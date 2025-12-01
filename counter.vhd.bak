@@ -1,0 +1,26 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity counter is
+	generic(
+		max_count : integer := 50000000;
+	);
+	port(
+		clk : in std_logic;
+		rst : in std_logic;
+		pulse_out : out std_logic
+	);
+end entity counter;
+
+architecture arch of counter is
+	signal cnt : std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+begin
+
+proc1 : process(clk)
+begin
+	if (rising_edge(clk)) then
+	
+	end if;	
+end process proc1;
+
+end architecture arch;

@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+package tank_components is
+
+end package tank_components;
+
+package body tank_components is
+
+end package body tank_components;

@@ -1,0 +1,119 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0sp1
+Ecounter
+Z0 w1764002520
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\danny\AppData\Local\quartus\tank_game\simulation
+Z7 8C:/Users/danny/AppData/Local/quartus/tank_game/counter.vhd
+Z8 FC:/Users/danny/AppData/Local/quartus/tank_game/counter.vhd
+l0
+L8
+V<XLhQP:agVnmA=XVAX:6]2
+Z9 OV;C;10.1d;51
+32
+Z10 !s108 1764002528.432000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/danny/AppData/Local/quartus/tank_game/counter.vhd|
+Z12 !s107 C:/Users/danny/AppData/Local/quartus/tank_game/counter.vhd|
+Z13 o-work work -2002 -explicit -O0
+Z14 tExplicit 1
+!s100 1@>4hE1O9HRN@;Z?EfNSb0
+!i10b 1
+Aarch
+R1
+R2
+R3
+R4
+R5
+DEx4 work 7 counter 0 22 <XLhQP:agVnmA=XVAX:6]2
+l22
+L19
+VT_;YQ_70MW9]LHg0:2WnO0
+R9
+32
+R10
+R11
+R12
+R13
+R14
+!s100 SV5kC@<3KoL6^6VT`6Y9a3
+!i10b 1
+Ecounter_tb
+Z15 w1763965119
+Z16 DPx4 work 15 tank_components 0 22 aBAm?jRQ?Ad>:k`CD2bMi2
+R4
+R5
+R6
+Z17 8C:/Users/danny/AppData/Local/quartus/tank_game/test_counter.vhd
+Z18 FC:/Users/danny/AppData/Local/quartus/tank_game/test_counter.vhd
+l0
+L5
+V;oX?4e=GAA34kWJScXOgV1
+!s100 31Oi6BlG4mmPoBaoAnWLn1
+R9
+32
+!i10b 1
+Z19 !s108 1764002528.584000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/danny/AppData/Local/quartus/tank_game/test_counter.vhd|
+Z21 !s107 C:/Users/danny/AppData/Local/quartus/tank_game/test_counter.vhd|
+R13
+R14
+Atest
+R16
+R4
+R5
+Z22 DEx4 work 10 counter_tb 0 22 ;oX?4e=GAA34kWJScXOgV1
+l30
+L16
+Z23 Vo0>^@9SY5QYga@U@b_zl;3
+Z24 !s100 [g<_DWhO?h9n1z6lkOIf_3
+R9
+32
+!i10b 1
+R19
+R20
+R21
+R13
+R14
+Ptank_components
+R4
+R5
+Z25 w1763964771
+R6
+Z26 8C:/Users/danny/AppData/Local/quartus/tank_game/tank_components.vhd
+Z27 FC:/Users/danny/AppData/Local/quartus/tank_game/tank_components.vhd
+l0
+L5
+VaBAm?jRQ?Ad>:k`CD2bMi2
+R9
+32
+Z28 !s108 1764002528.510000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/danny/AppData/Local/quartus/tank_game/tank_components.vhd|
+Z30 !s107 C:/Users/danny/AppData/Local/quartus/tank_game/tank_components.vhd|
+R13
+R14
+!s100 EAekXg<L1BOkcn]4Yik_E2
+!i10b 1
+Bbody
+R16
+R4
+R5
+l0
+L18
+VFPmcMF3cAUD`6a9c6[]FR1
+!s100 l7jecRmKeY09EVl3EcdiR2
+R9
+32
+R28
+R29
+R30
+R13
+R14
+nbody
+!i10b 1

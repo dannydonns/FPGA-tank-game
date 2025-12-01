@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity tank_game is
+	port(
+	
+	);
+end entity tank_game;
