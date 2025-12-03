@@ -42,15 +42,13 @@ set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY tank_game
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:30:31  NOVEMBER 23, 2025"
-set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
-set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
@@ -95,5 +93,25 @@ set_location_assignment PIN_D12 -to vga_blue[7]
 set_location_assignment PIN_F11 -to vga_blank
 set_location_assignment PIN_C13 -to vert_sync
 set_location_assignment PIN_G13 -to horiz_sync
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE bullet.vhd
+set_location_assignment PIN_E24 -to kb_leds[3]
+set_location_assignment PIN_E21 -to kb_leds[0]
+set_location_assignment PIN_E22 -to kb_leds[1]
+set_location_assignment PIN_E25 -to kb_leds[2]
+set_location_assignment PIN_G6 -to ps2_clk
+set_location_assignment PIN_H5 -to ps2_data
+set_location_assignment PIN_AA14 -to HEX0[6]
+set_location_assignment PIN_AG18 -to HEX0[5]
+set_location_assignment PIN_AF17 -to HEX0[4]
+set_location_assignment PIN_AH17 -to HEX0[3]
+set_location_assignment PIN_AG17 -to HEX0[2]
+set_location_assignment PIN_AE17 -to HEX0[1]
+set_location_assignment PIN_AA15 -to HEX1[5]
+set_location_assignment PIN_AD17 -to HEX0[0]
+set_location_assignment PIN_AC17 -to HEX1[6]
+set_location_assignment PIN_AB15 -to HEX1[4]
+set_location_assignment PIN_AB17 -to HEX1[3]
+set_location_assignment PIN_AA16 -to HEX1[2]
+set_location_assignment PIN_AB16 -to HEX1[1]
+set_location_assignment PIN_AA17 -to HEX1[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

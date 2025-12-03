@@ -91,6 +91,8 @@ begin
 				else
 					dir_nxt <= '1';
 				end if;
+			when others =>
+				dir_nxt <= '0';
 		end case;
 		x_nxt <= advance_tank(dir_curr, x_curr, speed);
 	end process direction_process;
