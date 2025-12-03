@@ -1,0 +1,42 @@
+# Quartus build output directories
+db/
+incremental_db/
+output_files/
+
+# Quartus workspace/session files
+*.qws
+
+# Automatically generated simulation/EDA files
+*.rpt
+*.sof
+*.cdf
+*.smsg
+*.summary
+*.qmsg
+
+# TimeQuest timing reports
+*.sta.rpt
+*.sta.summary
+
+# Compiler database files
+*.cdb
+*.hdb
+*.ddb
+*.idb
+*.rdb
+*.kpt
+*.bpm
+*.tdb
+*.ammdb
+
+# ModelSim/Questa output (optional)
+work/
+vsim.wlf
+transcript
+*.vcd
+*.wlf
+
+# Misc IDE junk
+*.bak
+*.log
+*.tmp

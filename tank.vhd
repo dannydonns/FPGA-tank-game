@@ -42,21 +42,21 @@ architecture behavioral of tank is
 			
 			when "01" =>
 				if(dir='0') then
-					x_adv := x - 4;
-				else
-					x_adv := x + 4;
-				end if;
-			when "10" =>
-				if(dir='0') then
-					x_adv := x - 6;
-				else
-					x_adv := x + 6;
-				end if;
-			when others => 
-				if(dir='0') then
 					x_adv := x - 2;
 				else
 					x_adv := x + 2;
+				end if;
+			when "10" =>
+				if(dir='0') then
+					x_adv := x - 3;
+				else
+					x_adv := x + 3;
+				end if;
+			when others => 
+				if(dir='0') then
+					x_adv := x - 1;
+				else
+					x_adv := x + 1;
 				end if;
 		end case;
 		
