@@ -154,9 +154,9 @@ begin
 	--640×480, top left corner is (0,0)
 	tank1 : tank
 		generic map(
-			x_start => 320,
-			y_start => 80,
-			tank_size => 20
+			x_start => 400,
+			y_start => 40,
+			tank_size => 40
 		)
 		port map(
 			-- inputs
@@ -169,9 +169,9 @@ begin
 
 	tank2 : tank
 		generic map(
-			x_start => 320,
-			y_start => 400,
-			tank_size => 20
+			x_start => 400,
+			y_start => 360,
+			tank_size => 40
 		)
 		port map(
 			-- inputs
