@@ -116,7 +116,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "kb_leds[0]",
+					"strict" : false
+				},
+				{
 					"name" : "kb_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "kb_leds[2]",
 					"strict" : false
 				},
 				{

@@ -1,5 +1,5 @@
 Fitter report for tank_game
-Tue Dec 02 21:14:49 2025
+Tue Dec 02 22:32:05 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -73,17 +73,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Dec 02 21:14:49 2025       ;
+; Fitter Status                      ; Successful - Tue Dec 02 22:32:05 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; tank_game                                   ;
 ; Top-level Entity Name              ; tank_game                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 433 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 389 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 170 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 170                                         ;
+; Total logic elements               ; 618 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 579 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 209 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 209                                         ;
 ; Total pins                         ; 36 / 529 ( 7 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 192 / 3,981,312 ( < 1 % )                   ;
@@ -165,8 +165,13 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
-;     Processors 3-8         ;   0.5%      ;
+;     Processor 2            ;   0.7%      ;
+;     Processor 3            ;   0.5%      ;
+;     Processor 4            ;   0.5%      ;
+;     Processor 5            ;   0.5%      ;
+;     Processor 6            ;   0.5%      ;
+;     Processor 7            ;   0.5%      ;
+;     Processor 8            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -199,8 +204,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 674 ) ; 0.00 % ( 0 / 674 )         ; 0.00 % ( 0 / 674 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 674 ) ; 0.00 % ( 0 / 674 )         ; 0.00 % ( 0 / 674 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 903 ) ; 0.00 % ( 0 / 903 )         ; 0.00 % ( 0 / 903 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 903 ) ; 0.00 % ( 0 / 903 )         ; 0.00 % ( 0 / 903 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -223,7 +228,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 662 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 891 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 12 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -239,26 +244,26 @@ The pin-out file can be found in C:/Users/zachtey/Documents/quartus_prime_projec
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Total logic elements                        ; 433 / 114,480 ( < 1 % )     ;
-;     -- Combinational with no register       ; 263                         ;
-;     -- Register only                        ; 44                          ;
-;     -- Combinational with a register        ; 126                         ;
+; Total logic elements                        ; 618 / 114,480 ( < 1 % )     ;
+;     -- Combinational with no register       ; 409                         ;
+;     -- Register only                        ; 39                          ;
+;     -- Combinational with a register        ; 170                         ;
 ;                                             ;                             ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 129                         ;
-;     -- 3 input functions                    ; 77                          ;
-;     -- <=2 input functions                  ; 183                         ;
-;     -- Register only                        ; 44                          ;
+;     -- 4 input functions                    ; 162                         ;
+;     -- 3 input functions                    ; 141                         ;
+;     -- <=2 input functions                  ; 276                         ;
+;     -- Register only                        ; 39                          ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 202                         ;
-;     -- arithmetic mode                      ; 187                         ;
+;     -- normal mode                          ; 278                         ;
+;     -- arithmetic mode                      ; 301                         ;
 ;                                             ;                             ;
-; Total registers*                            ; 170 / 117,053 ( < 1 % )     ;
-;     -- Dedicated logic registers            ; 170 / 114,480 ( < 1 % )     ;
+; Total registers*                            ; 209 / 117,053 ( < 1 % )     ;
+;     -- Dedicated logic registers            ; 209 / 114,480 ( < 1 % )     ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )           ;
 ;                                             ;                             ;
-; Total LABs:  partially or completely used   ; 36 / 7,155 ( < 1 % )        ;
+; Total LABs:  partially or completely used   ; 50 / 7,155 ( < 1 % )        ;
 ; Virtual pins                                ; 0                           ;
 ; I/O pins                                    ; 36 / 529 ( 7 % )            ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )              ;
@@ -277,11 +282,11 @@ The pin-out file can be found in C:/Users/zachtey/Documents/quartus_prime_projec
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )               ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )               ;
 ; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.3%          ;
-; Peak interconnect usage (total/H/V)         ; 4.2% / 4.7% / 3.5%          ;
-; Maximum fan-out                             ; 90                          ;
-; Highest non-global fan-out                  ; 90                          ;
-; Total fan-out                               ; 1723                        ;
-; Average fan-out                             ; 2.48                        ;
+; Peak interconnect usage (total/H/V)         ; 7.0% / 6.9% / 7.1%          ;
+; Maximum fan-out                             ; 128                         ;
+; Highest non-global fan-out                  ; 128                         ;
+; Total fan-out                               ; 2335                        ;
+; Average fan-out                             ; 2.54                        ;
 +---------------------------------------------+-----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -294,26 +299,26 @@ The pin-out file can be found in C:/Users/zachtey/Documents/quartus_prime_projec
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 433 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 263                    ; 0                              ;
-;     -- Register only                        ; 44                     ; 0                              ;
-;     -- Combinational with a register        ; 126                    ; 0                              ;
+; Total logic elements                        ; 618 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 409                    ; 0                              ;
+;     -- Register only                        ; 39                     ; 0                              ;
+;     -- Combinational with a register        ; 170                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 129                    ; 0                              ;
-;     -- 3 input functions                    ; 77                     ; 0                              ;
-;     -- <=2 input functions                  ; 183                    ; 0                              ;
-;     -- Register only                        ; 44                     ; 0                              ;
+;     -- 4 input functions                    ; 162                    ; 0                              ;
+;     -- 3 input functions                    ; 141                    ; 0                              ;
+;     -- <=2 input functions                  ; 276                    ; 0                              ;
+;     -- Register only                        ; 39                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 202                    ; 0                              ;
-;     -- arithmetic mode                      ; 187                    ; 0                              ;
+;     -- normal mode                          ; 278                    ; 0                              ;
+;     -- arithmetic mode                      ; 301                    ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 170                    ; 0                              ;
-;     -- Dedicated logic registers            ; 170 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 209                    ; 0                              ;
+;     -- Dedicated logic registers            ; 209 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 36 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 50 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 36                     ; 0                              ;
@@ -331,8 +336,8 @@ The pin-out file can be found in C:/Users/zachtey/Documents/quartus_prime_projec
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 1717                   ; 41                             ;
-;     -- Registered Connections               ; 697                    ; 0                              ;
+;     -- Total Connections                    ; 2328                   ; 41                             ;
+;     -- Registered Connections               ; 928                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 34                             ;
@@ -364,8 +369,8 @@ The pin-out file can be found in C:/Users/zachtey/Documents/quartus_prime_projec
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk_50       ; Y2    ; 2        ; 0            ; 36           ; 14           ; 16                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; global_reset ; AB28  ; 5        ; 115          ; 17           ; 0            ; 90                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; clk_50       ; Y2    ; 2        ; 0            ; 36           ; 14           ; 17                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; global_reset ; AB28  ; 5        ; 115          ; 17           ; 0            ; 128                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; ps2_clk      ; G6    ; 1        ; 0            ; 67           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; ps2_data     ; H5    ; 1        ; 0            ; 59           ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
@@ -1347,22 +1352,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                     ; Entity Name     ; Library Name ;
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |tank_game                                      ; 433 (0)     ; 170 (0)                   ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 36   ; 0            ; 263 (0)      ; 44 (0)            ; 126 (0)          ; |tank_game                                                                                                                              ; tank_game       ; work         ;
+; |tank_game                                      ; 618 (0)     ; 209 (0)                   ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 36   ; 0            ; 409 (0)      ; 39 (0)            ; 170 (0)          ; |tank_game                                                                                                                              ; tank_game       ; work         ;
+;    |bullet:bullet1|                             ; 35 (35)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 19 (19)          ; |tank_game|bullet:bullet1                                                                                                               ; bullet          ; work         ;
+;    |bullet:bullet2|                             ; 37 (37)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 19 (19)          ; |tank_game|bullet:bullet2                                                                                                               ; bullet          ; work         ;
 ;    |counter:game_cnt|                           ; 44 (44)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 33 (33)          ; |tank_game|counter:game_cnt                                                                                                             ; counter         ; work         ;
 ;    |pll:pll_inst|                               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tank_game|pll:pll_inst                                                                                                                 ; pll             ; work         ;
 ;       |altpll:altpll_component|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tank_game|pll:pll_inst|altpll:altpll_component                                                                                         ; altpll          ; work         ;
 ;          |pll_altpll:auto_generated|            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tank_game|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated                                                               ; pll_altpll      ; work         ;
-;    |ps2:kb_ps2|                                 ; 58 (15)     ; 41 (5)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (10)      ; 24 (2)            ; 17 (4)           ; |tank_game|ps2:kb_ps2                                                                                                                   ; ps2             ; work         ;
-;       |keyboard:u1|                             ; 40 (40)     ; 34 (34)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 21 (21)           ; 13 (13)          ; |tank_game|ps2:kb_ps2|keyboard:u1                                                                                                       ; keyboard        ; work         ;
+;    |ps2:kb_ps2|                                 ; 59 (17)     ; 41 (5)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (12)      ; 24 (2)            ; 17 (3)           ; |tank_game|ps2:kb_ps2                                                                                                                   ; ps2             ; work         ;
+;       |keyboard:u1|                             ; 39 (39)     ; 34 (34)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 21 (21)           ; 13 (13)          ; |tank_game|ps2:kb_ps2|keyboard:u1                                                                                                       ; keyboard        ; work         ;
 ;       |oneshot:pulser|                          ; 3 (3)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 1 (1)            ; |tank_game|ps2:kb_ps2|oneshot:pulser                                                                                                    ; oneshot         ; work         ;
-;    |tank:tank1|                                 ; 99 (99)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 75 (75)      ; 1 (1)             ; 23 (23)          ; |tank_game|tank:tank1                                                                                                                   ; tank            ; work         ;
-;    |tank:tank2|                                 ; 100 (100)   ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 76 (76)      ; 3 (3)             ; 21 (21)          ; |tank_game|tank:tank2                                                                                                                   ; tank            ; work         ;
-;    |vga_top_level:vga_top|                      ; 143 (0)     ; 48 (0)                    ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 84 (0)       ; 16 (0)            ; 43 (0)           ; |tank_game|vga_top_level:vga_top                                                                                                        ; vga_top_level   ; work         ;
-;       |pixelGenerator:videoGen|                 ; 68 (68)     ; 2 (2)                     ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 50 (50)      ; 0 (0)             ; 18 (18)          ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen                                                                                ; pixelGenerator  ; work         ;
+;    |tank:tank1|                                 ; 98 (98)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 74 (74)      ; 1 (1)             ; 23 (23)          ; |tank_game|tank:tank1                                                                                                                   ; tank            ; work         ;
+;    |tank:tank2|                                 ; 98 (98)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 74 (74)      ; 1 (1)             ; 23 (23)          ; |tank_game|tank:tank2                                                                                                                   ; tank            ; work         ;
+;    |vga_top_level:vga_top|                      ; 262 (0)     ; 49 (0)                    ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 198 (0)      ; 13 (0)            ; 51 (0)           ; |tank_game|vga_top_level:vga_top                                                                                                        ; vga_top_level   ; work         ;
+;       |pixelGenerator:videoGen|                 ; 190 (190)   ; 3 (3)                     ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 163 (163)    ; 0 (0)             ; 27 (27)          ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen                                                                                ; pixelGenerator  ; work         ;
 ;          |colorROM:colors|                      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors                                                                ; colorROM        ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;                |altsyncram_e481:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_e481:auto_generated ; altsyncram_e481 ; work         ;
-;       |vga_sync:videoSync|                      ; 80 (80)     ; 46 (46)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 34 (34)      ; 16 (16)           ; 30 (30)          ; |tank_game|vga_top_level:vga_top|vga_sync:videoSync                                                                                     ; vga_sync        ; work         ;
+;       |vga_sync:videoSync|                      ; 81 (81)     ; 46 (46)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 35 (35)      ; 13 (13)           ; 33 (33)          ; |tank_game|vga_top_level:vga_top|vga_sync:videoSync                                                                                     ; vga_sync        ; work         ;
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1406,7 +1413,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; kb_leds[3]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk_50       ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; global_reset ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; ps2_data     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; ps2_data     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; ps2_clk      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +--------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1439,6 +1446,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - tank:tank2|x_out[1]                      ; 0                 ; 6       ;
 ;      - tank:tank2|x_out[0]                      ; 0                 ; 6       ;
 ;      - ps2:kb_ps2|keyboard:u1|READ_CHAR         ; 0                 ; 6       ;
+;      - bullet:bullet2|b_active                  ; 0                 ; 6       ;
+;      - bullet:bullet1|b_active                  ; 0                 ; 6       ;
+;      - bullet:bullet1|by[9]                     ; 0                 ; 6       ;
+;      - bullet:bullet2|by[9]                     ; 0                 ; 6       ;
 ;      - counter:game_cnt|cnt[0]                  ; 0                 ; 6       ;
 ;      - counter:game_cnt|cnt[1]                  ; 0                 ; 6       ;
 ;      - counter:game_cnt|cnt[2]                  ; 0                 ; 6       ;
@@ -1471,8 +1482,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - counter:game_cnt|cnt[29]                 ; 0                 ; 6       ;
 ;      - counter:game_cnt|cnt[30]                 ; 0                 ; 6       ;
 ;      - counter:game_cnt|cnt[31]                 ; 0                 ; 6       ;
+;      - bullet:bullet2|by[3]~0                   ; 0                 ; 6       ;
+;      - bullet:bullet2|by[5]~1                   ; 0                 ; 6       ;
+;      - bullet:bullet2|by[6]~2                   ; 0                 ; 6       ;
+;      - bullet:bullet2|by[8]~3                   ; 0                 ; 6       ;
 ;      - ps2:kb_ps2|keyboard:u1|scan_code[0]~0    ; 0                 ; 6       ;
 ;      - ps2:kb_ps2|keyboard:u1|ready_set         ; 0                 ; 6       ;
+;      - tank:tank1|spd_curr[0]                   ; 0                 ; 6       ;
 ;      - tank:tank1|x_curr[9]                     ; 0                 ; 6       ;
 ;      - tank:tank1|dir_curr                      ; 0                 ; 6       ;
 ;      - tank:tank1|x_curr[8]                     ; 0                 ; 6       ;
@@ -1485,8 +1501,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - tank:tank1|x_curr[1]                     ; 0                 ; 6       ;
 ;      - tank:tank1|x_curr[0]                     ; 0                 ; 6       ;
 ;      - tank:tank1|spd_curr[1]                   ; 0                 ; 6       ;
-;      - tank:tank1|spd_curr[0]                   ; 0                 ; 6       ;
 ;      - counter:game_cnt|pulse                   ; 0                 ; 6       ;
+;      - bullet:bullet2|by[9]~6                   ; 0                 ; 6       ;
+;      - bullet:bullet2|by[9]~7                   ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~3                      ; 0                 ; 6       ;
+;      - bullet:bullet2|bx[8]~4                   ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~5                      ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~6                      ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~7                      ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~8                      ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~9                      ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~10                     ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~11                     ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~12                     ; 0                 ; 6       ;
+;      - bullet:bullet2|bx~13                     ; 0                 ; 6       ;
+;      - bullet:bullet1|by[8]~5                   ; 0                 ; 6       ;
+;      - bullet:bullet1|by~9                      ; 0                 ; 6       ;
+;      - bullet:bullet1|by~10                     ; 0                 ; 6       ;
+;      - bullet:bullet1|by~11                     ; 0                 ; 6       ;
+;      - bullet:bullet1|by~12                     ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~0                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx[8]~1                   ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~2                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~3                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~4                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~5                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~6                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~7                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~8                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~9                      ; 0                 ; 6       ;
+;      - bullet:bullet1|bx~10                     ; 0                 ; 6       ;
+;      - tank:tank2|spd_curr[0]                   ; 0                 ; 6       ;
 ;      - tank:tank2|x_curr[9]                     ; 0                 ; 6       ;
 ;      - tank:tank2|dir_curr                      ; 0                 ; 6       ;
 ;      - tank:tank2|x_curr[8]                     ; 0                 ; 6       ;
@@ -1499,19 +1544,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - tank:tank2|x_curr[1]                     ; 0                 ; 6       ;
 ;      - tank:tank2|x_curr[0]                     ; 0                 ; 6       ;
 ;      - tank:tank2|spd_curr[1]                   ; 0                 ; 6       ;
-;      - tank:tank2|spd_curr[0]                   ; 0                 ; 6       ;
 ;      - ps2:kb_ps2|keyboard:u1|SHIFTIN[0]~0      ; 0                 ; 6       ;
 ;      - ps2:kb_ps2|keyboard:u1|INCNT~0           ; 0                 ; 6       ;
-;      - ps2:kb_ps2|keyboard:u1|INCNT[1]~1        ; 0                 ; 6       ;
+;      - ps2:kb_ps2|keyboard:u1|INCNT[0]~1        ; 0                 ; 6       ;
 ;      - ps2:kb_ps2|keyboard:u1|INCNT~2           ; 0                 ; 6       ;
 ;      - ps2:kb_ps2|keyboard:u1|INCNT~3           ; 0                 ; 6       ;
 ;      - ps2:kb_ps2|keyboard:u1|INCNT~4           ; 0                 ; 6       ;
 ;      - tank:tank1|key_curr                      ; 0                 ; 6       ;
 ;      - tank:tank2|key_curr                      ; 0                 ; 6       ;
+;      - bullet:bullet1|by[8]~13                  ; 0                 ; 6       ;
 ; ps2_data                                        ;                   ;         ;
-;      - ps2:kb_ps2|keyboard:u1|READ_CHAR~0       ; 0                 ; 6       ;
-;      - ps2:kb_ps2|keyboard:u1|ready_set~0       ; 0                 ; 6       ;
-;      - ps2:kb_ps2|keyboard:u1|SHIFTIN[8]~feeder ; 0                 ; 6       ;
+;      - ps2:kb_ps2|keyboard:u1|READ_CHAR~0       ; 1                 ; 6       ;
+;      - ps2:kb_ps2|keyboard:u1|ready_set~0       ; 1                 ; 6       ;
+;      - ps2:kb_ps2|keyboard:u1|SHIFTIN[8]~feeder ; 1                 ; 6       ;
 ; ps2_clk                                         ;                   ;         ;
 ;      - ps2:kb_ps2|keyboard:u1|filter[7]~feeder  ; 0                 ; 6       ;
 +-------------------------------------------------+-------------------+---------+
@@ -1522,27 +1567,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------+---------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                            ; Location            ; Fan-Out ; Usage                                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------------------+---------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
+; bullet:bullet1|bx[8]~1                                                          ; LCCOMB_X109_Y20_N28 ; 10      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; bullet:bullet1|by[8]~5                                                          ; LCCOMB_X108_Y19_N26 ; 7       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; bullet:bullet2|bx[8]~4                                                          ; LCCOMB_X107_Y22_N6  ; 10      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; bullet:bullet2|by[9]~7                                                          ; LCCOMB_X106_Y21_N18 ; 7       ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
 ; clk_50                                                                          ; PIN_Y2              ; 2       ; Clock                                   ; no     ; --                   ; --               ; --                        ;
-; clk_50                                                                          ; PIN_Y2              ; 15      ; Clock                                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; counter:game_cnt|LessThan0~10                                                   ; LCCOMB_X110_Y22_N8  ; 32      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
-; counter:game_cnt|pulse                                                          ; FF_X106_Y27_N23     ; 4       ; Clock                                   ; no     ; --                   ; --               ; --                        ;
-; counter:game_cnt|pulse                                                          ; FF_X106_Y27_N23     ; 46      ; Clock                                   ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; global_reset                                                                    ; PIN_AB28            ; 90      ; Async. clear, Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; clk_50                                                                          ; PIN_Y2              ; 16      ; Clock                                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; counter:game_cnt|LessThan0~10                                                   ; LCCOMB_X112_Y25_N2  ; 32      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; counter:game_cnt|pulse                                                          ; FF_X108_Y24_N29     ; 4       ; Clock                                   ; no     ; --                   ; --               ; --                        ;
+; counter:game_cnt|pulse                                                          ; FF_X108_Y24_N29     ; 84      ; Clock                                   ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; global_reset                                                                    ; PIN_AB28            ; 128     ; Async. clear, Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
 ; pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1               ; 33      ; Clock                                   ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; ps2:kb_ps2|keyboard:u1|INCNT[1]~1                                               ; LCCOMB_X109_Y27_N16 ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; ps2:kb_ps2|keyboard:u1|SHIFTIN[0]~0                                             ; LCCOMB_X108_Y27_N28 ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; ps2:kb_ps2|keyboard:u1|clock_enable                                             ; FF_X55_Y71_N31      ; 10      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                    ; FF_X55_Y71_N29      ; 23      ; Clock                                   ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; ps2:kb_ps2|keyboard:u1|ready_set                                                ; FF_X113_Y27_N25     ; 2       ; Clock                                   ; no     ; --                   ; --               ; --                        ;
-; ps2:kb_ps2|keyboard:u1|scan_code[0]~0                                           ; LCCOMB_X108_Y27_N12 ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; ps2:kb_ps2|keyboard:u1|scan_ready                                               ; FF_X114_Y33_N7      ; 5       ; Clock                                   ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; ps2:kb_ps2|oneshot:pulser|pulse_out                                             ; FF_X114_Y33_N29     ; 1       ; Async. clear                            ; no     ; --                   ; --               ; --                        ;
-; tank:tank1|direction_process~0                                                  ; LCCOMB_X106_Y27_N28 ; 2       ; Latch enable                            ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; tank:tank2|direction_process~0                                                  ; LCCOMB_X106_Y27_N24 ; 2       ; Latch enable                            ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; vga_top_level:vga_top|vga_sync:videoSync|LessThan5~0                            ; LCCOMB_X106_Y18_N8  ; 11      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; vga_top_level:vga_top|vga_sync:videoSync|LessThan6~2                            ; LCCOMB_X107_Y22_N4  ; 10      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int                        ; FF_X55_Y72_N3       ; 46      ; Clock                                   ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; vga_top_level:vga_top|vga_sync:videoSync|v_count[9]~1                           ; LCCOMB_X103_Y22_N18 ; 10      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; ps2:kb_ps2|keyboard:u1|INCNT[0]~1                                               ; LCCOMB_X106_Y20_N18 ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; ps2:kb_ps2|keyboard:u1|SHIFTIN[0]~0                                             ; LCCOMB_X105_Y20_N24 ; 9       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; ps2:kb_ps2|keyboard:u1|clock_enable                                             ; FF_X56_Y72_N17      ; 10      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                    ; FF_X56_Y72_N23      ; 23      ; Clock                                   ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; ps2:kb_ps2|keyboard:u1|ready_set                                                ; FF_X105_Y24_N19     ; 2       ; Clock                                   ; no     ; --                   ; --               ; --                        ;
+; ps2:kb_ps2|keyboard:u1|scan_code[0]~0                                           ; LCCOMB_X106_Y20_N24 ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; ps2:kb_ps2|keyboard:u1|scan_ready                                               ; FF_X106_Y24_N25     ; 5       ; Clock                                   ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; ps2:kb_ps2|oneshot:pulser|pulse_out                                             ; FF_X106_Y24_N7      ; 1       ; Async. clear                            ; no     ; --                   ; --               ; --                        ;
+; tank:tank1|direction_process~0                                                  ; LCCOMB_X108_Y24_N30 ; 2       ; Latch enable                            ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; tank:tank2|direction_process~0                                                  ; LCCOMB_X108_Y24_N8  ; 2       ; Latch enable                            ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; vga_top_level:vga_top|vga_sync:videoSync|LessThan5~0                            ; LCCOMB_X110_Y21_N24 ; 11      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; vga_top_level:vga_top|vga_sync:videoSync|LessThan6~2                            ; LCCOMB_X107_Y23_N30 ; 10      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int                        ; FF_X55_Y72_N5       ; 46      ; Clock                                   ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; vga_top_level:vga_top|vga_sync:videoSync|v_count[9]~1                           ; LCCOMB_X108_Y23_N28 ; 10      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
 +---------------------------------------------------------------------------------+---------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1551,14 +1600,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                                            ; Location            ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk_50                                                                          ; PIN_Y2              ; 15      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; counter:game_cnt|pulse                                                          ; FF_X106_Y27_N23     ; 46      ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
+; clk_50                                                                          ; PIN_Y2              ; 16      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; counter:game_cnt|pulse                                                          ; FF_X108_Y24_N29     ; 84      ; 11                                   ; Global Clock         ; GCLK5            ; --                        ;
 ; pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1               ; 33      ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
-; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                    ; FF_X55_Y71_N29      ; 23      ; 9                                    ; Global Clock         ; GCLK12           ; --                        ;
-; ps2:kb_ps2|keyboard:u1|scan_ready                                               ; FF_X114_Y33_N7      ; 5       ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
-; tank:tank1|direction_process~0                                                  ; LCCOMB_X106_Y27_N28 ; 2       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
-; tank:tank2|direction_process~0                                                  ; LCCOMB_X106_Y27_N24 ; 2       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int                        ; FF_X55_Y72_N3       ; 46      ; 2                                    ; Global Clock         ; GCLK10           ; --                        ;
+; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                    ; FF_X56_Y72_N23      ; 23      ; 1                                    ; Global Clock         ; GCLK12           ; --                        ;
+; ps2:kb_ps2|keyboard:u1|scan_ready                                               ; FF_X106_Y24_N25     ; 5       ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; tank:tank1|direction_process~0                                                  ; LCCOMB_X108_Y24_N30 ; 2       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
+; tank:tank2|direction_process~0                                                  ; LCCOMB_X108_Y24_N8  ; 2       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int                        ; FF_X55_Y72_N5       ; 46      ; 3                                    ; Global Clock         ; GCLK14           ; --                        ;
 +---------------------------------------------------------------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1567,7 +1616,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------+-----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                                                                    ; Type ; Mode ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF          ; Location        ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------+-----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_e481:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 8            ; 24           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 192  ; 8                           ; 24                          ; --                          ; --                          ; 192                 ; 1    ; colorROM.mif ; M9K_X104_Y18_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_e481:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 8            ; 24           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 192  ; 8                           ; 24                          ; --                          ; --                          ; 192                 ; 1    ; colorROM.mif ; M9K_X104_Y22_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------+-----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1586,90 +1635,91 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 588 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 85 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 345 / 209,544 ( < 1 % ) ;
-; Direct links          ; 186 / 342,891 ( < 1 % ) ;
+; Block interconnects   ; 868 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 88 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 495 / 209,544 ( < 1 % ) ;
+; Direct links          ; 238 / 342,891 ( < 1 % ) ;
 ; Global clocks         ; 8 / 20 ( 40 % )         ;
-; Local interconnects   ; 228 / 119,088 ( < 1 % ) ;
+; Local interconnects   ; 286 / 119,088 ( < 1 % ) ;
 ; R24 interconnects     ; 99 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 443 / 289,782 ( < 1 % ) ;
+; R4 interconnects      ; 579 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.03) ; Number of LABs  (Total = 36) ;
+; Number of Logic Elements  (Average = 12.36) ; Number of LABs  (Total = 50) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
+; 1                                           ; 2                            ;
 ; 2                                           ; 1                            ;
 ; 3                                           ; 2                            ;
-; 4                                           ; 4                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
+; 4                                           ; 3                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 2                            ;
 ; 7                                           ; 1                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 2                            ;
-; 11                                          ; 3                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 2                            ;
 ; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 1                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 19                           ;
+; 15                                          ; 4                            ;
+; 16                                          ; 28                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.50) ; Number of LABs  (Total = 36) ;
+; LAB-wide Signals  (Average = 1.40) ; Number of LABs  (Total = 50) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 14                           ;
-; 1 Clock                            ; 29                           ;
-; 1 Clock enable                     ; 6                            ;
-; 1 Sync. clear                      ; 2                            ;
-; 2 Clocks                           ; 3                            ;
+; 1 Clock                            ; 37                           ;
+; 1 Clock enable                     ; 9                            ;
+; 1 Sync. clear                      ; 4                            ;
+; 2 Clock enables                    ; 1                            ;
+; 2 Clocks                           ; 5                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 15.75) ; Number of LABs  (Total = 36) ;
+; Number of Signals Sourced  (Average = 14.50) ; Number of LABs  (Total = 50) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
+; 1                                            ; 3                            ;
 ; 2                                            ; 1                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 2                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 3                            ;
-; 7                                            ; 3                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 3                            ;
+; 6                                            ; 4                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 2                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 3                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 4                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 5                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 5                            ;
+; 20                                           ; 3                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 3                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 3                            ;
+; 25                                           ; 1                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
+; 27                                           ; 1                            ;
 ; 28                                           ; 0                            ;
 ; 29                                           ; 0                            ;
-; 30                                           ; 1                            ;
+; 30                                           ; 0                            ;
 ; 31                                           ; 0                            ;
 ; 32                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
@@ -1678,68 +1728,69 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.97) ; Number of LABs  (Total = 36) ;
+; Number of Signals Sourced Out  (Average = 8.38) ; Number of LABs  (Total = 50) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 5                            ;
-; 2                                               ; 6                            ;
+; 1                                               ; 7                            ;
+; 2                                               ; 4                            ;
 ; 3                                               ; 2                            ;
 ; 4                                               ; 2                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 0                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 0                            ;
+; 5                                               ; 3                            ;
+; 6                                               ; 3                            ;
+; 7                                               ; 4                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 1                            ;
 ; 10                                              ; 1                            ;
-; 11                                              ; 6                            ;
+; 11                                              ; 4                            ;
 ; 12                                              ; 5                            ;
 ; 13                                              ; 2                            ;
-; 14                                              ; 1                            ;
+; 14                                              ; 2                            ;
 ; 15                                              ; 0                            ;
-; 16                                              ; 2                            ;
-; 17                                              ; 0                            ;
+; 16                                              ; 4                            ;
+; 17                                              ; 1                            ;
 ; 18                                              ; 2                            ;
+; 19                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.36) ; Number of LABs  (Total = 36) ;
+; Number of Distinct Inputs  (Average = 15.22) ; Number of LABs  (Total = 50) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 1                            ;
 ; 2                                            ; 2                            ;
-; 3                                            ; 4                            ;
-; 4                                            ; 2                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 0                            ;
+; 3                                            ; 3                            ;
+; 4                                            ; 3                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 2                            ;
+; 10                                           ; 3                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 2                            ;
-; 14                                           ; 0                            ;
+; 14                                           ; 5                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 1                            ;
-; 19                                           ; 1                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 4                            ;
 ; 20                                           ; 3                            ;
-; 21                                           ; 6                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 2                            ;
 ; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
+; 29                                           ; 1                            ;
+; 30                                           ; 1                            ;
 ; 31                                           ; 0                            ;
-; 32                                           ; 0                            ;
+; 32                                           ; 2                            ;
 ; 33                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -1880,20 +1931,24 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +---------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                                                                                     ;
-+--------------------------------------------------------------------------------+----------------------------------------------+-------------------+
-; Source Clock(s)                                                                ; Destination Clock(s)                         ; Delay Added in ns ;
-+--------------------------------------------------------------------------------+----------------------------------------------+-------------------+
-; clk_50                                                                         ; clk_50                                       ; 14.6              ;
-; ps2:kb_ps2|keyboard:u1|scan_ready                                              ; ps2:kb_ps2|keyboard:u1|scan_ready            ; 6.0               ;
-; ps2:kb_ps2|keyboard:u1|ready_set                                               ; clk_50                                       ; 4.0               ;
-; clk_50,ps2:kb_ps2|keyboard:u1|ready_set                                        ; clk_50                                       ; 4.0               ;
-; ps2:kb_ps2|keyboard:u1|scan_ready                                              ; counter:game_cnt|pulse                       ; 2.4               ;
-; ps2:kb_ps2|keyboard:u1|scan_ready,ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered ; ps2:kb_ps2|keyboard:u1|scan_ready            ; 2.2               ;
-; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                   ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered ; 1.8               ;
-; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered,I/O                               ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered ; 1.5               ;
-+--------------------------------------------------------------------------------+----------------------------------------------+-------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                                                                                 ;
++--------------------------------------------------------------------------------+----------------------------------------------------------+-------------------+
+; Source Clock(s)                                                                ; Destination Clock(s)                                     ; Delay Added in ns ;
++--------------------------------------------------------------------------------+----------------------------------------------------------+-------------------+
+; clk_50                                                                         ; clk_50                                                   ; 14.6              ;
+; ps2:kb_ps2|keyboard:u1|scan_ready                                              ; ps2:kb_ps2|keyboard:u1|scan_ready                        ; 7.8               ;
+; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                   ; ps2:kb_ps2|keyboard:u1|scan_ready                        ; 6.0               ;
+; clk_50,ps2:kb_ps2|keyboard:u1|ready_set                                        ; clk_50                                                   ; 4.0               ;
+; ps2:kb_ps2|keyboard:u1|ready_set                                               ; clk_50                                                   ; 4.0               ;
+; ps2:kb_ps2|keyboard:u1|scan_ready                                              ; counter:game_cnt|pulse                                   ; 2.4               ;
+; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                   ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered             ; 2.3               ;
+; ps2:kb_ps2|keyboard:u1|scan_ready,ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered ; ps2:kb_ps2|keyboard:u1|scan_ready                        ; 1.9               ;
+; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered,I/O                               ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered             ; 1.4               ;
+; clk_50                                                                         ; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int ; 1.3               ;
+; counter:game_cnt|pulse                                                         ; ps2:kb_ps2|key_L_reg                                     ; 1.2               ;
+; counter:game_cnt|pulse                                                         ; ps2:kb_ps2|key_S_reg                                     ; 1.1               ;
++--------------------------------------------------------------------------------+----------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
@@ -1903,12 +1958,12 @@ This will disable optimization of problematic paths and expose them for further 
 +---------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                               ; Destination Register                                                                                                                                          ; Delay Added in ns ;
 +---------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; ps2:kb_ps2|key_S_reg                                          ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 4.837             ;
+; ps2:kb_ps2|key_L_reg                                          ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 4.837             ;
 ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                  ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                                                                                                  ; 4.103             ;
-; ps2:kb_ps2|key_L_reg                                          ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 4.097             ;
-; ps2:kb_ps2|key_S_reg                                          ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 4.097             ;
-; ps2:kb_ps2|keyboard:u1|scan_ready                             ; ps2:kb_ps2|oneshot:pulser|pulse_out                                                                                                                           ; 4.074             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int      ; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int                                                                                                      ; 3.453             ;
-; ps2:kb_ps2|keyboard:u1|ready_set                              ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 3.339             ;
+; ps2:kb_ps2|keyboard:u1|scan_ready                             ; ps2:kb_ps2|oneshot:pulser|pulse_out                                                                                                                           ; 4.073             ;
+; ps2:kb_ps2|keyboard:u1|ready_set                              ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 3.684             ;
+; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int      ; vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int                                                                                                      ; 3.406             ;
 ; ps2:kb_ps2|keyboard:u1|filter[5]                              ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                                                                                                  ; 2.675             ;
 ; ps2:kb_ps2|keyboard:u1|filter[2]                              ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                                                                                                  ; 2.675             ;
 ; ps2:kb_ps2|keyboard:u1|filter[6]                              ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                                                                                                  ; 2.671             ;
@@ -1918,50 +1973,31 @@ This will disable optimization of problematic paths and expose them for further 
 ; ps2:kb_ps2|keyboard:u1|filter[1]                              ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                                                                                                  ; 2.608             ;
 ; ps2:kb_ps2|keyboard:u1|filter[7]                              ; ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered                                                                                                                  ; 2.608             ;
 ; ps2:kb_ps2|oneshot:pulser|delay                               ; ps2:kb_ps2|oneshot:pulser|pulse_out                                                                                                                           ; 2.037             ;
-; ps2:kb_ps2|keyboard:u1|INCNT[0]                               ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.525             ;
-; ps2:kb_ps2|keyboard:u1|INCNT[1]                               ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.525             ;
-; ps2:kb_ps2|keyboard:u1|INCNT[2]                               ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.525             ;
-; ps2_data                                                      ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.525             ;
-; ps2:kb_ps2|keyboard:u1|READ_CHAR                              ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.525             ;
-; ps2:kb_ps2|keyboard:u1|INCNT[3]                               ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.525             ;
-; ps2:kb_ps2|keyboard:u1|scan_code[4]                           ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; ps2:kb_ps2|keyboard:u1|scan_code[1]                           ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; ps2:kb_ps2|keyboard:u1|scan_code[2]                           ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; ps2:kb_ps2|keyboard:u1|scan_code[0]                           ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; ps2:kb_ps2|keyboard:u1|scan_code[5]                           ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; ps2:kb_ps2|keyboard:u1|scan_code[7]                           ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; ps2:kb_ps2|keyboard:u1|scan_code[6]                           ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; ps2:kb_ps2|keyboard:u1|scan_code[3]                           ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; ps2:kb_ps2|prev_was_break                                     ; ps2:kb_ps2|key_L_reg                                                                                                                                          ; 1.100             ;
-; counter:game_cnt|pulse                                        ; tank:tank1|key_curr                                                                                                                                           ; 0.299             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[9]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.199             ;
-; tank:tank1|spd_curr[0]                                        ; tank:tank1|spd_nxt[0]                                                                                                                                         ; 0.186             ;
-; tank:tank1|spd_curr[1]                                        ; tank:tank1|spd_nxt[0]                                                                                                                                         ; 0.183             ;
-; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0] ; vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_e481:auto_generated|ram_block1a16~porta_address_reg0 ; 0.158             ;
-; tank:tank2|spd_curr[0]                                        ; tank:tank2|spd_nxt[0]                                                                                                                                         ; 0.140             ;
-; tank:tank2|spd_curr[1]                                        ; tank:tank2|spd_nxt[0]                                                                                                                                         ; 0.138             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_row[8]         ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[1]                                                                                                 ; 0.016             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[8]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[7]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[6]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[5]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[4]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[3]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[2]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[1]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; vga_top_level:vga_top|vga_sync:videoSync|pixel_column[0]      ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[0]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[9]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[8]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[7]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[6]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[5]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[4]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[3]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[1]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
-; tank:tank1|x_out[2]                                           ; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0]                                                                                                 ; 0.013             ;
+; ps2:kb_ps2|keyboard:u1|INCNT[0]                               ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.402             ;
+; ps2:kb_ps2|keyboard:u1|INCNT[1]                               ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.402             ;
+; ps2:kb_ps2|keyboard:u1|INCNT[2]                               ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.402             ;
+; ps2_data                                                      ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.402             ;
+; ps2:kb_ps2|keyboard:u1|READ_CHAR                              ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.402             ;
+; ps2:kb_ps2|keyboard:u1|INCNT[3]                               ; ps2:kb_ps2|keyboard:u1|ready_set                                                                                                                              ; 1.402             ;
+; ps2:kb_ps2|keyboard:u1|scan_code[4]                           ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; ps2:kb_ps2|keyboard:u1|scan_code[1]                           ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; ps2:kb_ps2|keyboard:u1|scan_code[2]                           ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; ps2:kb_ps2|keyboard:u1|scan_code[0]                           ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; ps2:kb_ps2|keyboard:u1|scan_code[5]                           ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; ps2:kb_ps2|keyboard:u1|scan_code[7]                           ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; ps2:kb_ps2|keyboard:u1|scan_code[6]                           ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; ps2:kb_ps2|keyboard:u1|scan_code[3]                           ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; ps2:kb_ps2|prev_was_break                                     ; ps2:kb_ps2|key_S_reg                                                                                                                                          ; 0.938             ;
+; counter:game_cnt|pulse                                        ; tank:tank2|key_curr                                                                                                                                           ; 0.517             ;
+; tank:tank2|spd_curr[1]                                        ; tank:tank2|spd_nxt[0]                                                                                                                                         ; 0.474             ;
+; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0] ; vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_e481:auto_generated|ram_block1a16~porta_address_reg0 ; 0.443             ;
+; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[1] ; vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_e481:auto_generated|ram_block1a16~porta_address_reg0 ; 0.443             ;
+; vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[2] ; vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_e481:auto_generated|ram_block1a16~porta_address_reg0 ; 0.443             ;
+; tank:tank1|spd_curr[0]                                        ; tank:tank1|spd_nxt[0]                                                                                                                                         ; 0.400             ;
+; tank:tank1|spd_curr[1]                                        ; tank:tank1|spd_nxt[0]                                                                                                                                         ; 0.398             ;
+; tank:tank2|spd_curr[0]                                        ; tank:tank2|spd_nxt[0]                                                                                                                                         ; 0.398             ;
 +---------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 57 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 38 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2005,17 +2041,17 @@ Info (176353): Automatically promoted node clk_50~input (placed in PIN Y2 (CLK2,
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176353): Automatically promoted node pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/db/pll_altpll.v Line: 78
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
-Info (176353): Automatically promoted node vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int  File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd Line: 55
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int~0 File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd Line: 55
-        Info (176357): Destination node vga_clk~output File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 17
 Info (176353): Automatically promoted node counter:game_cnt|pulse  File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/counter.vhd Line: 25
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node counter:game_cnt|pulse~0 File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/counter.vhd Line: 25
         Info (176357): Destination node tank:tank1|key_curr File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 32
         Info (176357): Destination node tank:tank2|key_curr File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 32
+Info (176353): Automatically promoted node vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int  File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd Line: 55
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node vga_top_level:vga_top|vga_sync:videoSync|pixel_clock_int~0 File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd Line: 55
+        Info (176357): Destination node vga_clk~output File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 17
 Info (176353): Automatically promoted node ps2:kb_ps2|keyboard:u1|keyboard_clk_filtered  File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd Line: 19
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
@@ -2057,14 +2093,14 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:08
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X104_Y12 to location X115_Y23
+    Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X104_Y12 to location X115_Y23
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.55 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.74 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2073,10 +2109,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/output_files/tank_game.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 14497 megabytes
-    Info: Processing ended: Tue Dec 02 21:14:49 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 14499 megabytes
+    Info: Processing ended: Tue Dec 02 22:32:06 2025
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:40
 
 
 +----------------------------+

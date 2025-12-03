@@ -16,6 +16,10 @@ entity pixelGenerator is
         tank1x, tank1y : in std_logic_vector(9 downto 0);
         tank2x, tank2y : in std_logic_vector(9 downto 0);
 
+        --bullet1, bullet2 inputs
+        bullet1x, bullet1y : in std_logic_vector(9 downto 0);
+        bullet2x, bullet2y : in std_logic_vector(9 downto 0);
+
         -- vga outputs
         red_out, green_out, blue_out : out std_logic_vector(7 downto 0)
     );
@@ -46,6 +50,8 @@ architecture behavioral of pixelGenerator is
     signal pixel_row_int, pixel_column_int : natural;
     signal tank_1x, tank_1y : integer;
     signal tank_2x, tank_2y : integer;
+    signal bullet_1x, bullet_1y : integer;
+    signal bullet_2x, bullet_2y : integer;
     
 begin
     --------------------------------------------------------------------------------------------
@@ -60,6 +66,10 @@ begin
     tank_1y <= to_integer(unsigned(tank1y));
     tank_2x <= to_integer(unsigned(tank2x));
     tank_2y <= to_integer(unsigned(tank2y));
+    bullet_1x <= to_integer(unsigned(bullet1x));
+    bullet_1y <= to_integer(unsigned(bullet1y));
+    bullet_2x <= to_integer(unsigned(bullet2x));
+    bullet_2y <= to_integer(unsigned(bullet2y));
 
     --------------------------------------------------------------------------------------------	
 	
@@ -83,7 +93,15 @@ begin
 			-- 	colorAddress <= color_white;
 			-- end if;
 			-- and (pixel_column_int > tank_1x - tank_size_x) and (pixel_row_int < tank_1y + tank_size_y) and (pixel_row_int > tank_1y - tank_size_y) 
-            if (pixel_column_int < tank_1x + tank_size_x) and (pixel_column_int > tank_1x) and (pixel_row_int < tank_1y + tank_size_y) and (pixel_row_int > tank_1y) then
+            
+            
+            if (pixel_column_int < bullet_1x + 3) and (pixel_column_int > bullet_1x) and (pixel_row_int < bullet_1y + 6) and (pixel_row_int > bullet_1y) then
+                colorAddress <= color_yellow;
+            
+            elsif (pixel_column_int < bullet_2x + 3) and (pixel_column_int > bullet_2x) and (pixel_row_int < bullet_2y + 6) and (pixel_row_int > bullet_2y) then
+                colorAddress <= color_cyan;
+
+            elsif (pixel_column_int < tank_1x + tank_size_x) and (pixel_column_int > tank_1x) and (pixel_row_int < tank_1y + tank_size_y) and (pixel_row_int > tank_1y) then
                 colorAddress <= color_red;
             
             elsif (pixel_column_int < tank_2x + tank_size_x) and (pixel_column_int > tank_2x) and (pixel_row_int < tank_2y + tank_size_y) and (pixel_row_int > tank_2y) then
