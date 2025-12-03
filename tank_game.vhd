@@ -73,28 +73,6 @@ architecture structural of tank_game is
     	);
 	end component vga_top_level;
 	
-	component keyboard_control is
-    port(
-        clk_50        : in  std_logic;
-        reset         : in  std_logic;
-        -- raw PS/2 signals from the board connector
-        keyboard_clk  : in  std_logic;
-        keyboard_data : in  std_logic;
-        -- game controls
-        tank1_speed   : out std_logic_vector(1 downto 0);
-        tank1_fire    : out std_logic;
-        tank2_speed   : out std_logic_vector(1 downto 0);
-        tank2_fire    : out std_logic;
-        -- LED outputs for key indicators
-        led_A         : out std_logic;
-        led_S         : out std_logic;
-        led_K         : out std_logic;
-        led_L         : out std_logic;
-        --scan code debug
-        HEX0 : out std_logic_vector(6 downto 0);
-        HEX1 : out std_logic_vector(6 downto 0)
-    );
-end component;
 
 component ps2 is
     port(
