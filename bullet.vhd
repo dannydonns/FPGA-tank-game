@@ -8,10 +8,10 @@ entity bullet is
         screen_h : integer := 480   -- vertical resolution (e.g., 480)
     );
     port(
-        clk       : in  std_logic;               -- game tick (e.g., counter_pulse)
+        clk       : in  std_logic;               -- game tick 
         rst       : in  std_logic;               -- active-high reset
 
-        fire      : in  std_logic;               -- fire button (e.g., ps2_key_S / ps2_key_L)
+        fire      : in  std_logic;               -- fire button 
         direction : in  std_logic;               -- '0' = up, '1' = down
 
         tank_x    : in  unsigned(9 downto 0);    -- tank position at spawn time
@@ -52,9 +52,7 @@ begin
                 else
                     -- bullet is flying
                     if direction = '0' then
-                        --------------------------------------------------
                         -- DIRECTION = UP (toward y = 0)
-                        --------------------------------------------------
                         if by > spd then
                             -- move up
                             by <= by - spd;
@@ -72,9 +70,7 @@ begin
                         end if;
 
                     else
-                        --------------------------------------------------
                         -- DIRECTION = DOWN (toward y = screen_h - 1)
-                        --------------------------------------------------
                         if by < (max_y - spd) then
                             -- move down
                             by <= by + spd;

@@ -189,6 +189,9 @@ END component;
 	-- signal LCD_RS_sig, LCD_E_sig, LCD_ON_sig, RESET_LED_sig, SEC_LED_sig : std_logic;
 	-- signal LCD_RW_sig : std_logic;
 	-- signal DATA_BUS_sig : std_logic_vector(7 downto 0);
+	
+	--lcd reset signal
+	signal lcd_reset_sig : std_logic;
 
 	--- counter reset
 	signal counter_rst : std_logic;
@@ -269,7 +272,8 @@ begin
 	counter_rst <= global_reset or w1_sig or w2_sig or r_pressed;
 	game_cnt : counter
 		generic map(
-			max_count => 500000
+			--max_count => 500000
+			max_count => 500
 		)
 		port map(
 			clk => clk_100,
@@ -467,10 +471,11 @@ begin
 
 	--LCD
 	lcd: de2lcd 
-    PORT map (reset => not global_reset, clk_50Mhz=> clk_50,        
+    PORT map (reset => lcd_reset_sig, clk_50Mhz=> clk_50,        
          		p1_score => score1_sig, p2_score => score2_sig, -- scores
          		w1 => w1_sig , w2 => w2_sig, --win signals
          		LCD_RS => lcd_rs_out, LCD_E => lcd_e_out, LCD_ON => lcd_on_out, RESET_LED => reset_led_out, SEC_LED => sec_led_out,
          		LCD_RW  => lcd_rw_out, data_bus => data_bus_out);
+	lcd_reset_sig <= not global_reset;
 
 end architecture structural;
