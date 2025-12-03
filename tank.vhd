@@ -11,7 +11,7 @@ entity tank is
 	port(
 		-- inputs
 		clk, rst : in std_logic;
-		speed : in std_logic_vector(1 downto 0);
+		speed : in std_logic;
 		
 		-- coordinate outputs
 		x_out, y_out : out unsigned(9 downto 0)
@@ -29,6 +29,10 @@ architecture behavioral of tank is
 	-- state declaration
 	signal dir_curr : std_logic := '0';
 	signal dir_nxt : std_logic := '0';
+	signal key_curr : std_logic := '0';	-- '0' is up, '1' is down
+	signal key_nxt : std_logic := '0'; 	
+	signal spd_curr : std_logic_vector(1 downto 0) := "00"; 
+	signal spd_nxt : std_logic_vector(1 downto 0) := "00"; 
 	
 	function advance_tank(dir: std_logic; x : unsigned; spd: std_logic_vector(1 downto 0)) return unsigned is 
 		variable x_adv : unsigned(9 downto 0);
@@ -65,16 +69,20 @@ begin
 	begin
 		if (rst = '1') then
 			dir_curr <= '0';
+			spd_curr <= "00";
 			x_curr <= to_unsigned(x_start, 10);
+			key_curr <= '0';
 		elsif (rising_edge(clk)) then
 			dir_curr <= dir_nxt;
 			x_out <= x_nxt;
-			x_curr <= x_nxt;			
+			x_curr <= x_nxt;
+			spd_curr <= spd_nxt;		
+			key_curr <= key_nxt;
 		end if;
 	end process clk_process;
 
 	
-	direction_process : process(x_curr, dir_curr)
+	direction_process : process(x_curr, dir_curr, speed)
 	begin
 		-- left or right
 		case dir_curr is
@@ -94,7 +102,28 @@ begin
 			when others =>
 				dir_nxt <= '0';
 		end case;
-		x_nxt <= advance_tank(dir_curr, x_curr, speed);
+		
+
+		
+		if speed = '1' then
+			case spd_curr is
+				when "00" =>
+					if (key_curr = '0') then
+						spd_nxt <= "01";
+					end if;
+				when "01" =>
+					if (key_curr = '0') then
+						spd_nxt <= "10";
+					end if;
+				when others =>
+					if (key_curr = '0') then
+						spd_nxt <= "00";
+					end if;
+			end case;
+		end if;
+		key_nxt <= speed;
+
+		x_nxt <= advance_tank(dir_curr, x_curr, spd_curr);
 	end process direction_process;
 	
 end architecture behavioral;

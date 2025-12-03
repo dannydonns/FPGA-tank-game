@@ -48,7 +48,7 @@ architecture structural of tank_game is
 		port(
 			-- inputs
 			clk, rst : in std_logic;
-			speed : in std_logic_vector(1 downto 0);
+			speed : in std_logic;
 			
 			-- coordinate outputs
 			x_out, y_out : out unsigned(9 downto 0)
@@ -74,27 +74,27 @@ architecture structural of tank_game is
 	end component vga_top_level;
 	
 
-component ps2 is
-    port(
-        keyboard_clk, keyboard_data, clock_50MHz,
-        reset : in std_logic;
-        scan_code    : out std_logic_vector(7 downto 0);
-        scan_readyo  : out std_logic;
-        hist3        : out std_logic_vector(7 downto 0);
-        hist2        : out std_logic_vector(7 downto 0);
-        hist1        : out std_logic_vector(7 downto 0);
-        hist0        : out std_logic_vector(7 downto 0);
+	component ps2 is
+		port(
+			keyboard_clk, keyboard_data, clock_50MHz,
+			reset : in std_logic;
+			scan_code    : out std_logic_vector(7 downto 0);
+			scan_readyo  : out std_logic;
+			hist3        : out std_logic_vector(7 downto 0);
+			hist2        : out std_logic_vector(7 downto 0);
+			hist1        : out std_logic_vector(7 downto 0);
+			hist0        : out std_logic_vector(7 downto 0);
 
-        -- NEW: key state outputs (1 = currently pressed)
-        key_A        : out std_logic;
-        key_S        : out std_logic;
-        key_K        : out std_logic;
-        key_L        : out std_logic;
+			-- NEW: key state outputs (1 = currently pressed)
+			key_A        : out std_logic;
+			key_S        : out std_logic;
+			key_K        : out std_logic;
+			key_L        : out std_logic;
 
-        -- single 7-seg HEX display (keep pin planning simple)
-        hex0         : out std_logic_vector(6 downto 0)
-    );
-end component;
+			-- single 7-seg HEX display (keep pin planning simple)
+			hex0         : out std_logic_vector(6 downto 0)
+		);
+	end component;
 
     -- ps2 outputs
     signal ps2_scan_code   : std_logic_vector(7 downto 0);
@@ -121,10 +121,12 @@ end component;
 	-- temporary tank 1 signals
 	signal tank1x : unsigned(9 downto 0) := to_unsigned(240, 10);
 	signal tank1y : unsigned(9 downto 0) := to_unsigned(100, 10);
+	signal tank1spd : std_logic := '0';
 
 	-- temporary tank 2 signals
 	signal tank2x : unsigned(9 downto 0) := to_unsigned(240, 10);
 	signal tank2y : unsigned(9 downto 0) := to_unsigned(400, 10);
+	signal tank2spd : std_logic := '0';
 	
 	-- counter pulse
 	signal counter_pulse : std_logic := '0';
@@ -160,7 +162,7 @@ begin
 			-- inputs
 			clk => counter_pulse,
 			rst => global_reset,
-			speed => "10",
+			speed => tank1spd,
 			x_out => tank1x,
 			y_out => tank1y
 		);
@@ -175,7 +177,7 @@ begin
 			-- inputs
 			clk => counter_pulse,
 			rst => global_reset,
-			speed => "00",
+			speed => tank2spd,
 			x_out => tank2x,
 			y_out => tank2y
 		);
@@ -219,9 +221,9 @@ begin
             hist0         => ps2_hist0,
 
             key_A         => ps2_key_A,
-            key_S         => ps2_key_S,
+            key_S         => tank1spd,
             key_K         => ps2_key_K,
-            key_L         => ps2_key_L,
+            key_L         => tank2spd,
 
             hex0          => ps2_hex0
         );
