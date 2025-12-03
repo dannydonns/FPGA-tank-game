@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Dec 03 01:05:19 2025
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Fitter Status : Successful - Wed Dec  3 12:36:22 2025
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : tank_game
 Top-level Entity Name : tank_game
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 855 / 114,480 ( < 1 % )
-    Total combinational functions : 805 / 114,480 ( < 1 % )
-    Dedicated logic registers : 292 / 114,480 ( < 1 % )
-Total registers : 292
+Total logic elements : 811 / 114,480 ( < 1 % )
+    Total combinational functions : 764 / 114,480 ( < 1 % )
+    Dedicated logic registers : 278 / 114,480 ( < 1 % )
+Total registers : 278
 Total pins : 54 / 529 ( 10 % )
 Total virtual pins : 0
 Total memory bits : 192 / 3,981,312 ( < 1 % )
