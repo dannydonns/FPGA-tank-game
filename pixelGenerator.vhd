@@ -108,7 +108,7 @@ begin
                 colorAddress <= color_green;
             
             else
-                colorAddress <= color_white;
+                colorAddress <= color_black;
             end if;
 			
 			

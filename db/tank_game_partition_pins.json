@@ -132,6 +132,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "led_hit_1_on_2",
+					"strict" : false
+				},
+				{
+					"name" : "led_hit_2_on_1",
+					"strict" : false
+				},
+				{
 					"name" : "clk_50",
 					"strict" : false
 				},
