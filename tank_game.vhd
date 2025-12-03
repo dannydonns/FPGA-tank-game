@@ -1,7 +1,10 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.tank_components.all;
+--use IEEE.tank_components.all;
 use IEEE.numeric_std.all;
+
+library work;
+use work.tank_components.all;  
 
 entity tank_game is
 	port(
@@ -11,7 +14,16 @@ entity tank_game is
 		-- led_out : out std_logic;
 		-- vga outputs
 		vga_red, vga_green, vga_blue : out std_logic_vector(7 downto 0);
-		horiz_sync, vert_sync, vga_blank, vga_clk : out std_logic
+		horiz_sync, vert_sync, vga_blank, vga_clk : out std_logic;
+
+		-- ps2 keyboard inputs
+        ps2_clk  : in  std_logic;
+        ps2_data : in  std_logic;
+        kb_leds   : out std_logic_vector(3 downto 0)  -- [3]=A, [2]=S, [1]=K, [0]=L
+
+		--scan code debug outputs
+		--HEX0 : out std_logic_vector(6 downto 0);
+		--HEX1 : out std_logic_vector(6 downto 0)
 	);
 end entity tank_game;
 
@@ -61,6 +73,73 @@ architecture structural of tank_game is
     	);
 	end component vga_top_level;
 	
+	component keyboard_control is
+    port(
+        clk_50        : in  std_logic;
+        reset         : in  std_logic;
+        -- raw PS/2 signals from the board connector
+        keyboard_clk  : in  std_logic;
+        keyboard_data : in  std_logic;
+        -- game controls
+        tank1_speed   : out std_logic_vector(1 downto 0);
+        tank1_fire    : out std_logic;
+        tank2_speed   : out std_logic_vector(1 downto 0);
+        tank2_fire    : out std_logic;
+        -- LED outputs for key indicators
+        led_A         : out std_logic;
+        led_S         : out std_logic;
+        led_K         : out std_logic;
+        led_L         : out std_logic;
+        --scan code debug
+        HEX0 : out std_logic_vector(6 downto 0);
+        HEX1 : out std_logic_vector(6 downto 0)
+    );
+end component;
+
+component ps2 is
+    port(
+        keyboard_clk, keyboard_data, clock_50MHz,
+        reset : in std_logic;
+        scan_code    : out std_logic_vector(7 downto 0);
+        scan_readyo  : out std_logic;
+        hist3        : out std_logic_vector(7 downto 0);
+        hist2        : out std_logic_vector(7 downto 0);
+        hist1        : out std_logic_vector(7 downto 0);
+        hist0        : out std_logic_vector(7 downto 0);
+
+        -- NEW: key state outputs (1 = currently pressed)
+        key_A        : out std_logic;
+        key_S        : out std_logic;
+        key_K        : out std_logic;
+        key_L        : out std_logic;
+
+        -- single 7-seg HEX display (keep pin planning simple)
+        hex0         : out std_logic_vector(6 downto 0)
+    );
+end component;
+
+    -- ps2 outputs
+    signal ps2_scan_code   : std_logic_vector(7 downto 0);
+    signal ps2_scan_ready  : std_logic;
+    signal ps2_hist3       : std_logic_vector(7 downto 0);
+    signal ps2_hist2       : std_logic_vector(7 downto 0);
+    signal ps2_hist1       : std_logic_vector(7 downto 0);
+    signal ps2_hist0       : std_logic_vector(7 downto 0);
+    signal ps2_key_A       : std_logic;
+    signal ps2_key_S       : std_logic;
+    signal ps2_key_K       : std_logic;
+    signal ps2_key_L       : std_logic;
+    signal ps2_hex0        : std_logic_vector(6 downto 0);
+
+	-- internal wires for keyboard_control
+    signal kb_t1_speed : std_logic_vector(1 downto 0);
+    signal kb_t1_fire  : std_logic;
+    signal kb_t2_speed : std_logic_vector(1 downto 0);
+    signal kb_t2_fire  : std_logic;
+    signal kb_led_sig  : std_logic_vector(3 downto 0) := (others => '0');
+	signal kb_hex0    : std_logic_vector(6 downto 0);
+	signal kb_hex1    : std_logic_vector(6 downto 0);
+
 	-- temporary tank 1 signals
 	signal tank1x : unsigned(9 downto 0) := to_unsigned(240, 10);
 	signal tank1y : unsigned(9 downto 0) := to_unsigned(100, 10);
@@ -71,6 +150,10 @@ architecture structural of tank_game is
 	
 	-- counter pulse
 	signal counter_pulse : std_logic := '0';
+
+	--ps2 reset is opposite of global reset
+	signal ps2_reset : std_logic;
+
 begin
 
 	game_cnt : counter
@@ -85,9 +168,10 @@ begin
 		);
 	-- tank1x <= to_unsigned(320, 10);
 	-- tank1y <= to_unsigned(80, 10);
-	tank2x <= to_unsigned(240, 10);
-	tank2y <= to_unsigned(400, 10);
+	--tank2x <= to_unsigned(240, 10);
+	--tank2y <= to_unsigned(400, 10);
 
+	--640×480, top left corner is (0,0)
 	tank1 : tank
 		generic map(
 			x_start => 320,
@@ -98,9 +182,24 @@ begin
 			-- inputs
 			clk => counter_pulse,
 			rst => global_reset,
-			speed => "00",
+			speed => "10",
 			x_out => tank1x,
 			y_out => tank1y
+		);
+
+	tank2 : tank
+		generic map(
+			x_start => 320,
+			y_start => 400,
+			tank_size => 20
+		)
+		port map(
+			-- inputs
+			clk => counter_pulse,
+			rst => global_reset,
+			speed => "00",
+			x_out => tank2x,
+			y_out => tank2y
 		);
 
 	vga_top : vga_top_level
@@ -126,5 +225,32 @@ begin
 			vga_blank => vga_blank,
 			vga_clk => vga_clk
 		);
+
+	 kb_ps2 : ps2
+        port map(
+            keyboard_clk  => ps2_clk,
+            keyboard_data => ps2_data,
+            clock_50MHz   => clk_50,
+            reset         => ps2_reset,
+
+            scan_code     => ps2_scan_code,
+            scan_readyo   => ps2_scan_ready,
+            hist3         => ps2_hist3,
+            hist2         => ps2_hist2,
+            hist1         => ps2_hist1,
+            hist0         => ps2_hist0,
+
+            key_A         => ps2_key_A,
+            key_S         => ps2_key_S,
+            key_K         => ps2_key_K,
+            key_L         => ps2_key_L,
+
+            hex0          => ps2_hex0
+        );
+		ps2_reset <= not global_reset;
+		kb_leds(3) <= ps2_key_A;
+		kb_leds(2) <= ps2_key_S;
+		kb_leds(1) <= ps2_key_K;
+		kb_leds(0) <= ps2_key_L;
 
 end architecture structural;

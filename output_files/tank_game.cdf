@@ -1,10 +1,10 @@
-/* Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition */
+/* Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/Users/danny/AppData/Local/quartus/tank_game/output_files/") File("tank_game.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/output_files/") File("tank_game.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
