@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tank_game
-Wed Dec 03 01:04:55 2025
+Wed Dec 03 01:36:09 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -67,13 +67,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 03 01:04:55 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 03 01:36:09 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; tank_game                                   ;
 ; Top-level Entity Name              ; tank_game                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 868                                         ;
-;     Total combinational functions  ; 803                                         ;
+; Total logic elements               ; 865                                         ;
+;     Total combinational functions  ; 800                                         ;
 ;     Dedicated logic registers      ; 292                                         ;
 ; Total registers                    ; 292                                         ;
 ; Total pins                         ; 54                                          ;
@@ -234,16 +234,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 868                ;
+; Estimated Total logic elements              ; 865                ;
 ;                                             ;                    ;
-; Total combinational functions               ; 803                ;
+; Total combinational functions               ; 800                ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 219                ;
-;     -- 3 input functions                    ; 199                ;
-;     -- <=2 input functions                  ; 385                ;
+;     -- 4 input functions                    ; 215                ;
+;     -- 3 input functions                    ; 196                ;
+;     -- <=2 input functions                  ; 389                ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 393                ;
+;     -- normal mode                          ; 390                ;
 ;     -- arithmetic mode                      ; 410                ;
 ;                                             ;                    ;
 ; Total registers                             ; 292                ;
@@ -259,9 +259,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                  ;
 ;                                             ;                    ;
 ; Maximum fan-out node                        ; global_reset~input ;
-; Maximum fan-out                             ; 100                ;
-; Total fan-out                               ; 3226               ;
-; Average fan-out                             ; 2.61               ;
+; Maximum fan-out                             ; 99                 ;
+; Total fan-out                               ; 3209               ;
+; Average fan-out                             ; 2.60               ;
 +---------------------------------------------+--------------------+
 
 
@@ -270,24 +270,24 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |tank_game                                      ; 803 (1)             ; 292 (0)                   ; 192         ; 0            ; 0       ; 0         ; 54   ; 0            ; |tank_game                                                                                                                              ; tank_game       ; work         ;
-;    |bullet:bullet1|                             ; 36 (36)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|bullet:bullet1                                                                                                               ; bullet          ; work         ;
-;    |bullet:bullet2|                             ; 36 (36)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|bullet:bullet2                                                                                                               ; bullet          ; work         ;
+; |tank_game                                      ; 800 (1)             ; 292 (0)                   ; 192         ; 0            ; 0       ; 0         ; 54   ; 0            ; |tank_game                                                                                                                              ; tank_game       ; work         ;
+;    |bullet:bullet1|                             ; 35 (35)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|bullet:bullet1                                                                                                               ; bullet          ; work         ;
+;    |bullet:bullet2|                             ; 35 (35)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|bullet:bullet2                                                                                                               ; bullet          ; work         ;
 ;    |collision:collision_1_2|                    ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|collision:collision_1_2                                                                                                      ; collision       ; work         ;
 ;    |collision:collision_2_1|                    ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|collision:collision_2_1                                                                                                      ; collision       ; work         ;
 ;    |counter:game_cnt|                           ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|counter:game_cnt                                                                                                             ; counter         ; work         ;
-;    |de2lcd:lcd|                                 ; 103 (103)           ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|de2lcd:lcd                                                                                                                   ; de2lcd          ; work         ;
+;    |de2lcd:lcd|                                 ; 102 (102)           ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|de2lcd:lcd                                                                                                                   ; de2lcd          ; work         ;
 ;    |pll:pll_inst|                               ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|pll:pll_inst                                                                                                                 ; pll             ; work         ;
 ;       |altpll:altpll_component|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|pll:pll_inst|altpll:altpll_component                                                                                         ; altpll          ; work         ;
 ;          |pll_altpll:auto_generated|            ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated                                                               ; pll_altpll      ; work         ;
-;    |ps2:kb_ps2|                                 ; 35 (16)             ; 42 (6)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|ps2:kb_ps2                                                                                                                   ; ps2             ; work         ;
+;    |ps2:kb_ps2|                                 ; 36 (17)             ; 42 (6)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|ps2:kb_ps2                                                                                                                   ; ps2             ; work         ;
 ;       |keyboard:u1|                             ; 17 (17)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|ps2:kb_ps2|keyboard:u1                                                                                                       ; keyboard        ; work         ;
 ;       |oneshot:pulser|                          ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|ps2:kb_ps2|oneshot:pulser                                                                                                    ; oneshot         ; work         ;
-;    |score:score_inst|                           ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|score:score_inst                                                                                                             ; score           ; work         ;
+;    |score:score_inst|                           ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|score:score_inst                                                                                                             ; score           ; work         ;
 ;    |tank:tank1|                                 ; 92 (92)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|tank:tank1                                                                                                                   ; tank            ; work         ;
 ;    |tank:tank2|                                 ; 92 (92)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|tank:tank2                                                                                                                   ; tank            ; work         ;
-;    |vga_top_level:vga_top|                      ; 250 (0)             ; 49 (0)                    ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|vga_top_level:vga_top                                                                                                        ; vga_top_level   ; work         ;
-;       |pixelGenerator:videoGen|                 ; 191 (191)           ; 3 (3)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen                                                                                ; pixelGenerator  ; work         ;
+;    |vga_top_level:vga_top|                      ; 248 (0)             ; 49 (0)                    ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|vga_top_level:vga_top                                                                                                        ; vga_top_level   ; work         ;
+;       |pixelGenerator:videoGen|                 ; 189 (189)           ; 3 (3)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen                                                                                ; pixelGenerator  ; work         ;
 ;          |colorROM:colors|                      ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors                                                                ; colorROM        ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;                |altsyncram_e481:auto_generated| ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_e481:auto_generated ; altsyncram_e481 ; work         ;
@@ -1077,21 +1077,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 3                           ;
 ;     plain             ; 92                          ;
 ; cycloneiii_io_obuf    ; 8                           ;
-; cycloneiii_lcell_comb ; 805                         ;
+; cycloneiii_lcell_comb ; 802                         ;
 ;     arith             ; 410                         ;
 ;         2 data inputs ; 258                         ;
 ;         3 data inputs ; 152                         ;
-;     normal            ; 395                         ;
+;     normal            ; 392                         ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 29                          ;
-;         2 data inputs ; 92                          ;
-;         3 data inputs ; 47                          ;
-;         4 data inputs ; 219                         ;
+;         2 data inputs ; 96                          ;
+;         3 data inputs ; 44                          ;
+;         4 data inputs ; 215                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 24                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.90                        ;
-; Average LUT depth     ; 3.95                        ;
+; Average LUT depth     ; 4.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1110,7 +1110,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Dec 03 01:04:37 2025
+    Info: Processing started: Wed Dec 03 01:35:52 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tank_game -c tank_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1307,17 +1307,17 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 976 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 973 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 42 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 897 logic cells
+    Info (21061): Implemented 894 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 13285 megabytes
-    Info: Processing ended: Wed Dec 03 01:04:55 2025
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 13284 megabytes
+    Info: Processing ended: Wed Dec 03 01:36:09 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:32
 
 

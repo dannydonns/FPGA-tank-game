@@ -132,4 +132,5 @@ set_location_assignment PIN_M2 -to lcd_rs_out
 set_location_assignment PIN_M1 -to lcd_rw_out
 set_location_assignment PIN_G20 -to reset_led_out
 set_location_assignment PIN_H15 -to sec_led_out
+set_global_assignment -name SDC_FILE SDC1.sdc
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
