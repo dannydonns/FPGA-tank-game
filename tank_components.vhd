@@ -14,8 +14,8 @@ package tank_components is
 		);
 	end component counter;
 
-	constant tank_size_x : integer := 15;
-	constant tank_size_y : integer := 40;
+	constant tank_size_x : integer := 30;
+	constant tank_size_y : integer := 80;
 
 end package tank_components;
 

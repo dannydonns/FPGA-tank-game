@@ -83,10 +83,10 @@ begin
 			-- 	colorAddress <= color_white;
 			-- end if;
 			-- and (pixel_column_int > tank_1x - tank_size_x) and (pixel_row_int < tank_1y + tank_size_y) and (pixel_row_int > tank_1y - tank_size_y) 
-            if (pixel_column_int < tank_1x + tank_size_x) and (pixel_column_int > tank_1x - tank_size_x) and (pixel_row_int < tank_1y + tank_size_y) and (pixel_row_int > tank_1y - tank_size_y) then
+            if (pixel_column_int < tank_1x + tank_size_x) and (pixel_column_int > tank_1x) and (pixel_row_int < tank_1y + tank_size_y) and (pixel_row_int > tank_1y) then
                 colorAddress <= color_red;
             
-            elsif (pixel_column_int < tank_2x + tank_size_x) and (pixel_column_int > tank_2x - tank_size_x) and (pixel_row_int < tank_2y + tank_size_y) and (pixel_row_int > tank_2y - tank_size_y) then
+            elsif (pixel_column_int < tank_2x + tank_size_x) and (pixel_column_int > tank_2x) and (pixel_row_int < tank_2y + tank_size_y) and (pixel_row_int > tank_2y) then
                 colorAddress <= color_green;
             
             else

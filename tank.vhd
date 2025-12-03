@@ -42,15 +42,15 @@ architecture behavioral of tank is
 			
 			when "01" =>
 				if(dir='0') then
-					x_adv := x - 5;
+					x_adv := x - 4;
 				else
-					x_adv := x + 5;
+					x_adv := x + 4;
 				end if;
 			when "10" =>
 				if(dir='0') then
-					x_adv := x - 10;
+					x_adv := x - 6;
 				else
-					x_adv := x + 10;
+					x_adv := x + 6;
 				end if;
 			when others => 
 				if(dir='0') then
@@ -87,7 +87,7 @@ begin
 		-- left or right
 		case dir_curr is
 			when '0' =>
-				if (x_curr < to_unsigned(tank_size, 10)) then
+				if (x_curr < to_unsigned(15, 10)) then
 					-- switch directions and move in a different direction
 					dir_nxt <= '1';
 				else
@@ -105,20 +105,14 @@ begin
 		
 
 		
-		if speed = '1' then
+		if ((speed = '1') and (key_curr = '0')) then
 			case spd_curr is
 				when "00" =>
-					if (key_curr = '0') then
-						spd_nxt <= "01";
-					end if;
+					spd_nxt <= "01";
 				when "01" =>
-					if (key_curr = '0') then
-						spd_nxt <= "10";
-					end if;
+					spd_nxt <= "10";
 				when others =>
-					if (key_curr = '0') then
-						spd_nxt <= "00";
-					end if;
+					spd_nxt <= "00";
 			end case;
 		end if;
 		key_nxt <= speed;
