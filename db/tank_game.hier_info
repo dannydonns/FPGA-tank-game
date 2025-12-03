@@ -2,7 +2,7 @@
 clk_50 => pll:pll_inst.inclk0
 clk_50 => vga_top_level:vga_top.clock_50
 clk_50 => ps2:kb_ps2.clock_50MHz
-global_reset => counter:game_cnt.rst
+global_reset => counter_rst.IN1
 global_reset => tank:tank1.rst
 global_reset => tank:tank2.rst
 global_reset => vga_top_level:vga_top.reset_N
@@ -45,6 +45,8 @@ kb_leds[2] << ps2:kb_ps2.key_S
 kb_leds[3] << ps2:kb_ps2.key_A
 led_hit_1_on_2 << collision:collision_1_2.collision_signal
 led_hit_2_on_1 << collision:collision_2_1.collision_signal
+one_wins << score:score_inst.w1
+two_wins << score:score_inst.w2
 
 
 |tank_game|pll:pll_inst
@@ -1374,6 +1376,7 @@ key_A <= key_A_reg.DB_MAX_OUTPUT_PORT_TYPE
 key_S <= key_S_reg.DB_MAX_OUTPUT_PORT_TYPE
 key_K <= key_K_reg.DB_MAX_OUTPUT_PORT_TYPE
 key_L <= key_L_reg.DB_MAX_OUTPUT_PORT_TYPE
+key_R <= key_R_reg.DB_MAX_OUTPUT_PORT_TYPE
 hex0[0] <= leddcd:u_led0.segments_out[0]
 hex0[1] <= leddcd:u_led0.segments_out[1]
 hex0[2] <= leddcd:u_led0.segments_out[2]
@@ -1676,5 +1679,36 @@ y_tank[8] => LessThan2.IN3
 y_tank[9] => Add1.IN8
 y_tank[9] => LessThan2.IN2
 collision_signal <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tank_game|score:score_inst
+clk => w2~reg0.CLK
+clk => w1~reg0.CLK
+clk => c2_prev.CLK
+clk => c1_prev.CLK
+clk => score2_reg[0].CLK
+clk => score2_reg[1].CLK
+clk => score1_reg[0].CLK
+clk => score1_reg[1].CLK
+rst => w2~reg0.ACLR
+rst => w1~reg0.ACLR
+rst => c2_prev.ACLR
+rst => c1_prev.ACLR
+rst => score2_reg[0].ACLR
+rst => score2_reg[1].ACLR
+rst => score1_reg[0].ACLR
+rst => score1_reg[1].ACLR
+c1 => process_0.IN1
+c1 => c1_prev.DATAIN
+c1 => process_0.IN1
+c2 => process_0.IN1
+c2 => c2_prev.DATAIN
+c2 => process_0.IN1
+score1[0] <= score1_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+score1[1] <= score1_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+score2[0] <= score2_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+score2[1] <= score2_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+w1 <= w1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+w2 <= w2~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -60,7 +60,6 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_AB28 -to global_reset
 set_location_assignment PIN_Y2 -to clk_50
-set_location_assignment PIN_G19 -to led_out
 set_global_assignment -name VHDL_FILE tank.vhd
 set_global_assignment -name VHDL_FILE tank_components.vhd
 set_global_assignment -name VHDL_FILE tank_game.vhd
@@ -118,4 +117,6 @@ set_global_assignment -name VHDL_FILE output_files/bullet.vhd
 set_global_assignment -name QIP_FILE pll.qip
 set_location_assignment PIN_H15 -to led_hit_1_on_2
 set_location_assignment PIN_G16 -to led_hit_2_on_1
+set_location_assignment PIN_G19 -to one_wins
+set_location_assignment PIN_F19 -to two_wins
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

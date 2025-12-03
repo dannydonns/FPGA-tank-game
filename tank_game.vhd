@@ -27,7 +27,11 @@ entity tank_game is
 
 		--led collision indicators
 		led_hit_1_on_2 : out std_logic;
-		led_hit_2_on_1 : out std_logic
+		led_hit_2_on_1 : out std_logic;
+
+		--led winner indicators
+		one_wins: out std_logic;
+		two_wins: out std_logic
 	);
 end entity tank_game;
 
@@ -100,11 +104,12 @@ architecture structural of tank_game is
 			hist1        : out std_logic_vector(7 downto 0);
 			hist0        : out std_logic_vector(7 downto 0);
 
-			-- NEW: key state outputs (1 = currently pressed)
+			-- key state outputs (1 = currently pressed)
 			key_A        : out std_logic;
 			key_S        : out std_logic;
 			key_K        : out std_logic;
 			key_L        : out std_logic;
+			key_R        : out std_logic;
 
 			-- single 7-seg HEX display (keep pin planning simple)
 			hex0         : out std_logic_vector(6 downto 0)
@@ -149,6 +154,29 @@ architecture structural of tank_game is
         collision_signal   : out std_logic
     );
 end component;
+
+component score is
+    port(
+        -- clock, reset
+        clk, rst : in std_logic;
+        -- collision / hit signals for tank1, tank2
+        c1, c2 : in std_logic;
+        -- 2-bit scores
+        score1, score2 : out std_logic_vector(1 downto 0);
+        -- win signals
+        w1, w2 : out std_logic
+    );  
+end component;
+
+	--- counter reset
+	signal counter_rst : std_logic;
+	signal r_pressed : std_logic := '0';
+
+	--score signals
+	signal score1_sig : std_logic_vector(1 downto 0);
+	signal score2_sig : std_logic_vector(1 downto 0);
+	signal w1_sig     : std_logic;
+	signal w2_sig     : std_logic;
 
 	--bullet signals
 	signal bullet1_active : std_logic;
@@ -216,13 +244,14 @@ begin
 		c0		=> clk_100
 	);
 
+	counter_rst <= global_reset or w1_sig or w2_sig or r_pressed;
 	game_cnt : counter
 		generic map(
 			max_count => 500000
 		)
 		port map(
 			clk => clk_100,
-			rst => global_reset,
+			rst => counter_rst,
 
 			pulse_out => counter_pulse
 		);
@@ -349,6 +378,7 @@ begin
             key_S         => key_S_raw,
             key_K         => key_K_raw,
             key_L         => key_L_raw,
+			key_R         => r_pressed,
 
             hex0          => ps2_hex0
         );
@@ -394,5 +424,22 @@ begin
 	--led indicators for hits
 	led_hit_1_on_2 <= hit_1_on_2;
 	led_hit_2_on_1 <= hit_2_on_1;
+
+	--score
+	score_inst : score
+    port map(
+        clk    => clk_100,     -- or your VGA/game clock
+        rst    => r_pressed,	  -- reset on R key press
+        c1     => hit_1_on_2,
+        c2     => hit_2_on_1,
+        score1 => score1_sig,
+        score2 => score2_sig,
+        w1     => w1_sig,
+        w2     => w2_sig
+    );
+
+	--winner LEDs
+	one_wins <= w1_sig;
+	two_wins <= w2_sig;
 
 end architecture structural;

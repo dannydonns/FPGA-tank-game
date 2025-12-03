@@ -140,6 +140,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "one_wins",
+					"strict" : false
+				},
+				{
+					"name" : "two_wins",
+					"strict" : false
+				},
+				{
 					"name" : "clk_50",
 					"strict" : false
 				},
