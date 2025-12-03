@@ -9,9 +9,13 @@ entity vga_top_level is
 
         -- tank1 inputs
         tank1_x, tank1_y : in std_logic_vector(9 downto 0);
-
         -- tank2 inputs
         tank2_x, tank2_y : in std_logic_vector(9 downto 0);
+
+        --bullet1 inputs
+        bullet1_x, bullet1_y : in std_logic_vector(9 downto 0);
+        --bullet2 inputs
+        bullet2_x, bullet2_y : in std_logic_vector(9 downto 0);
 
         -- vga
         vga_red, vga_green, vga_blue    : out std_logic_vector(7 downto 0);
@@ -41,6 +45,10 @@ architecture structural of vga_top_level is
         tank1x, tank1y : in std_logic_vector(9 downto 0);
         tank2x, tank2y : in std_logic_vector(9 downto 0);
 
+        --bullet1, bullet2 inputs
+        bullet1x, bullet1y : in std_logic_vector(9 downto 0);
+        bullet2x, bullet2y : in std_logic_vector(9 downto 0);
+
         -- vga outputs
         red_out, green_out, blue_out : out std_logic_vector(7 downto 0)
     );
@@ -59,8 +67,11 @@ begin
 --------------------------------------------------------------------------------------------
 
 	videoGen : pixelGenerator
-        generic map(10,40)
-		port map(clock_50, VGA_clk_int, reset_N, video_on_int, eof, pixel_row_int, pixel_column_int, tank1_x, tank1_y, tank2_x, tank2_y, VGA_RED, VGA_GREEN, VGA_BLUE);
+        generic map(60,40)
+		port map(clock_50, VGA_clk_int, reset_N, video_on_int, eof, pixel_row_int, pixel_column_int, 
+                tank1_x, tank1_y, tank2_x, tank2_y, 
+                bullet1_x, bullet1_y, bullet2_x, bullet2_y, 
+                VGA_RED, VGA_GREEN, VGA_BLUE);
 
 --------------------------------------------------------------------------------------------
 --This section should not be modified in your design.  This section handles the VGA timing signals

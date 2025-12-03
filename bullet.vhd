@@ -1,69 +1,104 @@
--- library IEEE;
--- use IEEE.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
--- entity bullet is
-	
--- 	generic(
--- 		x_start, y_start : natural;
--- 		bullet_size_x: natural;
--- 		bullet_size_y : natural
--- 	);
+entity bullet is
+    generic(
+        speed    : integer := 4;    -- pixels per tick
+        screen_h : integer := 480   -- vertical resolution (e.g., 480)
+    );
+    port(
+        clk       : in  std_logic;               -- game tick (e.g., counter_pulse)
+        rst       : in  std_logic;               -- active-high reset
 
--- 	port(
--- 		clk, rst : in std_logic;
--- 		x_tank, y_tank : in unsigned(9 downto 0);
--- 		fire : in std_logic;
-		
--- 		-- out
--- 		x_out, y_out : unsigned(9 downto 0)
--- 	);
+        fire      : in  std_logic;               -- fire button (e.g., ps2_key_S / ps2_key_L)
+        direction : in  std_logic;               -- '0' = up, '1' = down
 
--- end entity;
+        tank_x    : in  unsigned(9 downto 0);    -- tank position at spawn time
+        tank_y    : in  unsigned(9 downto 0);
 
+        active    : out std_logic;               -- 1 if bullet on screen
+        x_out     : out unsigned(9 downto 0);
+        y_out     : out unsigned(9 downto 0)
+    );
+end entity bullet;
 
--- architecture behavioral of bullet is
+architecture rtl of bullet is
+    -- internal state
+    signal b_active : std_logic := '0';
+    signal bx, by   : unsigned(9 downto 0) := (others => '0');
 
--- 	-- state variables
--- 	signal x_curr : unsigned(9 downto 0) := to_unsigned(x_start, 10);
--- 	signal x_nxt : unsigned(9 downto 0) := to_unsigned(x_start, 10);
--- 	signal y_curr : unsigned(9 downto 0) := to_unsigned(y_start, 10);
--- 	signal y_nxt : unsigned(9 downto 0) := to_unsigned(y_start, 10);
+    constant spd   : unsigned(9 downto 0) := to_unsigned(speed, 10);
+    constant max_y : unsigned(9 downto 0) := to_unsigned(screen_h - 1, 10);
+begin
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+                b_active <= '0';
+                bx       <= (others => '0');
+                by       <= (others => '0');
 
--- 	-- fire state
--- 	signal fstate_curr : std_logic := '0'; -- '0' is reset, '1' is fired
--- 	signal fstate_nxt : std_logic := '0';
+            else
+                if b_active = '0' then
+                    -- no bullet currently on screen
+                    -- if fire is held, spawn at current tank position
+                    if fire = '1' then
+                        bx       <= tank_x;
+                        by       <= tank_y;
+                        b_active <= '1';
+                    end if;
 
--- 	-- fire key state (prevent from constant holding down)
--- 	signal fkey_curr : std_logic := '0';
--- 	signal fkey_nxt : std_logic := '0';
+                else
+                    -- bullet is flying
+                    if direction = '0' then
+                        --------------------------------------------------
+                        -- DIRECTION = UP (toward y = 0)
+                        --------------------------------------------------
+                        if by > spd then
+                            -- move up
+                            by <= by - spd;
+                        else
+                            -- reached / passed top edge
+                            if fire = '1' then
+                                -- immediately respawn from tank
+                                bx <= tank_x;
+                                by <= tank_y;
+                                -- b_active stays '1'
+                            else
+                                -- stop if no longer firing
+                                b_active <= '0';
+                            end if;
+                        end if;
 
--- begin
--- 	-- clock process
--- 	clk_prc : process(clk, rst)
--- 	begin
--- 		if (rst = '1') then
--- 			-- default state is that 
--- 			fstate_curr <= '0';
--- 			x_curr <= x_tank;
--- 			y_curr <= y_tank;
--- 			fkey_curr <= '0';
+                    else
+                        --------------------------------------------------
+                        -- DIRECTION = DOWN (toward y = screen_h - 1)
+                        --------------------------------------------------
+                        if by < (max_y - spd) then
+                            -- move down
+                            by <= by + spd;
+                        else
+                            -- reached / passed bottom edge
+                            if fire = '1' then
+                                -- immediately respawn from tank
+                                bx <= tank_x;
+                                by <= tank_y;
+                                -- b_active stays '1'
+                            else
+                                -- stop if no longer firing
+                                b_active <= '0';
+                            end if;
+                        end if;
 
--- 		elsif (rising_edge(clk)) then
--- 			fstate_curr <= fstate_nxt;
--- 			x_curr <= x_nxt;
--- 			x_out <= x_curr;
--- 			y_curr <= y_nxt;
--- 			y_out <= y_curr;
--- 			fkey_curr <= fkey_nxt;
+                    end if;
 
--- 		end if;
--- 	end process;
+                end if;
+            end if;
+        end if;
+    end process;
 
--- 	state_proc : process(fire, fstate_curr)
--- 	begin
--- 		case 
-
--- 		-- update fkey
--- 		fkey_nxt <= fire;
--- 	end process;
--- end architecture behavioral;
+    active <= b_active;
+    x_out  <= bx;
+    y_out  <= by;
+end architecture rtl;

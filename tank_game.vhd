@@ -70,9 +70,13 @@ architecture structural of tank_game is
 
     	    -- tank1 inputs
     	    tank1_x, tank1_y : in std_logic_vector(9 downto 0);
-
     	    -- tank2 inputs
     	    tank2_x, tank2_y : in std_logic_vector(9 downto 0);
+
+			--bullet1 inputs
+			bullet1_x, bullet1_y : in std_logic_vector(9 downto 0);
+			--bullet2 inputs
+			bullet2_x, bullet2_y : in std_logic_vector(9 downto 0);
 
     	    -- vga
     	    vga_red, vga_green, vga_blue    : out std_logic_vector(7 downto 0);
@@ -102,6 +106,36 @@ architecture structural of tank_game is
 			hex0         : out std_logic_vector(6 downto 0)
 		);
 	end component;
+	
+	--bullet component
+	component bullet is
+    generic(
+        speed    : integer := 4;    -- pixels per tick
+        screen_h : integer := 480   -- vertical resolution (e.g., 480)
+    );
+    port(
+        clk       : in  std_logic;               -- game tick (e.g., counter_pulse)
+        rst       : in  std_logic;               -- active-high reset
+
+        fire      : in  std_logic;               -- fire button (e.g., ps2_key_S / ps2_key_L)
+        direction : in  std_logic;               -- '0' = up, '1' = down
+
+        tank_x    : in  unsigned(9 downto 0);    -- tank position at spawn time
+        tank_y    : in  unsigned(9 downto 0);
+
+        active    : out std_logic;               -- 1 if bullet on screen
+        x_out     : out unsigned(9 downto 0);
+        y_out     : out unsigned(9 downto 0)
+    );
+	end component;
+
+	--bullet signals
+	signal bullet1_active : std_logic;
+	signal bullet1x : unsigned(9 downto 0);
+	signal bullet1y : unsigned(9 downto 0);
+	signal bullet2_active : std_logic;
+	signal bullet2x : unsigned(9 downto 0);
+	signal bullet2y : unsigned(9 downto 0);
 
     -- ps2 outputs
     signal ps2_scan_code   : std_logic_vector(7 downto 0);
@@ -115,6 +149,10 @@ architecture structural of tank_game is
     signal ps2_key_K       : std_logic;
     signal ps2_key_L       : std_logic;
     signal ps2_hex0        : std_logic_vector(6 downto 0);
+	signal key_A_raw : std_logic;
+	signal key_S_raw : std_logic;
+	signal key_K_raw : std_logic;
+	signal key_L_raw : std_logic;
 
 	-- internal wires for keyboard_control
     signal kb_t1_speed : std_logic_vector(1 downto 0);
@@ -199,6 +237,9 @@ begin
 			y_out => tank2y
 		);
 
+	tank1spd <= key_S_raw;  -- S controls top tank
+	tank2spd <= key_L_raw;  -- L controls bottom tank
+
 	vga_top : vga_top_level
 		port map(
 			-- clock stuff
@@ -211,6 +252,12 @@ begin
 			tank2_x => std_logic_vector(tank2x),
 			tank2_y => std_logic_vector(tank2y),
 
+			--bullet coordinates
+			bullet1_x => std_logic_vector(bullet1x),
+			bullet1_y => std_logic_vector(bullet1y),
+			bullet2_x => std_logic_vector(bullet2x),
+			bullet2_y => std_logic_vector(bullet2y),
+
 			-- color stuff
 			vga_red => vga_red,
 			vga_green => vga_green,
@@ -222,6 +269,42 @@ begin
 			vga_blank => vga_blank,
 			vga_clk => vga_clk
 		);
+
+	--bullet1 instance
+	bullet1: bullet
+    generic map(
+        speed => 4,    -- pixels per tick
+        screen_h => 480   -- vertical resolution (e.g., 480)
+    )
+    port map(
+        	clk       => counter_pulse,
+            rst       => global_reset,
+            fire      => key_A_raw,
+            direction => '1',               -- downwards (y increasing)
+            tank_x    => tank1x,
+            tank_y    => tank1y,
+            active    => bullet1_active,
+            x_out     => bullet1x,
+            y_out     => bullet1y
+    );
+
+	--bullet2 instance
+	bullet2: bullet
+    generic map(
+        speed => 4,    -- pixels per tick
+        screen_h => 480   -- vertical resolution (e.g., 480)
+    )
+    port map(
+        	clk       => counter_pulse,
+            rst       => global_reset,
+            fire      => key_K_raw,
+            direction => '0',               -- downwards (y increasing)
+            tank_x    => tank2x,
+            tank_y    => tank2y,
+            active    => bullet2_active,
+            x_out     => bullet2x,
+            y_out     => bullet2y
+    );
 
 	 kb_ps2 : ps2
         port map(
@@ -237,17 +320,19 @@ begin
             hist1         => ps2_hist1,
             hist0         => ps2_hist0,
 
-            key_A         => ps2_key_A,
-            key_S         => tank1spd,
-            key_K         => ps2_key_K,
-            key_L         => tank2spd,
+            key_A         => key_A_raw,
+            key_S         => key_S_raw,
+            key_K         => key_K_raw,
+            key_L         => key_L_raw,
 
             hex0          => ps2_hex0
         );
 		ps2_reset <= not global_reset;
-		kb_leds(3) <= ps2_key_A;
-		kb_leds(2) <= ps2_key_S;
-		kb_leds(1) <= ps2_key_K;
-		kb_leds(0) <= ps2_key_L;
+		
+		-- LEDs reflect raw key states
+		kb_leds(3) <= key_A_raw;
+		kb_leds(2) <= key_S_raw;
+		kb_leds(1) <= key_K_raw;
+		kb_leds(0) <= key_L_raw;
 
 end architecture structural;
