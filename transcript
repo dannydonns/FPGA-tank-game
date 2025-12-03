@@ -121,3 +121,279 @@ run -all
 # ** Failure: End of extended score testbench simulation
 #    Time: 1240 ns  Iteration: 0  Process: /full_game_runs/stim File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/full_game_runs_tb.vhd
 # Break in Process stim at C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/full_game_runs_tb.vhd line 319
+quit -sim
+# End time: 11:23:55 on Dec 03,2025, Elapsed time: 7:15:35
+# Errors: 1, Warnings: 1
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
+# Compile of keyboard.vhd was successful.
+# Compile of keyboard_control.vhd was successful.
+# Compile of keyboard_control_tb.vhd was successful.
+# Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of oneshot.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
+# Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
+# Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
+# Compile of test_counter.vhd was successful.
+# Compile of vga_components.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of vga_top_level.vhd was successful.
+# Compile of bullet_collision_tb.vhd was successful.
+# 26 compiles, 0 failed with no errors.
+vsim -gui work.bullet_collision_tb
+# vsim -gui work.bullet_collision_tb 
+# Start time: 11:24:47 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+
+do collision.do
+# End time: 11:25:34 on Dec 03,2025, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 3
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/simulation_day.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:25:35 on Dec 03,2025
+# vcom -reportprogress 300 bullet.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet
+# -- Compiling architecture rtl of bullet
+# End time: 11:25:35 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:25:35 on Dec 03,2025
+# vcom -reportprogress 300 collision.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity collision
+# -- Compiling architecture rtl of collision
+# End time: 11:25:35 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:25:35 on Dec 03,2025
+# vcom -reportprogress 300 bullet_collision_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet_collision_tb
+# -- Compiling architecture tb of bullet_collision_tb
+# -- Loading entity bullet
+# -- Loading entity collision
+# End time: 11:25:35 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.bullet_collision_tb 
+# Start time: 11:25:35 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /bullet_collision_tb/collision_inst
+# ** Failure: End of bullet/tank collision testbench
+#    Time: 5660 ns  Iteration: 0  Process: /bullet_collision_tb/stim File: bullet_collision_tb.vhd
+# Break in Process stim at bullet_collision_tb.vhd line 133
+quit -sim
+# End time: 11:30:33 on Dec 03,2025, Elapsed time: 0:04:58
+# Errors: 1, Warnings: 2
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
+# Compile of keyboard.vhd was successful.
+# Compile of keyboard_control.vhd was successful.
+# Compile of keyboard_control_tb.vhd was successful.
+# Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of oneshot.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
+# Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
+# Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
+# Compile of test_counter.vhd was successful.
+# Compile of vga_components.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of vga_top_level.vhd was successful.
+# Compile of bullet_collision_tb.vhd was successful.
+# 26 compiles, 0 failed with no errors.
+vsim work.bullet_collision_tb
+# vsim work.bullet_collision_tb 
+# Start time: 11:31:23 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+do collision.do
+# End time: 11:31:38 on Dec 03,2025, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 2
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/simulation_day.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:31:38 on Dec 03,2025
+# vcom -reportprogress 300 bullet.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet
+# -- Compiling architecture rtl of bullet
+# End time: 11:31:39 on Dec 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:31:39 on Dec 03,2025
+# vcom -reportprogress 300 collision.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity collision
+# -- Compiling architecture rtl of collision
+# End time: 11:31:39 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:31:39 on Dec 03,2025
+# vcom -reportprogress 300 bullet_collision_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet_collision_tb
+# -- Compiling architecture tb of bullet_collision_tb
+# -- Loading entity bullet
+# -- Loading entity collision
+# End time: 11:31:39 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.bullet_collision_tb 
+# Start time: 11:31:39 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /bullet_collision_tb/collision_inst
+# ** Failure: End of bullet/tank collision testbench
+#    Time: 5660 ns  Iteration: 0  Process: /bullet_collision_tb/stim File: bullet_collision_tb.vhd
+# Break in Process stim at bullet_collision_tb.vhd line 133
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
+# Compile of keyboard.vhd was successful.
+# Compile of keyboard_control.vhd was successful.
+# Compile of keyboard_control_tb.vhd was successful.
+# Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of oneshot.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
+# Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
+# Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
+# Compile of test_counter.vhd was successful.
+# Compile of vga_components.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of vga_top_level.vhd was successful.
+# Compile of bullet_collision_tb.vhd was successful.
+# 26 compiles, 0 failed with no errors.
+do collision.do
+# End time: 11:33:16 on Dec 03,2025, Elapsed time: 0:01:37
+# Errors: 1, Warnings: 3
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/simulation_day.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:33:17 on Dec 03,2025
+# vcom -reportprogress 300 bullet.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet
+# -- Compiling architecture rtl of bullet
+# End time: 11:33:17 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:33:17 on Dec 03,2025
+# vcom -reportprogress 300 collision.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity collision
+# -- Compiling architecture rtl of collision
+# End time: 11:33:17 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:33:17 on Dec 03,2025
+# vcom -reportprogress 300 bullet_collision_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet_collision_tb
+# -- Compiling architecture tb of bullet_collision_tb
+# -- Loading entity bullet
+# -- Loading entity collision
+# End time: 11:33:17 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.bullet_collision_tb 
+# Start time: 11:33:17 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /bullet_collision_tb/COLLISION_DUT
+# ** Failure: End of bullet_collision_tb with 6 collision scenarios
+#    Time: 32520 ns  Iteration: 0  Process: /bullet_collision_tb/stim_proc File: bullet_collision_tb.vhd
+# Break in Process stim_proc at bullet_collision_tb.vhd line 245

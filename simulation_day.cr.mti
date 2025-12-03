@@ -124,15 +124,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling package body tank_components
 -- Loading package tank_components
 
-} {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity score
--- Compiling architecture behavioral of score
-
 } {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -141,6 +132,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package NUMERIC_STD
 -- Compiling entity collision
 -- Compiling architecture rtl of collision
+
+} {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity score
+-- Compiling architecture behavioral of score
 
 } {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -158,6 +158,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package NUMERIC_STD
 -- Compiling entity tank
 -- Compiling architecture behavioral of tank
+
+} {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package tank_components
+-- Compiling entity tank_game
+-- Compiling architecture structural of tank_game
 
 } {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -177,16 +187,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity counter_tb
 -- Compiling architecture test of counter_tb
 
-} {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package tank_components
--- Compiling entity tank_game
--- Compiling architecture structural of tank_game
-
 } {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/full_game_runs_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/full_game_runs_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -196,6 +196,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity full_game_runs
 -- Compiling architecture tb of full_game_runs
 -- Loading entity score
+
+} {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bullet
+-- Compiling architecture rtl of bullet
 
 } {} {}} C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
