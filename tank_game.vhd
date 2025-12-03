@@ -28,6 +28,13 @@ entity tank_game is
 end entity tank_game;
 
 architecture structural of tank_game is
+	component pll IS
+	PORT
+	(
+		inclk0		: IN STD_LOGIC  := '0';
+		c0		: OUT STD_LOGIC 
+	);
+	end component;
 
 	component counter is 
 		generic(
@@ -134,14 +141,24 @@ architecture structural of tank_game is
 	--ps2 reset is opposite of global reset
 	signal ps2_reset : std_logic;
 
+	-- pll clock
+	signal clk_100 : std_logic;
+
 begin
+	
+	pll_inst : pll
+	port map
+	(
+		inclk0	=> clk_50,
+		c0		=> clk_100
+	);
 
 	game_cnt : counter
 		generic map(
 			max_count => 500000
 		)
 		port map(
-			clk => clk_50,
+			clk => clk_100,
 			rst => global_reset,
 
 			pulse_out => counter_pulse
