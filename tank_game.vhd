@@ -25,6 +25,11 @@ entity tank_game is
 		--HEX0 : out std_logic_vector(6 downto 0);
 		--HEX1 : out std_logic_vector(6 downto 0)
 
+		--lcd outputs
+		lcd_rs_out, lcd_e_out, lcd_on_out, reset_led_out, sec_led_out      : OUT   STD_LOGIC;
+		lcd_rw_out                     : BUFFER STD_LOGIC;
+		data_bus_out               : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+
 		--led collision indicators
 		led_hit_1_on_2 : out std_logic;
 		led_hit_2_on_1 : out std_logic;
@@ -167,6 +172,23 @@ component score is
         w1, w2 : out std_logic
     );  
 end component;
+
+--lcd
+component de2lcd IS
+    PORT(reset, clk_50Mhz               : IN    STD_LOGIC;
+         -- game inputs
+         -- scores
+         p1_score, p2_score : in std_logic_vector(1 downto 0);
+         w1, w2 : in std_logic;
+         LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED      : OUT   STD_LOGIC;
+         LCD_RW                     : BUFFER STD_LOGIC;
+         DATA_BUS               : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+END component;
+
+	-- --lcd signals
+	-- signal LCD_RS_sig, LCD_E_sig, LCD_ON_sig, RESET_LED_sig, SEC_LED_sig : std_logic;
+	-- signal LCD_RW_sig : std_logic;
+	-- signal DATA_BUS_sig : std_logic_vector(7 downto 0);
 
 	--- counter reset
 	signal counter_rst : std_logic;
@@ -441,5 +463,14 @@ begin
 	--winner LEDs
 	one_wins <= w1_sig;
 	two_wins <= w2_sig;
+
+
+	--LCD
+	lcd: de2lcd 
+    PORT map (reset => not global_reset, clk_50Mhz=> clk_50,        
+         		p1_score => score1_sig, p2_score => score2_sig, -- scores
+         		w1 => w1_sig , w2 => w2_sig, --win signals
+         		LCD_RS => lcd_rs_out, LCD_E => lcd_e_out, LCD_ON => lcd_on_out, RESET_LED => reset_led_out, SEC_LED => sec_led_out,
+         		LCD_RW  => lcd_rw_out, data_bus => data_bus_out);
 
 end architecture structural;
