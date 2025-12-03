@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tank_game
-Tue Dec 02 22:31:44 2025
+Tue Dec 02 23:07:16 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -29,14 +29,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  21. Parameter Settings for User Entity Instance: vga_top_level:vga_top|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component
  22. Parameter Settings for User Entity Instance: bullet:bullet1
  23. Parameter Settings for User Entity Instance: bullet:bullet2
- 24. altpll Parameter Settings by Entity Instance
- 25. altsyncram Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "ps2:kb_ps2"
- 27. Port Connectivity Checks: "bullet:bullet2"
- 28. Port Connectivity Checks: "bullet:bullet1"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+ 24. Parameter Settings for User Entity Instance: collision:collision_1_2
+ 25. Parameter Settings for User Entity Instance: collision:collision_2_1
+ 26. altpll Parameter Settings by Entity Instance
+ 27. altsyncram Parameter Settings by Entity Instance
+ 28. Port Connectivity Checks: "ps2:kb_ps2"
+ 29. Port Connectivity Checks: "bullet:bullet2"
+ 30. Port Connectivity Checks: "bullet:bullet1"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -63,16 +65,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 02 22:31:44 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 02 23:07:16 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; tank_game                                   ;
 ; Top-level Entity Name              ; tank_game                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 641                                         ;
-;     Total combinational functions  ; 578                                         ;
-;     Dedicated logic registers      ; 209                                         ;
-; Total registers                    ; 209                                         ;
-; Total pins                         ; 36                                          ;
+; Total logic elements               ; 751                                         ;
+;     Total combinational functions  ; 688                                         ;
+;     Dedicated logic registers      ; 211                                         ;
+; Total registers                    ; 211                                         ;
+; Total pins                         ; 38                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 192                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -219,6 +221,7 @@ https://fpgasoftware.intel.com/eula.
 ; keyboard.vhd                     ; yes             ; Auto-Found VHDL File                   ; C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd           ;         ;
 ; oneshot.vhd                      ; yes             ; Auto-Found VHDL File                   ; C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd            ;         ;
 ; leddcd.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/leddcd.vhd             ;         ;
+; collision.vhd                    ; yes             ; Auto-Found VHDL File                   ; C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd          ;         ;
 +----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
@@ -227,23 +230,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 641                ;
+; Estimated Total logic elements              ; 751                ;
 ;                                             ;                    ;
-; Total combinational functions               ; 578                ;
+; Total combinational functions               ; 688                ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 162                ;
-;     -- 3 input functions                    ; 141                ;
-;     -- <=2 input functions                  ; 275                ;
+;     -- 4 input functions                    ; 165                ;
+;     -- 3 input functions                    ; 185                ;
+;     -- <=2 input functions                  ; 338                ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 277                ;
-;     -- arithmetic mode                      ; 301                ;
+;     -- normal mode                          ; 297                ;
+;     -- arithmetic mode                      ; 391                ;
 ;                                             ;                    ;
-; Total registers                             ; 209                ;
-;     -- Dedicated logic registers            ; 209                ;
+; Total registers                             ; 211                ;
+;     -- Dedicated logic registers            ; 211                ;
 ;     -- I/O registers                        ; 0                  ;
 ;                                             ;                    ;
-; I/O pins                                    ; 36                 ;
+; I/O pins                                    ; 38                 ;
 ; Total memory bits                           ; 192                ;
 ;                                             ;                    ;
 ; Embedded Multiplier 9-bit elements          ; 0                  ;
@@ -252,9 +255,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                  ;
 ;                                             ;                    ;
 ; Maximum fan-out node                        ; global_reset~input ;
-; Maximum fan-out                             ; 128                ;
-; Total fan-out                               ; 2374               ;
-; Average fan-out                             ; 2.69               ;
+; Maximum fan-out                             ; 129                ;
+; Total fan-out                               ; 2648               ;
+; Average fan-out                             ; 2.65               ;
 +---------------------------------------------+--------------------+
 
 
@@ -263,9 +266,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |tank_game                                      ; 578 (0)             ; 209 (0)                   ; 192         ; 0            ; 0       ; 0         ; 36   ; 0            ; |tank_game                                                                                                                              ; tank_game       ; work         ;
-;    |bullet:bullet1|                             ; 34 (34)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|bullet:bullet1                                                                                                               ; bullet          ; work         ;
-;    |bullet:bullet2|                             ; 34 (34)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|bullet:bullet2                                                                                                               ; bullet          ; work         ;
+; |tank_game                                      ; 688 (0)             ; 211 (0)                   ; 192         ; 0            ; 0       ; 0         ; 38   ; 0            ; |tank_game                                                                                                                              ; tank_game       ; work         ;
+;    |bullet:bullet1|                             ; 36 (36)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|bullet:bullet1                                                                                                               ; bullet          ; work         ;
+;    |bullet:bullet2|                             ; 36 (36)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|bullet:bullet2                                                                                                               ; bullet          ; work         ;
+;    |collision:collision_1_2|                    ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|collision:collision_1_2                                                                                                      ; collision       ; work         ;
+;    |collision:collision_2_1|                    ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|collision:collision_2_1                                                                                                      ; collision       ; work         ;
 ;    |counter:game_cnt|                           ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|counter:game_cnt                                                                                                             ; counter         ; work         ;
 ;    |pll:pll_inst|                               ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|pll:pll_inst                                                                                                                 ; pll             ; work         ;
 ;       |altpll:altpll_component|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tank_game|pll:pll_inst|altpll:altpll_component                                                                                         ; altpll          ; work         ;
@@ -308,10 +313,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+------------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal          ; Free of Timing Hazards ;
 +----------------------------------------------------+------------------------------+------------------------+
-; tank:tank1|spd_nxt[1]                              ; tank:tank1|direction_process ; yes                    ;
-; tank:tank1|spd_nxt[0]                              ; tank:tank1|direction_process ; yes                    ;
 ; tank:tank2|spd_nxt[1]                              ; tank:tank2|direction_process ; yes                    ;
 ; tank:tank2|spd_nxt[0]                              ; tank:tank2|direction_process ; yes                    ;
+; tank:tank1|spd_nxt[1]                              ; tank:tank1|direction_process ; yes                    ;
+; tank:tank1|spd_nxt[0]                              ; tank:tank1|direction_process ; yes                    ;
 ; Number of user-specified and inferred latches = 4  ;                              ;                        ;
 +----------------------------------------------------+------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -322,12 +327,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------------------------------+----------------------------------------+
 ; Register name                                         ; Reason for Removal                     ;
 +-------------------------------------------------------+----------------------------------------+
-; bullet:bullet2|by[1]                                  ; Merged with bullet:bullet2|by[0]       ;
-; bullet:bullet1|by[1]                                  ; Merged with bullet:bullet1|by[0]       ;
 ; bullet:bullet2|by[0]                                  ; Stuck at GND due to stuck port data_in ;
 ; bullet:bullet1|by[0]                                  ; Stuck at GND due to stuck port data_in ;
 ; vga_top_level:vga_top|vga_sync:videoSync|pixel_row[9] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 5                 ;                                        ;
+; Total Number of Removed Registers = 3                 ;                                        ;
 +-------------------------------------------------------+----------------------------------------+
 
 
@@ -336,12 +339,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 209   ;
+; Total registers                              ; 211   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
-; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 62    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 96    ;
+; Number of registers using Clock Enable       ; 100   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -351,12 +354,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; tank:tank1|x_curr[8]                   ; 6       ;
-; tank:tank1|x_curr[7]                   ; 6       ;
-; tank:tank1|x_curr[4]                   ; 6       ;
 ; tank:tank2|x_curr[8]                   ; 6       ;
 ; tank:tank2|x_curr[7]                   ; 6       ;
 ; tank:tank2|x_curr[4]                   ; 6       ;
+; tank:tank1|x_curr[8]                   ; 6       ;
+; tank:tank1|x_curr[7]                   ; 6       ;
+; tank:tank1|x_curr[4]                   ; 6       ;
 ; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
 
@@ -366,15 +369,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_game|vga_top_level:vga_top|vga_sync:videoSync|v_count[9]           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |tank_game|bullet:bullet2|by[9]                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_game|bullet:bullet2|bx[8]                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |tank_game|bullet:bullet1|by[8]                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_game|bullet:bullet1|bx[8]                                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_game|ps2:kb_ps2|keyboard:u1|INCNT[0]                               ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |tank_game|tank:tank1|Mux6                                               ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |tank_game|tank:tank2|Mux10                                              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tank_game|vga_top_level:vga_top|pixelGenerator:videoGen|colorAddress[2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_game|vga_top_level:vga_top|vga_sync:videoSync|v_count[4]           ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |tank_game|bullet:bullet2|by[1]                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_game|bullet:bullet2|bx[0]                                          ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |tank_game|bullet:bullet1|by[5]                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |tank_game|bullet:bullet1|bx[7]                                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |tank_game|ps2:kb_ps2|keyboard:u1|INCNT[3]                               ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |tank_game|tank:tank2|Mux4                                               ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |tank_game|tank:tank1|Mux5                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 
 
@@ -872,7 +875,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; speed          ; 4     ; Signed Integer                     ;
+; speed          ; 10    ; Signed Integer                     ;
 ; screen_h       ; 480   ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -883,9 +886,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; speed          ; 4     ; Signed Integer                     ;
+; speed          ; 10    ; Signed Integer                     ;
 ; screen_h       ; 480   ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: collision:collision_1_2 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; tank_size_x    ; 60    ; Signed Integer                              ;
+; tank_size_y    ; 40    ; Signed Integer                              ;
+; bullet_size_x  ; 3     ; Signed Integer                              ;
+; bullet_size_y  ; 6     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: collision:collision_2_1 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; tank_size_x    ; 60    ; Signed Integer                              ;
+; tank_size_y    ; 40    ; Signed Integer                              ;
+; bullet_size_x  ; 3     ; Signed Integer                              ;
+; bullet_size_y  ; 6     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -966,29 +995,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 36                          ;
-; cycloneiii_ff         ; 209                         ;
+; boundary_port         ; 38                          ;
+; cycloneiii_ff         ; 211                         ;
 ;     CLR               ; 30                          ;
 ;     CLR SCLR          ; 32                          ;
-;     ENA               ; 96                          ;
+;     ENA               ; 100                         ;
 ;     SCLR              ; 5                           ;
-;     SLD               ; 4                           ;
-;     plain             ; 42                          ;
-; cycloneiii_lcell_comb ; 578                         ;
-;     arith             ; 301                         ;
-;         2 data inputs ; 189                         ;
-;         3 data inputs ; 112                         ;
-;     normal            ; 277                         ;
+;     SLD               ; 3                           ;
+;     plain             ; 41                          ;
+; cycloneiii_lcell_comb ; 688                         ;
+;     arith             ; 391                         ;
+;         2 data inputs ; 239                         ;
+;         3 data inputs ; 152                         ;
+;     normal            ; 297                         ;
 ;         0 data inputs ; 6                           ;
-;         1 data inputs ; 21                          ;
-;         2 data inputs ; 59                          ;
-;         3 data inputs ; 29                          ;
-;         4 data inputs ; 162                         ;
+;         1 data inputs ; 27                          ;
+;         2 data inputs ; 66                          ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 165                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.70                        ;
-; Average LUT depth     ; 4.06                        ;
+; Max LUT depth         ; 5.90                        ;
+; Average LUT depth     ; 4.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1007,7 +1036,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Dec 02 22:31:26 2025
+    Info: Processing started: Tue Dec 02 23:06:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tank_game -c tank_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1018,7 +1047,7 @@ Info (12021): Found 2 design units, including 0 entities, in source file tank_co
     Info (12022): Found design unit 1: tank_components File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd Line: 5
     Info (12022): Found design unit 2: tank_components-body File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file tank_game.vhd
-    Info (12022): Found design unit 1: tank_game-structural File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 30
+    Info (12022): Found design unit 1: tank_game-structural File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 34
     Info (12023): Found entity 1: tank_game File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
     Info (12022): Found design unit 1: counter-arch File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/counter.vhd Line: 19
@@ -1031,16 +1060,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
     Info (12022): Found design unit 1: pll-SYN File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd Line: 52
     Info (12023): Found entity 1: pll File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd Line: 43
 Info (12127): Elaborating entity "tank_game" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(133): object "bullet1_active" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 133
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(136): object "bullet2_active" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 136
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(141): object "ps2_scan_code" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 141
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(142): object "ps2_scan_ready" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 142
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(143): object "ps2_hist3" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 143
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(144): object "ps2_hist2" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 144
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(145): object "ps2_hist1" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 145
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(146): object "ps2_hist0" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 146
-Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(151): object "ps2_hex0" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 151
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 187
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(154): object "bullet1_active" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 154
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(157): object "bullet2_active" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 157
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(162): object "ps2_scan_code" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 162
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(163): object "ps2_scan_ready" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 163
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(164): object "ps2_hist3" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 164
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(165): object "ps2_hist2" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 165
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(166): object "ps2_hist1" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 166
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(167): object "ps2_hist0" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 167
+Warning (10036): Verilog HDL or VHDL warning at tank_game.vhd(172): object "ps2_hex0" assigned a value but never read File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 172
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 212
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd Line: 134
 Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd Line: 134
 Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd Line: 134
@@ -1101,9 +1130,9 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "counter" for hierarchy "counter:game_cnt" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 194
+Info (12128): Elaborating entity "counter" for hierarchy "counter:game_cnt" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 219
 Warning (10492): VHDL Process Statement warning at counter.vhd(35): signal "pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/counter.vhd Line: 35
-Info (12128): Elaborating entity "tank" for hierarchy "tank:tank1" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 210
+Info (12128): Elaborating entity "tank" for hierarchy "tank:tank1" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 235
 Warning (10540): VHDL Signal Declaration warning at tank.vhd(26): used explicit default value for signal "y_t" because signal was never assigned a value File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 26
 Warning (10492): VHDL Process Statement warning at tank.vhd(108): signal "key_curr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 108
 Warning (10492): VHDL Process Statement warning at tank.vhd(109): signal "spd_curr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 109
@@ -1111,7 +1140,7 @@ Warning (10492): VHDL Process Statement warning at tank.vhd(120): signal "spd_cu
 Warning (10631): VHDL Process Statement warning at tank.vhd(85): inferring latch(es) for signal or variable "spd_nxt", which holds its previous value in one or more paths through the process File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 85
 Info (10041): Inferred latch for "spd_nxt[0]" at tank.vhd(85) File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 85
 Info (10041): Inferred latch for "spd_nxt[1]" at tank.vhd(85) File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 85
-Info (12128): Elaborating entity "tank" for hierarchy "tank:tank2" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 225
+Info (12128): Elaborating entity "tank" for hierarchy "tank:tank2" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 250
 Warning (10540): VHDL Signal Declaration warning at tank.vhd(26): used explicit default value for signal "y_t" because signal was never assigned a value File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 26
 Warning (10492): VHDL Process Statement warning at tank.vhd(108): signal "key_curr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 108
 Warning (10492): VHDL Process Statement warning at tank.vhd(109): signal "spd_curr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 109
@@ -1122,7 +1151,7 @@ Info (10041): Inferred latch for "spd_nxt[1]" at tank.vhd(85) File: C:/Users/zac
 Warning (12125): Using design file vga_top_level.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: vga_top_level-structural File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd Line: 26
     Info (12023): Found entity 1: vga_top_level File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd Line: 5
-Info (12128): Elaborating entity "vga_top_level" for hierarchy "vga_top_level:vga_top" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 243
+Info (12128): Elaborating entity "vga_top_level" for hierarchy "vga_top_level:vga_top" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 268
 Warning (12125): Using design file pixelgenerator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: pixelGenerator-behavioral File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelgenerator.vhd Line: 28
     Info (12023): Found entity 1: pixelGenerator File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelgenerator.vhd Line: 5
@@ -1154,11 +1183,11 @@ Warning (12125): Using design file vga_sync.vhd, which is not specified as a des
     Info (12022): Found design unit 1: vga_sync-behavioral File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd Line: 15
     Info (12023): Found entity 1: vga_sync File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd Line: 5
 Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_top_level:vga_top|vga_sync:videoSync" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd Line: 81
-Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet1" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 274
+Info (12128): Elaborating entity "bullet" for hierarchy "bullet:bullet1" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 299
 Warning (12125): Using design file ps2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: ps2-structural File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd Line: 28
     Info (12023): Found entity 1: ps2 File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd Line: 6
-Info (12128): Elaborating entity "ps2" for hierarchy "ps2:kb_ps2" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 309
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:kb_ps2" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 334
 Warning (12125): Using design file keyboard.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: keyboard-a File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd Line: 14
     Info (12023): Found entity 1: keyboard File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd Line: 6
@@ -1171,21 +1200,25 @@ Warning (12125): Using design file leddcd.vhd, which is not specified as a desig
     Info (12022): Found design unit 1: leddcd-data_flow File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/leddcd.vhd Line: 12
     Info (12023): Found entity 1: leddcd File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/leddcd.vhd Line: 5
 Info (12128): Elaborating entity "leddcd" for hierarchy "ps2:kb_ps2|leddcd:u_led0" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd Line: 112
+Warning (12125): Using design file collision.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: collision-rtl File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd Line: 24
+    Info (12023): Found entity 1: collision File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd Line: 5
+Info (12128): Elaborating entity "collision" for hierarchy "collision:collision_1_2" File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd Line: 364
 Info (13000): Registers with preset signals will power-up high File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd Line: 70
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 728 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 840 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 667 logic cells
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 777 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 13277 megabytes
-    Info: Processing ended: Tue Dec 02 22:31:44 2025
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:34
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 13281 megabytes
+    Info: Processing ended: Tue Dec 02 23:07:16 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:31
 
 

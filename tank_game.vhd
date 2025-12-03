@@ -19,11 +19,15 @@ entity tank_game is
 		-- ps2 keyboard inputs
         ps2_clk  : in  std_logic;
         ps2_data : in  std_logic;
-        kb_leds   : out std_logic_vector(3 downto 0)  -- [3]=A, [2]=S, [1]=K, [0]=L
+        kb_leds   : out std_logic_vector(3 downto 0);  -- [3]=A, [2]=S, [1]=K, [0]=L
 
 		--scan code debug outputs
 		--HEX0 : out std_logic_vector(6 downto 0);
 		--HEX1 : out std_logic_vector(6 downto 0)
+
+		--led collision indicators
+		led_hit_1_on_2 : out std_logic;
+		led_hit_2_on_1 : out std_logic
 	);
 end entity tank_game;
 
@@ -129,6 +133,23 @@ architecture structural of tank_game is
     );
 	end component;
 
+	component collision is
+    generic(
+        tank_size_x   : natural := 40;
+        tank_size_y   : natural := 40;
+        bullet_size_x : natural := 2;
+        bullet_size_y : natural := 4
+    );
+    port(
+        -- bullet coords (top-left of bullet rect)
+        x_bullet, y_bullet : in unsigned(9 downto 0);
+        -- tank coords (top-left of tank rect)
+        x_tank,  y_tank    : in unsigned(9 downto 0);
+        -- 1 if rectangles overlap this cycle
+        collision_signal   : out std_logic
+    );
+end component;
+
 	--bullet signals
 	signal bullet1_active : std_logic;
 	signal bullet1x : unsigned(9 downto 0);
@@ -181,6 +202,10 @@ architecture structural of tank_game is
 
 	-- pll clock
 	signal clk_100 : std_logic;
+
+	--collision signals
+	signal hit_1_on_2 : std_logic;
+	signal hit_2_on_1 : std_logic;
 
 begin
 	
@@ -273,7 +298,7 @@ begin
 	--bullet1 instance
 	bullet1: bullet
     generic map(
-        speed => 4,    -- pixels per tick
+        speed => 10,    -- pixels per tick
         screen_h => 480   -- vertical resolution (e.g., 480)
     )
     port map(
@@ -291,7 +316,7 @@ begin
 	--bullet2 instance
 	bullet2: bullet
     generic map(
-        speed => 4,    -- pixels per tick
+        speed => 10,    -- pixels per tick
         screen_h => 480   -- vertical resolution (e.g., 480)
     )
     port map(
@@ -334,5 +359,40 @@ begin
 		kb_leds(2) <= key_S_raw;
 		kb_leds(1) <= key_K_raw;
 		kb_leds(0) <= key_L_raw;
+
+	--collisions	
+	collision_1_2 : collision
+		generic map(
+			tank_size_x   => 60,
+			tank_size_y   => 40,
+			bullet_size_x => 3,
+			bullet_size_y => 6
+		)
+		port map(
+			x_bullet        => bullet1x,
+			y_bullet        => bullet1y,
+			x_tank          => tank2x,
+			y_tank          => tank2y,
+			collision_signal => hit_1_on_2
+		);
+	
+	collision_2_1 : collision
+		generic map(
+			tank_size_x   => 60,
+			tank_size_y   => 40,
+			bullet_size_x => 3,
+			bullet_size_y => 6
+		)
+		port map(
+			x_bullet        => bullet2x,
+			y_bullet        => bullet2y,
+			x_tank          => tank1x,
+			y_tank          => tank1y,
+			collision_signal => hit_2_on_1
+		);
+
+	--led indicators for hits
+	led_hit_1_on_2 <= hit_1_on_2;
+	led_hit_2_on_1 <= hit_2_on_1;
 
 end architecture structural;
