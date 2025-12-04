@@ -51,7 +51,7 @@ architecture structural of tank_game is
 
 	component counter is 
 		generic(
-			max_count : natural := 50000000
+			max_count : natural := 5000
 		);
 		port(
 			clk : in std_logic;
@@ -67,7 +67,7 @@ architecture structural of tank_game is
 		);
 		port(
 			-- inputs
-			clk, pulse_clk, rst : in std_logic;
+			clk, rst : in std_logic;
 			speed : in std_logic;
 			
 			-- coordinate outputs
@@ -129,6 +129,7 @@ architecture structural of tank_game is
     );
     port(
         clk       : in  std_logic;               -- game tick (e.g., counter_pulse)
+		pls_clk : in std_logic;
         rst       : in  std_logic;               -- active-high reset
 
         fire      : in  std_logic;               -- fire button (e.g., ps2_key_S / ps2_key_L)
@@ -164,7 +165,8 @@ component score is
     port(
         -- clock, reset
         clk, rst : in std_logic;
-        -- collision / hit signals for tank1, tank2
+		pls_clk : in std_logic;
+		-- collision / hit signals for tank1, tank2
         c1, c2 : in std_logic;
         -- 2-bit scores
         score1, score2 : out std_logic_vector(1 downto 0);
@@ -290,7 +292,8 @@ begin
 		)
 		port map(
 			-- inputs
-			clk => counter_pulse,
+			clk => clk_100,
+			pls_clk => counter_pulse,
 			rst => global_reset,
 			speed => tank1spd,
 			x_out => tank1x,
@@ -305,7 +308,8 @@ begin
 		)
 		port map(
 			-- inputs
-			clk => counter_pulse,
+			clk => clk_100,
+			pls_clk => counter_pulse,
 			rst => global_reset,
 			speed => tank2spd,
 			x_out => tank2x,
@@ -352,7 +356,8 @@ begin
         screen_h => 480   -- vertical resolution (e.g., 480)
     )
     port map(
-        	clk       => counter_pulse,
+        	clk       => clk_100,
+			pls_clk => counter_pulse,
             rst       => global_reset,
             fire      => key_A_raw,
             direction => '1',               -- downwards (y increasing)
@@ -370,7 +375,8 @@ begin
         screen_h => 480   -- vertical resolution (e.g., 480)
     )
     port map(
-        	clk       => counter_pulse,
+        	clk       => clk_100,
+			pls_clk => counter_pulse,
             rst       => global_reset,
             fire      => key_K_raw,
             direction => '0',               -- downwards (y increasing)
@@ -450,6 +456,7 @@ begin
 	score_inst : score
     port map(
         clk    => clk_100,     -- or your VGA/game clock
+		pls_clk => counter_pulse,
         rst    => r_pressed,	  -- reset on R key press
         c1     => hit_1_on_2,
         c2     => hit_2_on_1,
