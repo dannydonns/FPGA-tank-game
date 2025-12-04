@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY tank_game
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:30:31  NOVEMBER 23, 2025"
-set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -60,7 +60,6 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_AB28 -to global_reset
 set_location_assignment PIN_Y2 -to clk_50
-set_location_assignment PIN_G19 -to led_out
 set_global_assignment -name VHDL_FILE tank.vhd
 set_global_assignment -name VHDL_FILE tank_components.vhd
 set_global_assignment -name VHDL_FILE tank_game.vhd
@@ -116,6 +115,21 @@ set_location_assignment PIN_AB16 -to HEX1[1]
 set_location_assignment PIN_AA17 -to HEX1[0]
 set_global_assignment -name VHDL_FILE output_files/bullet.vhd
 set_global_assignment -name QIP_FILE pll.qip
-set_location_assignment PIN_H15 -to led_hit_1_on_2
 set_location_assignment PIN_G16 -to led_hit_2_on_1
+set_location_assignment PIN_G19 -to one_wins
+set_location_assignment PIN_F19 -to two_wins
+set_location_assignment PIN_M5 -to data_bus_out[7]
+set_location_assignment PIN_M3 -to data_bus_out[6]
+set_location_assignment PIN_K2 -to data_bus_out[5]
+set_location_assignment PIN_K1 -to data_bus_out[4]
+set_location_assignment PIN_K7 -to data_bus_out[3]
+set_location_assignment PIN_L2 -to data_bus_out[2]
+set_location_assignment PIN_L1 -to data_bus_out[1]
+set_location_assignment PIN_L3 -to data_bus_out[0]
+set_location_assignment PIN_L4 -to lcd_e_out
+set_location_assignment PIN_L5 -to lcd_on_out
+set_location_assignment PIN_M2 -to lcd_rs_out
+set_location_assignment PIN_M1 -to lcd_rw_out
+set_location_assignment PIN_G20 -to reset_led_out
+set_location_assignment PIN_H15 -to sec_led_out
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

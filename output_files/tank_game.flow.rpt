@@ -1,6 +1,11 @@
 Flow report for tank_game
-Tue Dec 02 23:07:47 2025
+<<<<<<< HEAD
+Wed Dec 03 12:21:14 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+=======
+Wed Dec  3 12:36:29 2025
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+>>>>>>> 1259c2e4b405a48941a07d4d84a4855994acf604
 
 
 ---------------------
@@ -21,43 +26,66 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
 
 
 
+<<<<<<< HEAD
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 02 23:07:43 2025       ;
+; Flow Status                        ; Flow Failed - Wed Dec 03 12:21:14 2025      ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; tank_game                                   ;
 ; Top-level Entity Name              ; tank_game                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 736 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 689 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 211 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 211                                         ;
-; Total pins                         ; 38 / 529 ( 7 % )                            ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 192 / 3,981,312 ( < 1 % )                   ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
+=======
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Wed Dec  3 12:36:25 2025           ;
+; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                      ; tank_game                                       ;
+; Top-level Entity Name              ; tank_game                                       ;
+; Family                             ; Cyclone IV E                                    ;
+; Device                             ; EP4CE115F29C7                                   ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 811 / 114,480 ( < 1 % )                         ;
+;     Total combinational functions  ; 764 / 114,480 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 278 / 114,480 ( < 1 % )                         ;
+; Total registers                    ; 278                                             ;
+; Total pins                         ; 54 / 529 ( 10 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 192 / 3,981,312 ( < 1 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                 ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
+>>>>>>> 1259c2e4b405a48941a07d4d84a4855994acf604
 
 
 +-----------------------------------------+
@@ -65,7 +93,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/02/2025 23:07:00 ;
+<<<<<<< HEAD
+; Start date & time ; 12/03/2025 12:21:00 ;
+=======
+; Start date & time ; 12/03/2025 12:35:55 ;
+>>>>>>> 1259c2e4b405a48941a07d4d84a4855994acf604
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tank_game           ;
 +-------------------+---------------------+
@@ -76,7 +108,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 121372979622.176473841915592           ; --            ; --          ; --                                ;
+<<<<<<< HEAD
+; COMPILER_SIGNATURE_ID               ; 121372979622.176478606006212           ; --            ; --          ; --                                ;
+=======
+; COMPILER_SIGNATURE_ID               ; 5133028180307.176478695433808          ; --            ; --          ; --                                ;
+>>>>>>> 1259c2e4b405a48941a07d4d84a4855994acf604
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -100,11 +136,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 13281 MB            ; 00:00:31                           ;
-; Fitter               ; 00:00:19     ; 1.0                     ; 14501 MB            ; 00:00:38                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 13116 MB            ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 13312 MB            ; 00:00:03                           ;
-; Total                ; 00:00:43     ; --                      ; --                  ; 00:01:16                           ;
+<<<<<<< HEAD
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 13211 MB            ; 00:00:29                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:29                           ;
+=======
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4960 MB             ; 00:00:19                           ;
+; Fitter               ; 00:00:18     ; 1.1                     ; 6446 MB             ; 00:00:45                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4986 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4980 MB             ; 00:00:02                           ;
+; Total                ; 00:00:31     ; --                      ; --                  ; 00:01:08                           ;
+>>>>>>> 1259c2e4b405a48941a07d4d84a4855994acf604
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,10 +154,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis ; ZACHHB029        ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; ZACHHB029        ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; ZACHHB029        ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; ZACHHB029        ; Windows 10 ; 10.0       ; x86_64         ;
+=======
+; Analysis & Synthesis ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+>>>>>>> 1259c2e4b405a48941a07d4d84a4855994acf604
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -124,9 +169,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off tank_game -c tank_game
-quartus_fit --read_settings_files=off --write_settings_files=off tank_game -c tank_game
-quartus_asm --read_settings_files=off --write_settings_files=off tank_game -c tank_game
-quartus_sta tank_game -c tank_game
 
 
 

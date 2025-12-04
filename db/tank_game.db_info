@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 Quartus_Version = Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Version_Index = 520278016
-Creation_Time = Tue Dec 02 21:01:03 2025
+Creation_Time = Wed Dec 03 12:19:38 2025
+=======
+Quartus_Version = Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Version_Index = 587478272
+Creation_Time = Wed Dec  3 12:01:47 2025
+>>>>>>> 1259c2e4b405a48941a07d4d84a4855994acf604

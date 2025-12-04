@@ -9,699 +9,1142 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/zachtey/Documents/quartus_prime_projects/lab3/divider_sim
+Ebullet
+Z0 w1764867104
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 548
+Z4 dC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game
+Z5 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet.vhd
+Z6 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet.vhd
+l0
+L5 1
+V67aLD@U`Hl<S`CN:;gZ]H1
+!s100 Ba@Z`O;8TdXeI^THERVY=3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1764873078
+!i10b 1
+Z9 !s108 1764873078.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet.vhd|
+Z11 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+Z14 DEx4 work 6 bullet 0 22 67aLD@U`Hl<S`CN:;gZ]H1
+!i122 548
+l43
+L27 105
+VdDCY5>2MZa5=>TVH]LP]M0
+!s100 <JBB^Q6M9bQV5o8Idm54^0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ebullet_collision_tb
+Z15 w1764872090
+R1
+R2
+R3
+!i122 572
+R4
+Z16 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet_collision_tb.vhd
+Z17 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet_collision_tb.vhd
+l0
+L5 1
+V=g`NiSibX;K:>Uf`4:a;^1
+!s100 j<3_B:[:[If7z_L]TKV7R0
+R7
+32
+Z18 !s110 1764873081
+!i10b 1
+Z19 !s108 1764873081.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet_collision_tb.vhd|
+Z21 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/bullet_collision_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+Z22 DEx4 work 9 collision 0 22 RR39fPUK1NY?d5>AEg;Yf2
+R14
+Z23 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z24 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z25 DEx4 work 7 counter 0 22 ]9GERe5Y?9UhnJjSY[>BI1
+R1
+R2
+R3
+DEx4 work 19 bullet_collision_tb 0 22 =g`NiSibX;K:>Uf`4:a;^1
+!i122 572
+l30
+L8 269
+V_;O9SYAoEmCWoHCZO2g>N0
+!s100 OE2;8nBcW]ThUVK<GKFPD1
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Ecollision
+Z26 w1764784631
+R1
+R2
+R3
+!i122 549
+R4
+Z27 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd
+Z28 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd
+l0
+L5 1
+VRR39fPUK1NY?d5>AEg;Yf2
+!s100 BjZ;L1C3T9[Xk^AFSZ<B82
+R7
+32
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd|
+Z30 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/collision.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+R22
+!i122 549
+l29
+L24 31
+VD]6=Q=Xf<=lLTN__>4n>l1
+!s100 :If=:[bnaC=jaEbBf6k522
+R7
+32
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 1
+R12
+R13
 Ecolorrom
-Z0 w1764144817
-Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 179
-Z3 dC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game
-Z4 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd
-Z5 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd
+Z31 w1764144817
+R2
+R3
+!i122 550
+R4
+Z32 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd
+Z33 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd
 l0
 L42 1
 V]RjO]`@7HBV3<QXi`9b^e3
 !s100 @4Tb0_hTXW5cDH@>Qz[?63
-Z6 OV;C;2020.1;71
+R7
 32
-Z7 !s110 1764704094
+R8
 !i10b 1
-Z8 !s108 1764704094.000000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd|
-Z10 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd|
+R9
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd|
+Z35 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/colorROM.vhd|
 !i113 1
-Z11 o-work work -2002 -explicit
-Z12 tExplicit 1 CvgOpt 0
+R12
+R13
 Asyn
-R1
 R2
+R3
 DEx4 work 8 colorrom 0 22 ]RjO]`@7HBV3<QXi`9b^e3
-!i122 179
+!i122 550
 l81
 L52 57
 VJHlP=NCCDPfhVB_fV_D872
 !s100 K^cm5WIZ<5JQ6kFcnNobH3
-R6
-32
 R7
-!i10b 1
+32
 R8
+!i10b 1
 R9
-R10
+R34
+R35
 !i113 1
-R11
 R12
+R13
 Ecounter
-R0
-Z13 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z15 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z36 w1764740184
+R23
+R24
 R1
 R2
-!i122 180
 R3
-Z16 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/counter.vhd
-Z17 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/counter.vhd
+!i122 582
+R4
+Z37 8counter.vhd
+Z38 Fcounter.vhd
 l0
 L8 1
-V]9GERe5Y?9UhnJjSY[>BI1
+VPoF]0e8AV]g@Oe<<Hf8b30
 !s100 iBYokNA?mBAN6[Y_FIQ8:0
-R6
-32
 R7
+33
+Z39 !s110 1764873384
 !i10b 1
-R8
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/counter.vhd|
-Z19 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/counter.vhd|
+Z40 !s108 1764873384.000000
+Z41 !s90 -reportprogress|300|-2008|counter.vhd|
+Z42 !s107 counter.vhd|
 !i113 1
-R11
-R12
-Aarch
+Z43 o-2008
 R13
-R14
-R15
+Aarch
+R23
+R24
 R1
 R2
-DEx4 work 7 counter 0 22 ]9GERe5Y?9UhnJjSY[>BI1
-!i122 180
+R3
+Z44 DEx4 work 7 counter 0 22 PoF]0e8AV]g@Oe<<Hf8b30
+!i122 582
 l22
 L19 19
-VAc<:WiS;4aEQ=JdnjRVmU3
+Vnha_<zb;QnC9EcfEV]GcN3
 !s100 gbEHDTij4L7:e^Y^>:zGf0
-R6
-32
 R7
+33
+R39
 !i10b 1
-R8
-R18
-R19
+R40
+R41
+R42
 !i113 1
-R11
-R12
+R43
+R13
 Ecounter_tb
-R0
-Z20 DPx4 work 15 tank_components 0 22 gAII[AW:jLnHZ<C@me=8z2
-R1
+R31
+Z45 DPx4 work 15 tank_components 0 22 :N[Ze[C=99YYUTR=OnYmz2
 R2
-!i122 188
 R3
-Z21 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/test_counter.vhd
-Z22 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/test_counter.vhd
+!i122 568
+R4
+Z46 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/test_counter.vhd
+Z47 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/test_counter.vhd
 l0
 L5 1
 VJRD1CY_U<9JMRHm9VC^[Q2
 !s100 7@8P`IN<Ed0;KlIj7MO@l2
-R6
+R7
 32
-Z23 !s110 1764704095
+R18
 !i10b 1
-Z24 !s108 1764704095.000000
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/test_counter.vhd|
-Z26 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/test_counter.vhd|
+R19
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/test_counter.vhd|
+Z49 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/test_counter.vhd|
 !i113 1
-R11
 R12
+R13
 Atest
-R20
-R1
+R45
 R2
+R3
 DEx4 work 10 counter_tb 0 22 JRD1CY_U<9JMRHm9VC^[Q2
-!i122 188
+!i122 568
 l30
 L16 39
 VSA<jmIBBCO>=zOdo[>9b[3
 !s100 ?Tm9NfgUnNkO10NKkgKF40
-R6
+R7
 32
-R23
+R18
 !i10b 1
-R24
-R25
-R26
+R19
+R48
+R49
 !i113 1
-R11
 R12
-Ekeyboard
-Z27 w1764697277
 R13
-R14
+Ede2lcd
+Z50 w1764745472
+R23
+R24
+R2
+R3
+!i122 552
+R4
+Z51 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/de2lcd.vhd
+Z52 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/de2lcd.vhd
+l0
+L6 1
+V`jlLiE=gLVKgIbJUMFazo3
+!s100 boIiHlR4hXD`YWkIOPl0F3
+R7
+32
+Z53 !s110 1764873079
+!i10b 1
+Z54 !s108 1764873079.000000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/de2lcd.vhd|
+Z56 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/de2lcd.vhd|
+!i113 1
+R12
+R13
+Aa
+R23
+R24
+R2
+R3
+DEx4 work 6 de2lcd 0 22 `jlLiE=gLVKgIbJUMFazo3
+!i122 552
+l27
+L17 278
+V:mzbf9D;cB0U3GjL2D^B;3
+!s100 b8hGF63BPD?L;HWDcnVm90
+R7
+32
+R53
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R12
+R13
+Efull_game_runs
+Z57 w1764873069
 R1
 R2
-!i122 181
 R3
-Z28 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd
-Z29 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd
+!i122 584
+R4
+Z58 8full_game_runs_tb.vhd
+Z59 Ffull_game_runs_tb.vhd
+l0
+L5 1
+VjMgPbJV_fJ`@;lY8:WIO?2
+!s100 ;5>1WG]ch<Kb;nW?RGVaR3
+R7
+33
+R39
+!i10b 1
+R40
+Z60 !s90 -reportprogress|300|-2008|full_game_runs_tb.vhd|
+Z61 !s107 full_game_runs_tb.vhd|
+!i113 1
+R43
+R13
+Atb
+R23
+R24
+R44
+Z62 DEx4 work 5 score 0 22 jIP6T;TY7XDM11o:RencD1
+R1
+R2
+R3
+Z63 DEx4 work 14 full_game_runs 0 22 jMgPbJV_fJ`@;lY8:WIO?2
+!i122 584
+l25
+Z64 L8 329
+Z65 ViWcDS_WXd:E[d_^LW_LIL2
+Z66 !s100 eJkbFIKl:@]OfHoRQVWIE3
+R7
+33
+R39
+!i10b 1
+R40
+R60
+R61
+!i113 1
+R43
+R13
+Ekeyboard
+Z67 w1764705835
+R23
+R24
+R2
+R3
+!i122 553
+R4
+Z68 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd
+Z69 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd
 l0
 L6 1
 VXMI`lk>XPcYPc=j951L^C3
 !s100 G?]`8PKXb1L2TRzINal`63
-R6
-32
 R7
+32
+R53
 !i10b 1
-R8
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd|
-Z31 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd|
+R54
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd|
+Z71 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard.vhd|
 !i113 1
-R11
 R12
-Aa
 R13
-R14
-R1
+Aa
+R23
+R24
 R2
+R3
 DEx4 work 8 keyboard 0 22 XMI`lk>XPcYPc=j951L^C3
-!i122 181
+!i122 553
 l21
 L14 64
 VQW@jfX=zGaE>RfM^F[zma1
 !s100 ag<8eK>N1EN808^E=MlM21
-R6
-32
 R7
+32
+R53
 !i10b 1
-R8
-R30
-R31
+R54
+R70
+R71
 !i113 1
-R11
 R12
+R13
 Ekeyboard_control
-Z32 w1764701246
-R15
+Z72 w1764714696
 R1
 R2
-!i122 182
 R3
-Z33 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control.vhd
-Z34 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control.vhd
+!i122 554
+R4
+Z73 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control.vhd
+Z74 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control.vhd
 l0
 L5 1
-V:46@nfLL84:zJ@Ka2e3=23
-!s100 PkOW[dfc3KXE5WeMgc<9f2
-R6
-32
+VbTaIM>OI2kM:YYeERe3Nc1
+!s100 za7cnTPYg@DEX:K9MoRAz2
 R7
+32
+R53
 !i10b 1
-R8
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control.vhd|
-Z36 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control.vhd|
+R54
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control.vhd|
+Z76 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control.vhd|
 !i113 1
-R11
 R12
+R13
 Artl
-R15
 R1
 R2
-DEx4 work 16 keyboard_control 0 22 :46@nfLL84:zJ@Ka2e3=23
-!i122 182
-l78
-L28 158
-V9Ib_J^^A3<Ak[JGV^S?C:2
-!s100 aCT:Y58QZWGU?3aVfI^d72
-R6
-32
-R7
-!i10b 1
-R8
-R35
-R36
-!i113 1
-R11
-R12
-Ekeyboard_control_tb
-Z37 w1764704078
-R15
-R1
-R2
-!i122 176
 R3
-Z38 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd
-Z39 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd
+DEx4 work 16 keyboard_control 0 22 bTaIM>OI2kM:YYeERe3Nc1
+!i122 554
+l94
+L32 188
+V97]EhiMST3nb;nQ76;AF>3
+!s100 QlYeF9n<_5I_1]P^n?^K;2
+R7
+32
+R53
+!i10b 1
+R54
+R75
+R76
+!i113 1
+R12
+R13
+Ekeyboard_control_tb
+Z77 w1764704078
+R1
+R2
+R3
+!i122 555
+R4
+Z78 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd
+Z79 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd
 l0
 L6 1
 V=RICEYZkLI`l]51FQiE=z2
 !s100 7VB9T7UZ6@jg<>N@QeT0a0
-R6
+R7
 32
-Z40 !s110 1764704093
+R53
 !i10b 1
-Z41 !s108 1764704093.000000
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd|
-Z43 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd|
+R54
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd|
+Z81 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd|
 !i113 1
-R11
 R12
+R13
 Atb
-R15
 R1
 R2
+R3
 DEx4 work 19 keyboard_control_tb 0 22 =RICEYZkLI`l]51FQiE=z2
-!i122 176
+!i122 555
 l59
 L9 188
 VG4eC<099blM=I8`UiOC@R0
 !s100 [VfT4AlM1e7>7B9LIQDNg1
-R6
+R7
 32
-R40
+R53
 !i10b 1
-R41
-R42
-R43
+R54
+R80
+R81
 !i113 1
-R11
 R12
+R13
 Ekeyboard_test_top
-Z44 w1764697285
-R15
+Z82 w1764697285
 R1
 R2
-!i122 183
 R3
-Z45 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_test_top.vhd
-Z46 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_test_top.vhd
+!i122 556
+R4
+Z83 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_test_top.vhd
+Z84 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_test_top.vhd
 l0
 L5 1
 VPM9J`9ei_CSOA5Zef23^I1
 !s100 mYHX8XYiY`h0oFh6lDM=:2
-R6
-32
 R7
+32
+R53
 !i10b 1
-R8
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_test_top.vhd|
-Z48 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_test_top.vhd|
+R54
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_test_top.vhd|
+Z86 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_test_top.vhd|
 !i113 1
-R11
 R12
+R13
 Artl
-R15
 R1
 R2
+R3
 DEx4 work 17 keyboard_test_top 0 22 PM9J`9ei_CSOA5Zef23^I1
-!i122 183
+!i122 556
 l43
 L15 51
 VK9nJ=29G287EeU3DQ]N;e1
 !s100 C[J<]o=zPJY<2Td5ZQ:Tm1
-R6
-32
 R7
+32
+R53
 !i10b 1
-R8
-R47
-R48
+R54
+R85
+R86
 !i113 1
-R11
 R12
-Eoneshot
-Z49 w1764611486
 R13
-R14
-R1
+Eleddcd
+Z87 w1764611486
 R2
-!i122 184
 R3
-Z50 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd
-Z51 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd
+!i122 557
+R4
+Z88 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/leddcd.vhd
+Z89 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/leddcd.vhd
+l0
+L5 1
+Vl9EEXHFZ35eLP7?@hTd[03
+!s100 I;dI@WIQ@AM@A=WS3`2RQ3
+R7
+32
+R53
+!i10b 1
+R54
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/leddcd.vhd|
+Z91 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/leddcd.vhd|
+!i113 1
+R12
+R13
+Adata_flow
+R2
+R3
+DEx4 work 6 leddcd 0 22 l9EEXHFZ35eLP7?@hTd[03
+!i122 557
+l13
+L12 21
+VnhC07fYOC8?l:`7iJ?;8a1
+!s100 hd4kSf3PkC2_Uba;^2S4e1
+R7
+32
+R53
+!i10b 1
+R54
+R90
+R91
+!i113 1
+R12
+R13
+Eoneshot
+R87
+R23
+R24
+R2
+R3
+!i122 558
+R4
+Z92 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd
+Z93 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd
 l0
 L6 1
 V>AzmQBQ@E91=BCS5DYF=f3
 !s100 VOYY7TRm?e8kDGZmZ;jXF0
-R6
-32
 R7
+32
+R53
 !i10b 1
-R8
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd|
-Z53 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd|
+R54
+Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd|
+Z95 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/oneshot.vhd|
 !i113 1
-R11
 R12
-Add
 R13
-R14
-R1
+Add
+R23
+R24
 R2
+R3
 DEx4 work 7 oneshot 0 22 >AzmQBQ@E91=BCS5DYF=f3
-!i122 184
+!i122 558
 l16
 L14 16
 VZWFB<9ACUQ9R1Ah><nX7R3
 !s100 T`eW:eJ^RbBY?knHN0FPJ1
-R6
-32
 R7
-!i10b 1
-R8
-R52
+32
 R53
+!i10b 1
+R54
+R94
+R95
 !i113 1
-R11
 R12
+R13
 Epixelgenerator
-R0
-R15
+Z96 w1764738408
 R1
 R2
-!i122 185
 R3
-Z54 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelGenerator.vhd
-Z55 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelGenerator.vhd
+!i122 559
+R4
+Z97 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelGenerator.vhd
+Z98 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelGenerator.vhd
 l0
 L5 1
-VWlf5nV>jLM<FM73flH:If1
-!s100 AL:V=j>3gchg^DCTB5`Ji3
-R6
+Vn`k?C?DYFSI2mjleVJ8]=1
+!s100 >Y2XI11Kmm2SfAnfS9@n_3
+R7
 32
-R23
+Z99 !s110 1764873080
 !i10b 1
-R8
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelGenerator.vhd|
-Z57 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelGenerator.vhd|
+R54
+Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelGenerator.vhd|
+Z101 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pixelGenerator.vhd|
 !i113 1
-R11
 R12
+R13
 Abehavioral
-R15
 R1
 R2
-DEx4 work 14 pixelgenerator 0 22 Wlf5nV>jLM<FM73flH:If1
-!i122 185
-l50
-L24 78
-Vd9TbH2lYM^naMkOlR?1@D2
-!s100 H:Xf0Ij71n>^ne<8c?1E80
-R6
+R3
+DEx4 work 14 pixelgenerator 0 22 n`k?C?DYFSI2mjleVJ8]=1
+!i122 559
+l56
+L28 92
+VRZ7DjD`f7Ia44O2^QS>iM1
+!s100 S^5=c`FTQ_h4oe>AEfiTT2
+R7
 32
-R23
+R99
 !i10b 1
-R8
-R56
-R57
+R54
+R100
+R101
 !i113 1
-R11
 R12
+R13
+Epll
+Z102 w1764731046
+R2
+R3
+!i122 560
+R4
+Z103 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd
+Z104 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd
+l0
+L43 1
+Vh6IhYCi2BD^:fMVH;n:]H3
+!s100 A<H4AY;Y0hFFY7nE=<T@T1
+R7
+32
+R99
+!i10b 1
+Z105 !s108 1764873080.000000
+Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd|
+Z107 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/pll.vhd|
+!i113 1
+R12
+R13
+Asyn
+R2
+R3
+DEx4 work 3 pll 0 22 h6IhYCi2BD^:fMVH;n:]H3
+!i122 560
+l126
+L52 147
+V2FOR06]]N5;U5il3F<No71
+!s100 O=;zj:ojUKSXFzSECfHOP0
+R7
+32
+R99
+!i10b 1
+R105
+R106
+R107
+!i113 1
+R12
+R13
 Eps2
-Z58 w1764699294
-R13
-R14
-R1
+Z108 w1764740513
+R23
+R24
 R2
-!i122 186
 R3
-Z59 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd
-Z60 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd
+!i122 561
+R4
+Z109 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd
+Z110 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd
 l0
 L6 1
-VKYcb7bE8W=O9T;EBcl:191
-!s100 YWihC>CUT:QzX?bdGO]ea0
-R6
+V^7R?<g^`GnHg=PL3UNBcd1
+!s100 ddh;MBL=65MgkliT2JjNF0
+R7
 32
-R23
+R99
 !i10b 1
-R24
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd|
-Z62 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd|
+R105
+Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd|
+Z112 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/ps2.vhd|
 !i113 1
-R11
 R12
+R13
 Astructural
-R13
-R14
-R1
-R2
-DEx4 work 3 ps2 0 22 KYcb7bE8W=O9T;EBcl:191
-!i122 186
-l43
-L19 62
-VFHUGIPi4da[OScGoYFi@30
-!s100 OH;GR5jLhm5[<I3NW1Z`Y2
-R6
-32
 R23
-!i10b 1
 R24
-R61
-R62
-!i113 1
-R11
-R12
-Etank
-Z63 w1764703609
-R15
-R1
 R2
-!i122 178
 R3
-Z64 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd
-Z65 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd
-l0
-L6 1
-V>6hHW1>AQ];2;kD_QQEEg2
-!s100 1lgWN2_mIbNmDcPzFc32L0
-R6
-32
+DEx4 work 3 ps2 0 22 ^7R?<g^`GnHg=PL3UNBcd1
+!i122 561
+l83
+L29 154
+VElaDa=K8b:L2FG0AlgAQ60
+!s100 `dNX_mHO[m=bkTK;o<LYR2
 R7
-!i10b 1
-R41
-Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd|
-Z67 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd|
-!i113 1
-R11
-R12
-Abehavioral
-R15
-R1
-R2
-DEx4 work 4 tank 0 22 >6hHW1>AQ];2;kD_QQEEg2
-!i122 178
-l62
-L22 79
-V0iSmGofm4>dGj^I`JML4?0
-!s100 Gk>7U]nd:8RQ9T5^?jEI;2
-R6
 32
-R7
+R99
 !i10b 1
-R41
-R66
-R67
+R105
+R111
+R112
 !i113 1
-R11
 R12
-Ptank_components
-R1
-R2
-!i122 187
+R13
+Escore
 R0
+R1
+R2
 R3
-Z68 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd
-Z69 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd
+!i122 583
+R4
+Z113 8score.vhd
+Z114 Fscore.vhd
 l0
 L5 1
-VgAII[AW:jLnHZ<C@me=8z2
-!s100 HDLh:6]>ojF7ZbGmVaI3^2
-R6
-32
-R23
+VjIP6T;TY7XDM11o:RencD1
+!s100 5@iIReGQcILK8U70WQ0RI0
+R7
+33
+R39
 !i10b 1
-R24
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd|
-Z71 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd|
+R40
+Z115 !s90 -reportprogress|300|-2008|score.vhd|
+Z116 !s107 score.vhd|
 !i113 1
-R11
-R12
-Bbody
-R20
+R43
+R13
+Abehavioral
 R1
 R2
-!i122 187
+R3
+R62
+!i122 583
+l39
+L17 101
+V`DabZ;CR;gG8:dM_<Vo233
+!s100 LGL_DzEe9Oh]D6]U^Mj6B1
+R7
+33
+R39
+!i10b 1
+R40
+R115
+R116
+!i113 1
+R43
+R13
+Escore_tb
+Z117 w1764870360
+R1
+R2
+R3
+!i122 563
+R4
+Z118 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score_tb.vhd
+Z119 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score_tb.vhd
+l0
+L5 1
+VmQKL5EMW6]R@3JE3@c7n<2
+!s100 `Vbj<90:1?MNn1WZF50UA0
+R7
+32
+R99
+!i10b 1
+R105
+Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score_tb.vhd|
+Z121 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score_tb.vhd|
+!i113 1
+R12
+R13
+Asim
+R23
+R24
+R25
+DEx4 work 5 score 0 22 mMRW8OE2W^OU_QFTSVVkL3
+R1
+R2
+R3
+DEx4 work 8 score_tb 0 22 mQKL5EMW6]R@3JE3@c7n<2
+!i122 563
+l21
+L8 112
+VYGfiNJ4H;D>mhBFUHN3d93
+!s100 jhIQFgVIDl9eMk5<ZGc6i2
+R7
+32
+R99
+!i10b 1
+R105
+R120
+R121
+!i113 1
+R12
+R13
+Etank
+R0
+R1
+R2
+R3
+!i122 564
+R4
+Z122 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd
+Z123 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd
+l0
+L5 1
+V]ze[dz`>Z1z?O@Q?YE]@C0
+!s100 0OCNlXc9E_29[UC@dZzXO3
+R7
+32
+R99
+!i10b 1
+R105
+Z124 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd|
+Z125 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 4 tank 0 22 ]ze[dz`>Z1z?O@Q?YE]@C0
+!i122 564
+l59
+L23 116
+V1[40g57DzgbZAJIkiGECj3
+!s100 OEH3^U6L4^m3i;>S^JfKk2
+R7
+32
+R99
+!i10b 1
+R105
+R124
+R125
+!i113 1
+R12
+R13
+Ptank_components
+R2
+R3
+!i122 565
+Z126 w1764730683
+R4
+Z127 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd
+Z128 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd
+l0
+L5 1
+V:N[Ze[C=99YYUTR=OnYmz2
+!s100 UE@:K1]hmC5h`3oGo@NcO1
+R7
+32
+R99
+!i10b 1
+R105
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd|
+Z130 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_components.vhd|
+!i113 1
+R12
+R13
+Bbody
+R45
+R2
+R3
+!i122 565
 l0
 L22 1
 VLHcECVZa^2mQ6AXfh64U>2
 !s100 O;FAa3k>:o=eAJ01ikNn>0
-R6
+R7
 32
-R23
+R99
 !i10b 1
-R24
-R70
-R71
+R105
+R129
+R130
 !i113 1
-R11
 R12
+R13
 Etank_game
-Z72 w1764703500
-R20
-R15
+Z131 w1764868601
+R45
 R1
 R2
-!i122 177
 R3
-Z73 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd
-Z74 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd
+!i122 566
+R4
+Z132 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd
+Z133 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd
 l0
 L9 1
-V9OK<H4k_^YZVWUjeOl`Oi3
-!s100 466C7[ZWU8Ce:EV`Hdjm83
-R6
+VMV6H94Sf3B;LMI_^gWK:Z3
+!s100 XbOU58<P9GQ?@oFU[AhJb3
+R7
 32
-R40
+R18
 !i10b 1
-R41
-Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd|
-Z76 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd|
+R105
+Z134 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd|
+Z135 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game.vhd|
 !i113 1
-R11
 R12
+R13
 Astructural
-R20
-R15
+R45
 R1
 R2
-DEx4 work 9 tank_game 0 22 9OK<H4k_^YZVWUjeOl`Oi3
-!i122 177
-l106
-L26 170
-V^6mV@M9@Ro^=nYR3<L;XA1
-!s100 lz1_h4AZ64V`[0RhEe2<j2
-R6
-32
-R40
-!i10b 1
-R41
-R75
-R76
-!i113 1
-R11
-R12
-Pvga_components
-R1
-R2
-!i122 189
-R0
 R3
-Z77 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_components.vhd
-Z78 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_components.vhd
+Z136 DEx4 work 9 tank_game 0 22 MV6H94Sf3B;LMI_^gWK:Z3
+!i122 566
+l261
+L43 442
+Vh=gh@5FE8KF^fj[_ZXi2G0
+!s100 m=F<Bn[GJ3<=_LhLZNb0I3
+R7
+32
+R18
+!i10b 1
+R105
+R134
+R135
+!i113 1
+R12
+R13
+Etank_game_tb
+Z137 w1764783537
+R1
+R2
+R3
+!i122 567
+R4
+Z138 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game_tb.vhd
+Z139 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game_tb.vhd
+l0
+L5 1
+VC]>P4b::YL_3zl>Jk27>I0
+!s100 8;<DgE=F3=aL`XLei43e=2
+R7
+32
+R18
+!i10b 1
+R19
+Z140 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game_tb.vhd|
+Z141 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/tank_game_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+R45
+R136
+R1
+R2
+R3
+DEx4 work 12 tank_game_tb 0 22 C]>P4b::YL_3zl>Jk27>I0
+!i122 567
+l39
+L8 121
+V?D6mUo830QJn7hd_EA62I2
+!s100 <YGXWYhK0bR9J8MTN]85A0
+R7
+32
+R18
+!i10b 1
+R19
+R140
+R141
+!i113 1
+R12
+R13
+Pvga_components
+R2
+R3
+!i122 569
+R31
+R4
+Z142 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_components.vhd
+Z143 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_components.vhd
 l0
 L4 1
 VRMa0bP>KDlWCFYZYfW=fn2
 !s100 RE1F[D7Ool14;J8e[h][^3
-R6
+R7
 32
-R23
+R18
 !i10b 1
-R24
-Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_components.vhd|
-Z80 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_components.vhd|
+R19
+Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_components.vhd|
+Z145 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_components.vhd|
 !i113 1
-R11
 R12
+R13
 Bbody
 DPx4 work 14 vga_components 0 22 RMa0bP>KDlWCFYZYfW=fn2
-R1
 R2
-!i122 189
+R3
+!i122 569
 l0
 L26 1
 VAeMmj=3YC6^fCO3zTc4CX0
 !s100 o>g2J7b96RN<DhLC05_OR2
-R6
+R7
 32
-R23
+R18
 !i10b 1
-R24
-R79
-R80
+R19
+R144
+R145
 !i113 1
-R11
 R12
-Evga_sync
-R0
 R13
-R14
-R1
+Evga_sync
+R31
+R23
+R24
 R2
-!i122 190
 R3
-Z81 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd
-Z82 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd
+!i122 570
+R4
+Z146 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd
+Z147 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd
 l0
 L5 1
 Vc9]k4MHlNL;1oomh^@^3L3
 !s100 LknWEW4GU?n<oI@E``RA60
-R6
+R7
 32
-R23
+R18
 !i10b 1
-R24
-Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd|
-Z84 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd|
+R19
+Z148 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd|
+Z149 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_sync.vhd|
 !i113 1
-R11
 R12
-Abehavioral
 R13
-R14
-R1
+Abehavioral
+R23
+R24
 R2
+R3
 DEx4 work 8 vga_sync 0 22 c9]k4MHlNL;1oomh^@^3L3
-!i122 190
+!i122 570
 l44
 L15 121
 VECTjERzm[?64SEP=NLG=D1
 !s100 cI:IDd>8VZR4ZH>XUlnBB1
-R6
+R7
 32
-R23
+R18
 !i10b 1
-R24
-R83
-R84
+R19
+R148
+R149
 !i113 1
-R11
 R12
+R13
 Evga_top_level
-R0
-R20
-R1
+Z150 w1764736269
+R45
 R2
-!i122 191
 R3
-Z85 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd
-Z86 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd
+!i122 571
+R4
+Z151 8C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd
+Z152 FC:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd
 l0
 L5 1
-V;gk2__IJ`GTP_Xb3BJk>71
-!s100 ZoXCAFS>Si_O@=@CD8SiV3
-R6
+VeACfnUAQk3YCnz2_?E[I`1
+!s100 COW^OlUkBaZGQc0@aMekK1
+R7
 32
-Z87 !s110 1764704096
+R18
 !i10b 1
-R24
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd|
-Z89 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd|
+R19
+Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd|
+Z154 !s107 C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/vga_top_level.vhd|
 !i113 1
-R11
 R12
+R13
 Astructural
-R20
-R1
+R45
 R2
-Z90 DEx4 work 13 vga_top_level 0 22 ;gk2__IJ`GTP_Xb3BJk>71
-!i122 191
-l57
-Z91 L22 60
-Z92 Vnlz;WI39:<3lH`@ZG0na]3
-Z93 !s100 mB>E1K;5OK5B9n?JO52j;2
-R6
+R3
+DEx4 work 13 vga_top_level 0 22 eACfnUAQk3YCnz2_?E[I`1
+!i122 571
+l65
+L26 67
+VSf:I04Mn7KOCR9LNY^IfX3
+!s100 jA8S0dC8PkVP;G7JTW5BE2
+R7
 32
-R87
+R18
 !i10b 1
-R24
-R88
-R89
+R19
+R153
+R154
 !i113 1
-R11
 R12
+R13

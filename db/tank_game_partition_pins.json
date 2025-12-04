@@ -132,6 +132,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "lcd_rs_out",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_e_out",
+					"strict" : false
+				},
+				{
+					"name" : "reset_led_out",
+					"strict" : false
+				},
+				{
 					"name" : "led_hit_1_on_2",
 					"strict" : false
 				},
@@ -140,11 +152,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_50",
+					"name" : "one_wins",
+					"strict" : false
+				},
+				{
+					"name" : "two_wins",
+					"strict" : false
+				},
+				{
+					"name" : "data_bus_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_bus_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_bus_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_bus_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_bus_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_bus_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_bus_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_bus_out[7]",
 					"strict" : false
 				},
 				{
 					"name" : "global_reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50",
 					"strict" : false
 				},
 				{

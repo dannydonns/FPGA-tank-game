@@ -25,9 +25,18 @@ entity tank_game is
 		--HEX0 : out std_logic_vector(6 downto 0);
 		--HEX1 : out std_logic_vector(6 downto 0)
 
+		--lcd outputs
+		lcd_rs_out, lcd_e_out, lcd_on_out, reset_led_out, sec_led_out      : OUT   STD_LOGIC;
+		lcd_rw_out                     : BUFFER STD_LOGIC;
+		data_bus_out               : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+
 		--led collision indicators
 		led_hit_1_on_2 : out std_logic;
-		led_hit_2_on_1 : out std_logic
+		led_hit_2_on_1 : out std_logic;
+
+		--led winner indicators
+		one_wins: out std_logic;
+		two_wins: out std_logic
 	);
 end entity tank_game;
 
@@ -42,7 +51,7 @@ architecture structural of tank_game is
 
 	component counter is 
 		generic(
-			max_count : natural := 50000000
+			max_count : natural := 5000
 		);
 		port(
 			clk : in std_logic;
@@ -59,6 +68,7 @@ architecture structural of tank_game is
 		port(
 			-- inputs
 			clk, rst : in std_logic;
+			pls_clk : in std_logic;
 			speed : in std_logic;
 			
 			-- coordinate outputs
@@ -100,11 +110,12 @@ architecture structural of tank_game is
 			hist1        : out std_logic_vector(7 downto 0);
 			hist0        : out std_logic_vector(7 downto 0);
 
-			-- NEW: key state outputs (1 = currently pressed)
+			-- key state outputs (1 = currently pressed)
 			key_A        : out std_logic;
 			key_S        : out std_logic;
 			key_K        : out std_logic;
 			key_L        : out std_logic;
+			key_R        : out std_logic;
 
 			-- single 7-seg HEX display (keep pin planning simple)
 			hex0         : out std_logic_vector(6 downto 0)
@@ -119,6 +130,7 @@ architecture structural of tank_game is
     );
     port(
         clk       : in  std_logic;               -- game tick (e.g., counter_pulse)
+		pls_clk : in std_logic;
         rst       : in  std_logic;               -- active-high reset
 
         fire      : in  std_logic;               -- fire button (e.g., ps2_key_S / ps2_key_L)
@@ -149,6 +161,45 @@ architecture structural of tank_game is
         collision_signal   : out std_logic
     );
 end component;
+
+component score is
+    port(
+        -- clock, reset
+        clk, rst : in std_logic;
+		pls_clk : in std_logic;
+		-- collision / hit signals for tank1, tank2
+        c1, c2 : in std_logic;
+        -- 2-bit scores
+        score1, score2 : out std_logic_vector(1 downto 0);
+        -- win signals
+        w1, w2 : out std_logic
+    );  
+end component;
+
+--lcd
+component de2lcd IS
+    PORT(reset, clk_50Mhz               : IN    STD_LOGIC;
+         -- game inputs
+         -- scores
+         p1_score, p2_score : in std_logic_vector(1 downto 0);
+         w1, w2 : in std_logic;
+         LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED      : OUT   STD_LOGIC;
+         LCD_RW                     : BUFFER STD_LOGIC;
+         DATA_BUS               : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+END component;
+
+	-- --lcd signals
+	signal lcd_reset : std_logic;
+
+	--- counter reset
+	signal counter_rst : std_logic;
+	signal r_pressed : std_logic := '0';
+
+	--score signals
+	signal score1_sig : std_logic_vector(1 downto 0);
+	signal score2_sig : std_logic_vector(1 downto 0);
+	signal w1_sig     : std_logic;
+	signal w2_sig     : std_logic;
 
 	--bullet signals
 	signal bullet1_active : std_logic;
@@ -216,13 +267,14 @@ begin
 		c0		=> clk_100
 	);
 
+	counter_rst <= global_reset or w1_sig or w2_sig or r_pressed;
 	game_cnt : counter
 		generic map(
 			max_count => 500000
 		)
 		port map(
 			clk => clk_100,
-			rst => global_reset,
+			rst => counter_rst,
 
 			pulse_out => counter_pulse
 		);
@@ -240,7 +292,8 @@ begin
 		)
 		port map(
 			-- inputs
-			clk => counter_pulse,
+			clk => clk_100,
+			pls_clk => counter_pulse,
 			rst => global_reset,
 			speed => tank1spd,
 			x_out => tank1x,
@@ -255,7 +308,8 @@ begin
 		)
 		port map(
 			-- inputs
-			clk => counter_pulse,
+			clk => clk_100,
+			pls_clk => counter_pulse,
 			rst => global_reset,
 			speed => tank2spd,
 			x_out => tank2x,
@@ -302,7 +356,8 @@ begin
         screen_h => 480   -- vertical resolution (e.g., 480)
     )
     port map(
-        	clk       => counter_pulse,
+        	clk       => clk_100,
+			pls_clk => counter_pulse,
             rst       => global_reset,
             fire      => key_A_raw,
             direction => '1',               -- downwards (y increasing)
@@ -320,7 +375,8 @@ begin
         screen_h => 480   -- vertical resolution (e.g., 480)
     )
     port map(
-        	clk       => counter_pulse,
+        	clk       => clk_100,
+			pls_clk => counter_pulse,
             rst       => global_reset,
             fire      => key_K_raw,
             direction => '0',               -- downwards (y increasing)
@@ -349,6 +405,7 @@ begin
             key_S         => key_S_raw,
             key_K         => key_K_raw,
             key_L         => key_L_raw,
+			key_R         => r_pressed,
 
             hex0          => ps2_hex0
         );
@@ -394,5 +451,34 @@ begin
 	--led indicators for hits
 	led_hit_1_on_2 <= hit_1_on_2;
 	led_hit_2_on_1 <= hit_2_on_1;
+
+	--score
+	score_inst : score
+    port map(
+        clk    => clk_100,     -- or your VGA/game clock
+		pls_clk => counter_pulse,
+        rst    => r_pressed,	  -- reset on R key press
+        c1     => hit_1_on_2,
+        c2     => hit_2_on_1,
+        score1 => score1_sig,
+        score2 => score2_sig,
+        w1     => w1_sig,
+        w2     => w2_sig
+    );
+
+	--winner LEDs
+	one_wins <= w1_sig;
+	two_wins <= w2_sig;
+
+
+	--LCD
+	lcd: de2lcd 
+    PORT map (reset => lcd_reset, clk_50Mhz=> clk_50,        
+         		p1_score => score1_sig, p2_score => score2_sig, -- scores
+         		w1 => w1_sig , w2 => w2_sig, --win signals
+         		LCD_RS => lcd_rs_out, LCD_E => lcd_e_out, LCD_ON => lcd_on_out, RESET_LED => reset_led_out, SEC_LED => sec_led_out,
+         		LCD_RW  => lcd_rw_out, data_bus => data_bus_out);
+		
+	lcd_reset <= not global_reset;
 
 end architecture structural;
