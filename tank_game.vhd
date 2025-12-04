@@ -67,7 +67,7 @@ architecture structural of tank_game is
 		);
 		port(
 			-- inputs
-			clk, rst : in std_logic;
+			clk, pulse_clk, rst : in std_logic;
 			speed : in std_logic;
 			
 			-- coordinate outputs
@@ -224,7 +224,6 @@ END component;
 	signal key_S_raw : std_logic;
 	signal key_K_raw : std_logic;
 	signal key_L_raw : std_logic;
-
 	-- internal wires for keyboard_control
     signal kb_t1_speed : std_logic_vector(1 downto 0);
     signal kb_t1_fire  : std_logic;

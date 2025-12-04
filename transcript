@@ -1,283 +1,399 @@
-# Compile of bullet.vhd failed with 1 errors.
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
 # Compile of colorROM.vhd was successful.
 # Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
 # Compile of keyboard.vhd was successful.
 # Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_control_tb.vhd failed with 22 errors.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank.vhd failed with 1 errors.
-# Compile of tank_components.vhd was successful.
-# Compile of tank_game.vhd failed with 3 errors.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 17 compiles, 4 failed with 27 errors.
-# Errors: 3, Warnings: 0
-# Errors: 1, Warnings: 0
-# Errors: 0, Warnings: 0
-# Compile of colorROM.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of counter.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of keyboard.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of keyboard_control.vhd was successful.
-# Errors: 22, Warnings: 0
-# Errors: 0, Warnings: 0
-# Compile of keyboard_test_top.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of oneshot.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of pixelGenerator.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of ps2.vhd was successful.
-# Errors: 1, Warnings: 0
-# Errors: 0, Warnings: 0
-# Compile of tank_components.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of test_counter.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of vga_components.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of vga_sync.vhd was successful.
-# Errors: 0, Warnings: 0
-# Compile of vga_top_level.vhd was successful.
-# Errors: 3, Warnings: 0
-# Errors: 1, Warnings: 0
-# Errors: 22, Warnings: 0
-# Errors: 1, Warnings: 0
-# Errors: 3, Warnings: 0
-# Compile of tank_game.vhd failed.
-# Errors: 1, Warnings: 0
-# Compile of bullet.vhd failed.
-# Errors: 22, Warnings: 0
-# Compile of keyboard_control_tb.vhd failed.
-# Errors: 1, Warnings: 0
-# Compile of tank.vhd failed.
-# Compile of tank_game.vhd failed with 3 errors.
-# Compile of keyboard_control_tb.vhd failed with 22 errors.
-# Compile of tank.vhd failed with 1 errors.
-# Compile of bullet.vhd failed with 1 errors.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 17 compiles, 4 failed with 27 errors.
-# Compile of keyboard_control_tb.vhd failed with 22 errors.
-# Compile of tank_game.vhd failed with 3 errors.
-# Compile of tank.vhd failed with 1 errors.
-# Compile of bullet.vhd failed with 1 errors.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 17 compiles, 4 failed with 27 errors.
-# Compile of keyboard_control_tb.vhd failed with 22 errors.
-# Compile of tank_game.vhd was successful.
-# Compile of tank.vhd failed with 1 errors.
-# Compile of bullet.vhd failed with 1 errors.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 17 compiles, 3 failed with 24 errors.
-# Compile of keyboard_control_tb.vhd failed with 22 errors.
-# Compile of tank_game.vhd was successful.
-# Compile of tank.vhd was successful.
-# Compile of bullet.vhd failed with 1 errors.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 17 compiles, 2 failed with 23 errors.
 # Compile of keyboard_control_tb.vhd was successful.
-# Compile of tank_game.vhd was successful.
-# Compile of tank.vhd was successful.
-# Compile of bullet.vhd failed with 1 errors.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
 # Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
 # Compile of oneshot.vhd was successful.
 # Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
 # Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
 # Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
 # Compile of test_counter.vhd was successful.
 # Compile of vga_components.vhd was successful.
 # Compile of vga_sync.vhd was successful.
 # Compile of vga_top_level.vhd was successful.
-# 17 compiles, 1 failed with 1 error.
-# Compile of keyboard_control_tb.vhd was successful.
-# Compile of tank_game.vhd was successful.
-# Compile of tank.vhd was successful.
-# Compile of bullet.vhd failed with 1 errors.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 17 compiles, 1 failed with 1 error.
-# Compile of keyboard_control_tb.vhd was successful.
-# Compile of tank_game.vhd was successful.
-# Compile of tank.vhd was successful.
-# Compile of bullet.vhd failed with 3 errors.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 17 compiles, 1 failed with 3 errors.
-# Compile of keyboard_control_tb.vhd was successful.
-# Compile of tank_game.vhd was successful.
-# Compile of tank.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 16 compiles, 1 failed with no errors.
-# Compile of keyboard_control_tb.vhd was successful.
-# Compile of tank_game.vhd was successful.
-# Compile of tank.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 16 compiles, 0 failed with no errors.
-vsim -gui work.keyboard_control_tb
-# vsim -gui work.keyboard_control_tb 
-# Start time: 13:32:01 on Dec 02,2025
+# 25 compiles, 0 failed with no errors.
+# Load canceled
+vsim -gui work.score_tb
+# vsim -gui work.score_tb 
+# Start time: 04:06:55 on Dec 03,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.keyboard_control_tb(tb)
-# Loading work.keyboard_control(rtl)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.ps2(structural)
-# Loading work.keyboard(a)
-# Loading work.oneshot(dd)
-add wave -r sim:/keyboard_control_tb/*
-run
+# Loading work.score_tb(sim)
+# Loading work.score(behavioral)
+add wave -r sim:/score_tb/*
 run -all
-# ** Note: Testbench finished
-#    Time: 117225 us  Iteration: 0  Instance: /keyboard_control_tb
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Compile of keyboard_control_tb.vhd was successful.
-# Compile of tank_game.vhd was successful.
-# Compile of tank.vhd was successful.
-# Compile of colorROM.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of keyboard.vhd was successful.
-# Compile of keyboard_control.vhd was successful.
-# Compile of keyboard_test_top.vhd was successful.
-# Compile of oneshot.vhd was successful.
-# Compile of pixelGenerator.vhd was successful.
-# Compile of ps2.vhd was successful.
-# Compile of tank_components.vhd was successful.
-# Compile of test_counter.vhd was successful.
-# Compile of vga_components.vhd was successful.
-# Compile of vga_sync.vhd was successful.
-# Compile of vga_top_level.vhd was successful.
-# 16 compiles, 0 failed with no errors.
+# ** Note: Simulation done.
+#    Time: 310 ns  Iteration: 0  Instance: /score_tb
+# ** Failure: End of testbench stop simulation.
+#    Time: 310 ns  Iteration: 0  Process: /score_tb/stim_proc File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score_tb.vhd
+# Break in Process stim_proc at C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/score_tb.vhd line 88
 quit -sim
-# End time: 13:35:06 on Dec 02,2025, Elapsed time: 0:03:05
-# Errors: 0, Warnings: 18
-vsim work.keyboard_control_tb(tb)
-# vsim work.keyboard_control_tb(tb) 
-# Start time: 13:35:14 on Dec 02,2025
+# End time: 04:07:57 on Dec 03,2025, Elapsed time: 0:01:02
+# Errors: 1, Warnings: 5
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
+# Compile of keyboard.vhd was successful.
+# Compile of keyboard_control.vhd was successful.
+# Compile of keyboard_control_tb.vhd was successful.
+# Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of oneshot.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
+# Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
+# Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
+# Compile of test_counter.vhd was successful.
+# Compile of vga_components.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of vga_top_level.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.full_game_runs
+# vsim -gui work.full_game_runs 
+# Start time: 04:08:20 on Dec 03,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.keyboard_control_tb(tb)
-# Loading work.keyboard_control(rtl)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.ps2(structural)
-# Loading work.keyboard(a)
-# Loading work.oneshot(dd)
-add wave -r sim:/keyboard_control_tb/*
+# Loading work.full_game_runs(tb)
+# Loading work.score(behavioral)
+add wave -r sim:/full_game_runs/*
 run -all
-# ** Failure: Testbench finished
-#    Time: 117225 us  Iteration: 0  Process: /keyboard_control_tb/stimulus File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd
-# Break in Process stimulus at C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/keyboard_control_tb.vhd line 193
+# ** Failure: End of score testbench simulation
+#    Time: 530 ns  Iteration: 0  Process: /full_game_runs/stim File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/full_game_runs_tb.vhd
+# Break in Process stim at C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/full_game_runs_tb.vhd line 146
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
+# Compile of keyboard.vhd was successful.
+# Compile of keyboard_control.vhd was successful.
+# Compile of keyboard_control_tb.vhd was successful.
+# Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of oneshot.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
+# Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
+# Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
+# Compile of test_counter.vhd was successful.
+# Compile of vga_components.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of vga_top_level.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.full_game_runs(tb)
+# Loading work.score(behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Failure: End of extended score testbench simulation
+#    Time: 1240 ns  Iteration: 0  Process: /full_game_runs/stim File: C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/full_game_runs_tb.vhd
+# Break in Process stim at C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/full_game_runs_tb.vhd line 319
+quit -sim
+# End time: 11:23:55 on Dec 03,2025, Elapsed time: 7:15:35
+# Errors: 1, Warnings: 1
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
+# Compile of keyboard.vhd was successful.
+# Compile of keyboard_control.vhd was successful.
+# Compile of keyboard_control_tb.vhd was successful.
+# Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of oneshot.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
+# Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
+# Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
+# Compile of test_counter.vhd was successful.
+# Compile of vga_components.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of vga_top_level.vhd was successful.
+# Compile of bullet_collision_tb.vhd was successful.
+# 26 compiles, 0 failed with no errors.
+vsim -gui work.bullet_collision_tb
+# vsim -gui work.bullet_collision_tb 
+# Start time: 11:24:47 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+
+do collision.do
+# End time: 11:25:34 on Dec 03,2025, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 3
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/simulation_day.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:25:35 on Dec 03,2025
+# vcom -reportprogress 300 bullet.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet
+# -- Compiling architecture rtl of bullet
+# End time: 11:25:35 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:25:35 on Dec 03,2025
+# vcom -reportprogress 300 collision.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity collision
+# -- Compiling architecture rtl of collision
+# End time: 11:25:35 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:25:35 on Dec 03,2025
+# vcom -reportprogress 300 bullet_collision_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet_collision_tb
+# -- Compiling architecture tb of bullet_collision_tb
+# -- Loading entity bullet
+# -- Loading entity collision
+# End time: 11:25:35 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.bullet_collision_tb 
+# Start time: 11:25:35 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /bullet_collision_tb/collision_inst
+# ** Failure: End of bullet/tank collision testbench
+#    Time: 5660 ns  Iteration: 0  Process: /bullet_collision_tb/stim File: bullet_collision_tb.vhd
+# Break in Process stim at bullet_collision_tb.vhd line 133
+quit -sim
+# End time: 11:30:33 on Dec 03,2025, Elapsed time: 0:04:58
+# Errors: 1, Warnings: 2
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
+# Compile of keyboard.vhd was successful.
+# Compile of keyboard_control.vhd was successful.
+# Compile of keyboard_control_tb.vhd was successful.
+# Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of oneshot.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
+# Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
+# Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
+# Compile of test_counter.vhd was successful.
+# Compile of vga_components.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of vga_top_level.vhd was successful.
+# Compile of bullet_collision_tb.vhd was successful.
+# 26 compiles, 0 failed with no errors.
+vsim work.bullet_collision_tb
+# vsim work.bullet_collision_tb 
+# Start time: 11:31:23 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+do collision.do
+# End time: 11:31:38 on Dec 03,2025, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 2
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/simulation_day.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:31:38 on Dec 03,2025
+# vcom -reportprogress 300 bullet.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet
+# -- Compiling architecture rtl of bullet
+# End time: 11:31:39 on Dec 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:31:39 on Dec 03,2025
+# vcom -reportprogress 300 collision.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity collision
+# -- Compiling architecture rtl of collision
+# End time: 11:31:39 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:31:39 on Dec 03,2025
+# vcom -reportprogress 300 bullet_collision_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet_collision_tb
+# -- Compiling architecture tb of bullet_collision_tb
+# -- Loading entity bullet
+# -- Loading entity collision
+# End time: 11:31:39 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.bullet_collision_tb 
+# Start time: 11:31:39 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /bullet_collision_tb/collision_inst
+# ** Failure: End of bullet/tank collision testbench
+#    Time: 5660 ns  Iteration: 0  Process: /bullet_collision_tb/stim File: bullet_collision_tb.vhd
+# Break in Process stim at bullet_collision_tb.vhd line 133
+# Compile of bullet.vhd was successful.
+# Compile of collision.vhd was successful.
+# Compile of colorROM.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of de2lcd.vhd was successful.
+# Compile of full_game_runs_tb.vhd was successful.
+# Compile of keyboard.vhd was successful.
+# Compile of keyboard_control.vhd was successful.
+# Compile of keyboard_control_tb.vhd was successful.
+# Compile of keyboard_test_top.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of oneshot.vhd was successful.
+# Compile of pixelGenerator.vhd was successful.
+# Compile of pll.vhd was successful.
+# Compile of ps2.vhd was successful.
+# Compile of score.vhd was successful.
+# Compile of score_tb.vhd was successful.
+# Compile of tank.vhd was successful.
+# Compile of tank_components.vhd was successful.
+# Compile of tank_game.vhd was successful.
+# Compile of tank_game_tb.vhd was successful.
+# Compile of test_counter.vhd was successful.
+# Compile of vga_components.vhd was successful.
+# Compile of vga_sync.vhd was successful.
+# Compile of vga_top_level.vhd was successful.
+# Compile of bullet_collision_tb.vhd was successful.
+# 26 compiles, 0 failed with no errors.
+do collision.do
+# End time: 11:33:16 on Dec 03,2025, Elapsed time: 0:01:37
+# Errors: 1, Warnings: 3
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/zachtey/Documents/quartus_prime_projects/FPGA-tank-game/simulation_day.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:33:17 on Dec 03,2025
+# vcom -reportprogress 300 bullet.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet
+# -- Compiling architecture rtl of bullet
+# End time: 11:33:17 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:33:17 on Dec 03,2025
+# vcom -reportprogress 300 collision.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity collision
+# -- Compiling architecture rtl of collision
+# End time: 11:33:17 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:33:17 on Dec 03,2025
+# vcom -reportprogress 300 bullet_collision_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bullet_collision_tb
+# -- Compiling architecture tb of bullet_collision_tb
+# -- Loading entity bullet
+# -- Loading entity collision
+# End time: 11:33:17 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.bullet_collision_tb 
+# Start time: 11:33:17 on Dec 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bullet_collision_tb(tb)
+# Loading work.bullet(rtl)
+# Loading work.collision(rtl)
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /bullet_collision_tb/COLLISION_DUT
+# ** Failure: End of bullet_collision_tb with 6 collision scenarios
+#    Time: 32520 ns  Iteration: 0  Process: /bullet_collision_tb/stim_proc File: bullet_collision_tb.vhd
+# Break in Process stim_proc at bullet_collision_tb.vhd line 245
