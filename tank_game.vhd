@@ -68,6 +68,7 @@ architecture structural of tank_game is
 		port(
 			-- inputs
 			clk, rst : in std_logic;
+			pls_clk : in std_logic;
 			speed : in std_logic;
 			
 			-- coordinate outputs
@@ -188,9 +189,7 @@ component de2lcd IS
 END component;
 
 	-- --lcd signals
-	-- signal LCD_RS_sig, LCD_E_sig, LCD_ON_sig, RESET_LED_sig, SEC_LED_sig : std_logic;
-	-- signal LCD_RW_sig : std_logic;
-	-- signal DATA_BUS_sig : std_logic_vector(7 downto 0);
+	signal lcd_reset : std_logic;
 
 	--- counter reset
 	signal counter_rst : std_logic;
@@ -226,6 +225,7 @@ END component;
 	signal key_S_raw : std_logic;
 	signal key_K_raw : std_logic;
 	signal key_L_raw : std_logic;
+
 	-- internal wires for keyboard_control
     signal kb_t1_speed : std_logic_vector(1 downto 0);
     signal kb_t1_fire  : std_logic;
@@ -473,10 +473,12 @@ begin
 
 	--LCD
 	lcd: de2lcd 
-    PORT map (reset => not global_reset, clk_50Mhz=> clk_50,        
+    PORT map (reset => lcd_reset, clk_50Mhz=> clk_50,        
          		p1_score => score1_sig, p2_score => score2_sig, -- scores
          		w1 => w1_sig , w2 => w2_sig, --win signals
          		LCD_RS => lcd_rs_out, LCD_E => lcd_e_out, LCD_ON => lcd_on_out, RESET_LED => reset_led_out, SEC_LED => sec_led_out,
          		LCD_RW  => lcd_rw_out, data_bus => data_bus_out);
+		
+	lcd_reset <= not global_reset;
 
 end architecture structural;

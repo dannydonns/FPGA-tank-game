@@ -8,78 +8,106 @@ end entity;
 architecture sim of score_tb is
 
     -- DUT ports
-    signal clk    : std_logic := '0';
-    signal rst    : std_logic := '1';
-    signal c1     : std_logic := '0';
-    signal c2     : std_logic := '0';
-    signal score1 : std_logic_vector(1 downto 0);
-    signal score2 : std_logic_vector(1 downto 0);
-    signal w1     : std_logic;
-    signal w2     : std_logic;
+    signal pls_clk    : std_logic := '0';
+    signal clk_100    : std_logic := '0';
+    signal rst        : std_logic := '1';
+    signal c1         : std_logic := '0';
+    signal c2         : std_logic := '0';
+    signal score1     : std_logic_vector(1 downto 0);
+    signal score2     : std_logic_vector(1 downto 0);
+    signal w1         : std_logic;
+    signal w2         : std_logic;
 
 begin
     --------------------------------------------------------------------
     -- DUT
     --------------------------------------------------------------------
-    DUT : entity work.score
+    SCORE_DUT : entity work.score
         port map(
-            clk    => clk,
-            rst    => rst,
-            c1     => c1,
-            c2     => c2,
-            score1 => score1,
-            score2 => score2,
-            w1     => w1,
-            w2     => w2
+            clk     => clk_100,
+            rst     => rst,
+            pls_clk => pls_clk,
+            c1      => c1,
+            c2      => c2,
+            score1  => score1,
+            score2  => score2,
+            w1      => w1,
+            w2      => w2
+        );
+
+    -- pls_clk pulses every ~100 clk_100 cycles
+    COUNTER_DUT: entity work.counter
+        generic map(
+            max_count => 100
+        )
+        port map(
+            clk       => clk_100,
+            rst       => rst,
+            pulse_out => pls_clk
         );
 
     --------------------------------------------------------------------
-    -- Clock generator: 10 ns period (100 MHz)
+    -- 100 MHz clock generator
     --------------------------------------------------------------------
     clk_process : process
     begin
-        clk <= '0';
+        clk_100 <= '0';
         wait for 5 ns;
-        clk <= '1';
+        clk_100 <= '1';
         wait for 5 ns;
     end process;
 
     --------------------------------------------------------------------
-    -- Test sequence, ends simulation automatically
+    -- Test sequence using *4-cycle-wide* c1/c2 pulses
     --------------------------------------------------------------------
     stim_proc : process
+        -- utility to hold a signal high for 4 clk_100 cycles
+        procedure pulse_4cycles(signal s : out std_logic) is
+        begin
+            s <= '1';
+            wait until rising_edge(clk_100);
+            wait until rising_edge(clk_100);
+            wait until rising_edge(clk_100);
+            wait until rising_edge(clk_100);
+            s <= '0';
+        end procedure;
     begin
-        -- Hold reset for 20ns
+        ----------------------------------------------------------------
+        -- Reset
+        ----------------------------------------------------------------
         rst <= '1';
         wait for 20 ns;
         rst <= '0';
 
+        -- allow pls_clk to start ticking
+        wait until rising_edge(pls_clk);
+
         ----------------------------------------------------------------
         -- Score player 1 three times
         ----------------------------------------------------------------
-        wait for 30 ns;
-        c1 <= '1'; wait for 10 ns; c1 <= '0';
+        wait until rising_edge(pls_clk);
+        pulse_4cycles(c1);
 
-        wait for 40 ns;
-        c1 <= '1'; wait for 10 ns; c1 <= '0';
+        wait until rising_edge(pls_clk);
+        pulse_4cycles(c1);
 
-        wait for 40 ns;
-        c1 <= '1'; wait for 10 ns; c1 <= '0';
-
-        ----------------------------------------------------------------
-        -- Score player 2 one time
-        ----------------------------------------------------------------
-        wait for 40 ns;
-        c2 <= '1'; wait for 10 ns; c2 <= '0';
+        wait until rising_edge(pls_clk);
+        pulse_4cycles(c1);
 
         ----------------------------------------------------------------
-        -- Give P1 last point to reach "11" (win)
+        -- Score player 2 once
         ----------------------------------------------------------------
-        wait for 40 ns;
-        c1 <= '1'; wait for 10 ns; c1 <= '0';
+        wait until rising_edge(pls_clk);
+        pulse_4cycles(c2);
 
-        -- Let a few clocks pass to observe w1=1
-        wait for 50 ns;
+        ----------------------------------------------------------------
+        -- Final P1 point (expected to trigger win)
+        ----------------------------------------------------------------
+        wait until rising_edge(pls_clk);
+        pulse_4cycles(c1);
+
+        -- observe win output
+        wait until rising_edge(pls_clk);
 
         ----------------------------------------------------------------
         -- END SIMULATION
