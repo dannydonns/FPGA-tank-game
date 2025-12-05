@@ -99,9 +99,7 @@ begin
         -- let pls_clk start ticking
         wait_pls(2);
 
-        --------------------------------------------------------------------
         -- SCENARIO 1: Player 1 scores 3 times in a row and wins
-        --------------------------------------------------------------------
         -- Hit 1 (P1)
         wait until rising_edge(pls_clk);
         pulse_4cycles(c1);

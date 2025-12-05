@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-Analysis & Synthesis Status : Failed - Wed Dec 03 12:21:14 2025
+Analysis & Synthesis Status : Successful - Fri Dec 05 00:59:21 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-Revision Name : tank_game
-Top-level Entity Name : tank_game
-Family : Cyclone IV E
-Total logic elements : N/A until Partition Merge
-    Total combinational functions : N/A until Partition Merge
-    Dedicated logic registers : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total memory bits : N/A until Partition Merge
-Embedded Multiplier 9-bit elements : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
-=======
-Analysis & Synthesis Status : Successful - Wed Dec  3 12:36:03 2025
-Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : tank_game
 Top-level Entity Name : tank_game
 Family : Cyclone IV E
@@ -28,4 +12,3 @@ Total virtual pins : 0
 Total memory bits : 192
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 1
->>>>>>> 1259c2e4b405a48941a07d4d84a4855994acf604
