@@ -80,21 +80,6 @@ begin
     pixelDraw : process(clk, rst_n) is
 	begin
 		if (rising_edge(clk)) then
-		
-			-- if (pixel_row_int < 120 and pixel_column_int < 320) then
-			-- 	colorAddress <= color_green;
-			-- elsif (pixel_row_int >= 120 and pixel_column_int < 320) then
-			-- 	colorAddress <= color_yellow;
-			-- elsif (pixel_row_int < 120 and pixel_column_int >= 320) then
-			-- 	colorAddress <= color_red;
-			-- elsif (pixel_row_int >= 120 and pixel_column_int >= 320) then
-			-- 	colorAddress <= color_blue;
-			-- else
-			-- 	colorAddress <= color_white;
-			-- end if;
-			-- and (pixel_column_int > tank_1x - tank_size_x) and (pixel_row_int < tank_1y + tank_size_y) and (pixel_row_int > tank_1y - tank_size_y) 
-            
-            
             if (pixel_column_int < bullet_1x + 3) and (pixel_column_int > bullet_1x) and (pixel_row_int < bullet_1y + 6) and (pixel_row_int > bullet_1y) then
                 colorAddress <= color_yellow;
             

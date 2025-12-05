@@ -60,10 +60,6 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_AB28 -to global_reset
 set_location_assignment PIN_Y2 -to clk_50
-set_global_assignment -name VHDL_FILE tank.vhd
-set_global_assignment -name VHDL_FILE tank_components.vhd
-set_global_assignment -name VHDL_FILE tank_game.vhd
-set_global_assignment -name VHDL_FILE counter.vhd
 set_location_assignment PIN_E12 -to vga_red[0]
 set_location_assignment PIN_E11 -to vga_red[1]
 set_location_assignment PIN_D10 -to vga_red[2]
@@ -92,7 +88,6 @@ set_location_assignment PIN_D12 -to vga_blue[7]
 set_location_assignment PIN_F11 -to vga_blank
 set_location_assignment PIN_C13 -to vert_sync
 set_location_assignment PIN_G13 -to horiz_sync
-set_global_assignment -name VHDL_FILE bullet.vhd
 set_location_assignment PIN_E24 -to kb_leds[3]
 set_location_assignment PIN_E21 -to kb_leds[0]
 set_location_assignment PIN_E22 -to kb_leds[1]
@@ -113,8 +108,6 @@ set_location_assignment PIN_AB17 -to HEX1[3]
 set_location_assignment PIN_AA16 -to HEX1[2]
 set_location_assignment PIN_AB16 -to HEX1[1]
 set_location_assignment PIN_AA17 -to HEX1[0]
-set_global_assignment -name VHDL_FILE output_files/bullet.vhd
-set_global_assignment -name QIP_FILE pll.qip
 set_location_assignment PIN_G16 -to led_hit_2_on_1
 set_location_assignment PIN_G19 -to one_wins
 set_location_assignment PIN_F19 -to two_wins
@@ -132,4 +125,12 @@ set_location_assignment PIN_M2 -to lcd_rs_out
 set_location_assignment PIN_M1 -to lcd_rw_out
 set_location_assignment PIN_G20 -to reset_led_out
 set_location_assignment PIN_H15 -to sec_led_out
+set_global_assignment -name SDC_FILE tank_game.sdc
+set_global_assignment -name VHDL_FILE tank.vhd
+set_global_assignment -name VHDL_FILE tank_components.vhd
+set_global_assignment -name VHDL_FILE tank_game.vhd
+set_global_assignment -name VHDL_FILE counter.vhd
+set_global_assignment -name VHDL_FILE bullet.vhd
+set_global_assignment -name VHDL_FILE output_files/bullet.vhd
+set_global_assignment -name QIP_FILE pll.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -28,9 +28,7 @@ architecture tb of bullet_collision_tb is
     signal hit_seen  : std_logic := '0';
 
 begin
-    --------------------------------------------------------------------
     -- Clock: 50 MHz (20 ns period)
-    --------------------------------------------------------------------
     clk_process : process
     begin
         clk <= '0';
@@ -39,10 +37,8 @@ begin
         wait for 10 ns;
     end process;
 
-    --------------------------------------------------------------------
     -- pls_clk generator: slow pulse from counter
     -- now: 1 pls_clk tick per 10 clk cycles
-    --------------------------------------------------------------------
     COUNTER_DUT : entity work.counter
         generic map(
             max_count => 10
